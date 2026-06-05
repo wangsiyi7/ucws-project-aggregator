@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "2026-06-05.ucws.project-index.v1",
+  "generatedAt": "2026-06-05T13:02:05.628Z",
+  "sources": {
+    "officialRepo": {
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026",
+      "localPath": "C:\\Users\\35398\\Desktop\\UCWS 2026\\_tmp_ucws_official_repo",
+      "note": "Official UCWS archive. Project ownership remains with each team."
+    },
+    "launchlens": {
+      "repoUrl": "https://github.com/wangsiyi7/launchlens",
+      "demoUrl": "https://wangsiyi7.github.io/launchlens/",
+      "localPath": "C:\\Users\\35398\\Desktop\\UCWS 2026\\launchlens",
+      "dynamicWallSnapshot": "data/ucws-project-wall.json"
+    },
+    "event": {
+      "eventUrl": "https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy",
+      "projectWallUrl": "https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall",
+      "authenticatedApi": "Dynamic Project Wall enumeration requires EPIC_TOKEN in LaunchLens sync."
+    },
+    "aggregator": {
+      "repoUrl": "https://github.com/wangsiyi7/ucws-project-aggregator",
+      "demoUrl": "https://wangsiyi7.github.io/ucws-project-aggregator/",
+      "localDemoPath": "index.html"
+    }
+  },
+  "norms": {
+    "evidenceFields": [
+      "demoUrl",
+      "repoUrl",
+      "screenshotUrls",
+      "teamMembers",
+      "summary"
+    ],
+    "syncRules": [
+      "Do not write EPIC_TOKEN or any session token into committed files.",
+      "Keep official archive records distinct from dynamic Project Wall records.",
+      "Prefer URLs that judges can open directly.",
+      "Treat missing evidence as a review gap, not as a reason to invent content."
+    ],
+    "projectTaxonomy": [
+      "AI Agent",
+      "Application",
+      "Developer Tool",
+      "Skill / Workflow",
+      "Project"
+    ]
+  },
+  "skill": {
+    "path": "skills/ucws-project-aggregation/SKILL.md",
+    "purpose": "Give Codex or another agent a repeatable workflow for UCWS project aggregation and judge-facing synthesis."
+  },
+  "stats": {
+    "projects": 1,
+    "officialProjects": 1,
+    "dynamicProjects": 0,
+    "repos": 1,
+    "demos": 1,
+    "tracks": 1,
+    "categories": 1
+  },
+  "tracks": [
+    "Application"
+  ],
+  "categories": [
+    "Skill / Workflow"
+  ],
+  "projectLinks": [
+    {
+      "name": "LaunchLens",
+      "category": "Skill / Workflow",
+      "repoUrl": "https://github.com/wangsiyi7/launchlens",
+      "demoUrl": "https://wangsiyi7.github.io/launchlens/",
+      "officialArchiveUrl": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
+      "projectWallUrl": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "official:launchlens",
+      "name": "LaunchLens",
+      "track": "Application",
+      "category": "Skill / Workflow",
+      "tagline": "Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages.",
+      "summary": "LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly. LaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. It helps builders move from rough notes to a credible public submission in minutes. The current version includes Temple Mode, a 2.5D spatial submission workflow with six clickable nodes for project story, evidence, score, Oracle LLM, generated archive, and final GitHub / Project Wall handoff. Classic Mode remains available for fast form editing and stable export. The first use case is UCWS Singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.",
+      "description": "LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly. LaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. It helps builders move from rough notes to a credible public submission in minutes. The current version includes Temple Mode, a 2.5D spatial submission workflow with six clickable nodes for project story, evidence, score, Oracle LLM, generated archive, and final GitHub / Project Wall handoff. Classic Mode remains available for fast form editing and stable export. The first use case is UCWS Singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.",
+      "repoUrl": "https://github.com/wangsiyi7/launchlens",
+      "demoUrl": "https://wangsiyi7.github.io/launchlens/",
+      "techStack": "HTML, CSS, JavaScript, browser localStorage, 2.5D generated bitmap background, optional OpenAI-compatible chat completion endpoint",
+      "screenshotUrls": [
+        "https://your-demo-url.example.com/assets/screenshot.png"
+      ],
+      "logoUrl": "",
+      "teamMembers": "[{\"name\":\"Add submitting team members\",\"role\":\"Builder\",\"links\":{}}]",
+      "sourceKinds": [
+        "official-repo"
+      ],
+      "officialArchiveUrl": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
+      "projectWallUrl": "",
+      "links": [
+        "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
+        "https://github.com/wangsiyi7/launchlens",
+        "https://wangsiyi7.github.io/launchlens/"
+      ],
+      "evidence": {
+        "hasDemo": true,
+        "hasRepo": true,
+        "hasScreenshots": true,
+        "hasTeam": true,
+        "hasSummary": true
+      },
+      "readinessScore": 100,
+      "searchText": "launchlens application skill / workflow turn rough hackathon ideas into scored, ready-to-submit project wall packages. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] https://github.com/epicconnectorai/ucws-singapore-hackathon-2026/tree/main/projects/launchlens https://github.com/wangsiyi7/launchlens https://wangsiyi7.github.io/launchlens/"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UCWS Project Aggregator</title>
+    <meta
+      name="description"
+      content="A companion project index, norms, skill, and demo for UCWS Singapore Hackathon 2026."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" data-i18n="brand.eyebrow">UCWS Singapore 2026</p>
+        <h1 data-i18n="brand.title">Project Aggregator</h1>
+      </div>
+      <nav class="quick-links" aria-label="Repository links">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button id="langEnBtn" type="button" class="active" aria-pressed="true">EN</button>
+          <button id="langZhBtn" type="button" aria-pressed="false">中文</button>
+        </div>
+        <a href="https://github.com/wangsiyi7/ucws-project-aggregator" data-i18n="link.aggregatorRepo">Aggregator Repo</a>
+        <a href="https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026" data-i18n="link.official">Official UCWS Repo</a>
+        <a href="https://github.com/wangsiyi7/launchlens" data-i18n="link.launchlensRepo">LaunchLens Repo</a>
+        <a href="https://wangsiyi7.github.io/launchlens/" data-i18n="link.launchlensDemo">LaunchLens Demo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Companion Index</p>
+          <h2 data-i18n="hero.title">Search project evidence, source links, and reusable judging norms.</h2>
+          <p data-i18n="hero.body">
+            This demo reads a normalized UCWS project index generated from the official archive and
+            the LaunchLens Project Wall snapshot. It is built to help judges and agents compare
+            evidence without mixing private tokens into the data layer.
+          </p>
+        </div>
+        <div id="statusPanel" class="status-panel" aria-live="polite" data-i18n="status.loading">Loading project index...</div>
+      </section>
+
+      <section class="stats-band" aria-label="Project stats">
+        <div id="statsGrid" class="stats-grid"></div>
+      </section>
+
+      <section class="controls" aria-label="Project filters">
+        <input id="searchInput" type="search" placeholder="Search project, repo, category, stack, evidence..." data-i18n-placeholder="placeholder.search" />
+        <select id="categorySelect" aria-label="Category filter">
+          <option value="all" data-i18n="filter.allCategories">All categories</option>
+        </select>
+        <select id="evidenceSelect" aria-label="Evidence filter">
+          <option value="all" data-i18n="filter.allEvidence">All evidence</option>
+          <option value="repo" data-i18n="filter.hasRepo">Has repo</option>
+          <option value="demo" data-i18n="filter.hasDemo">Has demo</option>
+          <option value="gaps" data-i18n="filter.gaps">Evidence gaps</option>
+        </select>
+        <button id="briefButton" type="button" data-i18n="button.brief">Build Review Brief</button>
+      </section>
+
+      <section class="content-grid">
+        <div>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow" data-i18n="index.eyebrow">Project Index</p>
+              <h3 data-i18n="index.title">Normalized records</h3>
+            </div>
+            <span id="resultCount" class="pill">0 projects</span>
+          </div>
+          <div id="projectList" class="project-list"></div>
+        </div>
+
+        <aside class="review-panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow" data-i18n="assist.eyebrow">Judge Assist</p>
+              <h3 data-i18n="assist.title">Evidence brief</h3>
+            </div>
+          </div>
+          <pre id="briefOutput" tabindex="0" data-i18n="assist.empty">Filter projects, then build a review brief.</pre>
+          <div class="resource-list">
+            <a href="docs/UCWS_PROJECT_NORMS.md" data-i18n="resource.norms">Aggregation Norms</a>
+            <a href="docs/INTEROP.md" data-i18n="resource.interop">Interop Notes</a>
+            <a href="skills/ucws-project-aggregation/SKILL.md" data-i18n="resource.skill">Codex Skill</a>
+            <a href="data/project-index.json" data-i18n="resource.json">Project Index JSON</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+node_modules/
+_server_*.txt
+*.baiduyun.uploading.cfg
+*.log

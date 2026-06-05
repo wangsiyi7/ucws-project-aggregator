@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026-06-05.ucws.sources.v1",
+  "officialRepo": {
+    "name": "UCWS Hackathon Singapore 2026",
+    "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026",
+    "localPath": "../_tmp_ucws_official_repo",
+    "projectsPath": "projects"
+  },
+  "event": {
+    "projectWallUrl": "https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall",
+    "eventUrl": "https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy"
+  },
+  "launchlens": {
+    "repoUrl": "https://github.com/wangsiyi7/launchlens",
+    "demoUrl": "https://wangsiyi7.github.io/launchlens/",
+    "localPath": "../launchlens",
+    "projectWallSnapshot": "data/ucws-project-wall.json"
+  },
+  "aggregator": {
+    "plannedRepoUrl": "https://github.com/wangsiyi7/ucws-project-aggregator",
+    "plannedDemoUrl": "https://wangsiyi7.github.io/ucws-project-aggregator/"
+  }
+}
