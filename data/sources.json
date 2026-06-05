@@ -17,7 +17,7 @@
     "projectWallSnapshot": "data/ucws-project-wall.json"
   },
   "aggregator": {
-    "plannedRepoUrl": "https://github.com/wangsiyi7/ucws-project-aggregator",
-    "plannedDemoUrl": "https://wangsiyi7.github.io/ucws-project-aggregator/"
+    "repoUrl": "https://github.com/wangsiyi7/ucws-project-aggregator",
+    "demoUrl": "https://wangsiyi7.github.io/ucws-project-aggregator/"
   }
 }

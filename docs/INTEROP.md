@@ -32,11 +32,11 @@ npm.cmd run serve
 
 - Official UCWS archive: https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026
 - LaunchLens: https://github.com/wangsiyi7/launchlens
-- Companion aggregator target: https://github.com/wangsiyi7/ucws-project-aggregator
+- Companion aggregator repository: https://github.com/wangsiyi7/ucws-project-aggregator
 
 ## Publish Pattern
 
-The static demo can be published with GitHub Pages once this folder is pushed to its own repository. The expected public URL is:
+The static demo is published with GitHub Pages at:
 
 ```text
 https://wangsiyi7.github.io/ucws-project-aggregator/

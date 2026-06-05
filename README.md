@@ -6,8 +6,8 @@ Companion project for LaunchLens. It aggregates UCWS Singapore Hackathon 2026 pr
 
 ## Online Links
 
-- GitHub repository target: https://github.com/wangsiyi7/ucws-project-aggregator
-- GitHub Pages target: https://wangsiyi7.github.io/ucws-project-aggregator/
+- GitHub repository: https://github.com/wangsiyi7/ucws-project-aggregator
+- GitHub Pages demo: https://wangsiyi7.github.io/ucws-project-aggregator/
 - Local demo: http://127.0.0.1:8082/
 
 ## Sources
