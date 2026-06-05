@@ -64,6 +64,8 @@ const officialRepo = join(fixtureRoot, "official");
 const launchlens = join(fixtureRoot, "launchlens");
 await mkdir(join(officialRepo, "projects", "sample"), { recursive: true });
 await mkdir(join(launchlens, "data"), { recursive: true });
+await writeFile(join(officialRepo, "README.md"), "# UCWS Fixture\n\nOfficial event overview.");
+await writeFile(join(officialRepo, "RESOURCES.md"), "# Resources\n\nBuilder links and judging support.");
 await writeFile(
   join(officialRepo, "projects", "sample", "project-payload.json"),
   JSON.stringify({
@@ -95,6 +97,11 @@ const index = await buildProjectIndex({
 assert.equal(index.stats.projects, 2);
 assert.equal(index.stats.officialProjects, 1);
 assert.equal(index.stats.dynamicProjects, 1);
+assert.equal(index.stats.resources >= 2, true);
+assert.equal(index.stats.searchableRecords >= 4, true);
 assert.equal(index.projectLinks.length, 2);
+assert.equal(index.resources.some((resource) => resource.title === "UCWS Fixture"), true);
+assert.equal(index.searchRecords.some((record) => record.type === "resource"), true);
+assert.equal(index.searchRecords.some((record) => record.type === "project"), true);
 
 console.log("ucws-project-aggregator build-index tests passed");

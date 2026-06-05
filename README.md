@@ -1,8 +1,8 @@
-# UCWS Project Aggregator
+# UCWS Project Searcher
 
 > English by default. The demo has an EN / 中文 language switch.
 
-Companion project for LaunchLens. It aggregates UCWS Singapore Hackathon 2026 project sources, applies a small evidence standard, exposes a judge-facing demo page, and provides a Codex skill entry for repeatable project-wall analysis.
+Companion project for LaunchLens. It builds a searchable UCWS Singapore Hackathon 2026 index from project records, official repository documents, local official snapshot files, and commit history. The online demo helps judges, organizers, and agents find evidence across sources instead of opening many pages manually.
 
 ## Online Links
 
@@ -18,12 +18,12 @@ Companion project for LaunchLens. It aggregates UCWS Singapore Hackathon 2026 pr
 - LaunchLens repository: https://github.com/wangsiyi7/launchlens
 - LaunchLens demo: https://wangsiyi7.github.io/launchlens/
 
-## What This Folder Adds
+## What This Repository Adds
 
-- A normalized `data/project-index.json` generated from the official UCWS archive and LaunchLens dynamic-wall snapshot.
-- A static demo page for judges and organizers to search, filter, and compare project evidence.
+- A normalized `data/project-index.json` generated from the official UCWS archive, LaunchLens dynamic-wall snapshot, official documents, project snapshot files, and commit history.
+- A static searcher demo for judges and organizers to search projects, resources, and commits from one UI.
 - A norms document for evidence, token safety, attribution, and project taxonomy.
-- A skill file that lets Codex or another agent repeat the aggregation workflow.
+- A skill file that lets Codex or another agent repeat the aggregation and search workflow.
 
 ## Run Locally
 
@@ -47,9 +47,12 @@ The generated index is intentionally simple:
 data/project-index.json
   sources             Official repo, LaunchLens, event, and aggregator links
   norms               Evidence fields, sync rules, and taxonomy
-  stats               Counts for projects, demos, repos, tracks, and categories
+  stats               Counts for projects, resources, commits, repos, demos, and searchable records
   projectLinks        Compact link list for quick enumeration
   projects            Normalized full records for search and review
+  resources           Official documents and local official project snapshot files
+  commits             Official snapshot and aggregator repository commit records
+  searchRecords       Unified project/resource/commit records used by the demo searcher
 ```
 
 The dynamic UCWS wall still requires LaunchLens to run with `EPIC_TOKEN`. This project never stores tokens and only consumes LaunchLens output after it has been safely normalized.
@@ -67,17 +70,17 @@ The repository includes `.github/workflows/pages.yml`, so the static demo deploy
 
 ## Interop With LaunchLens
 
-LaunchLens remains the primary builder and judging workspace. This aggregator is the companion index:
+LaunchLens remains the primary builder and judging workspace. This project is the companion search index:
 
 - LaunchLens pulls authenticated Project Wall data into `launchlens/data/ucws-project-wall.json`.
-- This project builds `data/project-index.json` from that snapshot plus the official UCWS repo archive.
+- This project builds `data/project-index.json` from that snapshot, the official UCWS repo archive, official resources, and commit history.
 - The demo links back to LaunchLens for deeper project judging, repo scanning, and AI-assisted synthesis.
 
 See [docs/INTEROP.md](docs/INTEROP.md) and [docs/UCWS_PROJECT_NORMS.md](docs/UCWS_PROJECT_NORMS.md).
 
 ## 中文说明
 
-UCWS Project Aggregator 是 LaunchLens 的配套线上项目。它会聚合 UCWS 官方 GitHub 归档、LaunchLens 的动态项目墙快照、证据规范和 Codex Skill，并提供一个默认英文、可切换中文的评委检索 demo。
+UCWS Project Searcher 是 LaunchLens 的配套线上项目。它会聚合 UCWS 官方 GitHub 归档、LaunchLens 的动态项目墙快照、官方资料、项目快照文件、commit 历史、证据规范和 Codex Skill，并提供一个默认英文、可切换中文的评委检索 demo。
 
 线上目标：
 

@@ -210,7 +210,7 @@ main {
 
 .controls {
   display: grid;
-  grid-template-columns: minmax(16rem, 1fr) 14rem 12rem auto;
+  grid-template-columns: minmax(16rem, 1fr) 12rem 14rem 12rem auto;
   gap: 0.7rem;
   margin: 1rem 0;
 }
@@ -226,7 +226,8 @@ main {
 .project-head,
 .meta-row,
 .link-row,
-.evidence-row {
+.evidence-row,
+.radar-tags {
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -307,6 +308,17 @@ main {
 .evidence.gap {
   background: rgba(255, 127, 155, 0.13);
   color: var(--rose);
+}
+
+.radar-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.65rem;
+  border: 1px solid rgba(117, 167, 255, 0.24);
+  border-radius: 999px;
+  padding: 0 0.55rem;
+  color: var(--blue);
+  font-size: 0.82rem;
 }
 
 .link-row a,

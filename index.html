@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UCWS Project Aggregator</title>
+    <title>UCWS Project Searcher</title>
     <meta
       name="description"
-      content="A companion project index, norms, skill, and demo for UCWS Singapore Hackathon 2026."
+          content="A searchable companion index for UCWS Singapore Hackathon 2026 projects, official resources, and commit history."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,7 +14,7 @@
     <header class="topbar">
       <div>
         <p class="eyebrow" data-i18n="brand.eyebrow">UCWS Singapore 2026</p>
-        <h1 data-i18n="brand.title">Project Aggregator</h1>
+        <h1 data-i18n="brand.title">Project Searcher</h1>
       </div>
       <nav class="quick-links" aria-label="Repository links">
         <div class="lang-toggle" role="group" aria-label="Language">
@@ -32,11 +32,11 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="hero.eyebrow">Companion Index</p>
-          <h2 data-i18n="hero.title">Search project evidence, source links, and reusable judging norms.</h2>
+          <h2 data-i18n="hero.title">Search projects, official resources, and commit history in one place.</h2>
           <p data-i18n="hero.body">
-            This demo reads a normalized UCWS project index generated from the official archive and
-            the LaunchLens Project Wall snapshot. It is built to help judges and agents compare
-            evidence without mixing private tokens into the data layer.
+            This demo reads a normalized UCWS search index generated from the official archive,
+            LaunchLens Project Wall snapshot, official resource documents, and commit history.
+            It helps judges and agents find evidence without mixing private tokens into the data layer.
           </p>
         </div>
         <div id="statusPanel" class="status-panel" aria-live="polite" data-i18n="status.loading">Loading project index...</div>
@@ -47,7 +47,13 @@
       </section>
 
       <section class="controls" aria-label="Project filters">
-        <input id="searchInput" type="search" placeholder="Search project, repo, category, stack, evidence..." data-i18n-placeholder="placeholder.search" />
+        <input id="searchInput" type="search" placeholder="Search project, repo, category, official docs, commits..." data-i18n-placeholder="placeholder.search" />
+        <select id="scopeSelect" aria-label="Record scope">
+          <option value="all" data-i18n="filter.allRecords">All records</option>
+          <option value="project" data-i18n="filter.projects">Projects</option>
+          <option value="resource" data-i18n="filter.resources">Official resources</option>
+          <option value="commit" data-i18n="filter.commits">Commit history</option>
+        </select>
         <select id="categorySelect" aria-label="Category filter">
           <option value="all" data-i18n="filter.allCategories">All categories</option>
         </select>
@@ -64,12 +70,12 @@
         <div>
           <div class="section-head">
             <div>
-              <p class="eyebrow" data-i18n="index.eyebrow">Project Index</p>
-              <h3 data-i18n="index.title">Normalized records</h3>
+              <p class="eyebrow" data-i18n="index.eyebrow">Search Index</p>
+              <h3 data-i18n="index.title">Projects, resources, and commits</h3>
             </div>
             <span id="resultCount" class="pill">0 projects</span>
           </div>
-          <div id="projectList" class="project-list"></div>
+          <div id="projectList" class="project-list result-list"></div>
         </div>
 
         <aside class="review-panel">

@@ -1,9 +1,16 @@
+import { execFile } from "node:child_process";
 import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
-import { dirname, join, resolve } from "node:path";
+import { promisify } from "node:util";
+import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
+const execFileAsync = promisify(execFile);
+
+const ROOT_RESOURCE_FILES = ["README.md", "RESOURCES.md", "SECURITY.md", "LICENSE"];
+const PROJECT_RESOURCE_EXTENSIONS = new Set([".md", ".json", ".toml", ".yml", ".yaml"]);
+const MAX_RESOURCE_CHARS = 1600;
 
 export const DEFAULTS = {
   officialRepoPath: resolve(ROOT, "..", "_tmp_ucws_official_repo"),
@@ -41,6 +48,32 @@ function cleanText(value) {
   return String(value || "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function summarizeText(value, limit = 420) {
+  const text = cleanText(value);
+  if (text.length <= limit) return text;
+  return `${text.slice(0, limit - 1).trim()}...`;
+}
+
+function markdownTitle(markdown, fallback) {
+  const match = String(markdown || "").match(/^#\s+(.+)$/m);
+  return cleanText(match?.[1] || fallback);
+}
+
+function markdownHeadings(markdown) {
+  return [...String(markdown || "").matchAll(/^#{1,3}\s+(.+)$/gm)]
+    .map((match) => cleanText(match[1]))
+    .filter(Boolean)
+    .slice(0, 12);
+}
+
+function repoBlobUrl(repoUrl, branch, path) {
+  return `${repoUrl}/blob/${encodeURIComponent(branch)}/${path.split(/[/\\]+/).map(encodeURIComponent).join("/")}`;
+}
+
+function localSnapshotPath(basePath, filePath) {
+  return relative(basePath, filePath).split(/[/\\]+/).join("/");
 }
 
 function firstNonEmpty(...values) {
@@ -95,6 +128,62 @@ export function classifyProject(project) {
   return cleanText(project.track) || "Project";
 }
 
+function buildResourceSearchText(resource) {
+  return [
+    resource.title,
+    resource.kind,
+    resource.path,
+    resource.summary,
+    resource.content,
+    ...(resource.headings || []),
+    ...(resource.tags || []),
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+function normalizeResource(resource) {
+  const normalized = {
+    ...resource,
+    title: cleanText(resource.title),
+    kind: cleanText(resource.kind || "Document"),
+    summary: summarizeText(resource.summary || resource.content),
+    content: summarizeText(resource.content, MAX_RESOURCE_CHARS),
+    headings: resource.headings || markdownHeadings(resource.content),
+    tags: resource.tags || [],
+  };
+  normalized.searchText = buildResourceSearchText(normalized);
+  return normalized;
+}
+
+function normalizeCommit(commit, source, repoUrl = "") {
+  const normalized = {
+    id: `${source}:commit:${commit.hash}`,
+    type: "commit",
+    source,
+    hash: commit.hash,
+    shortHash: commit.shortHash,
+    date: commit.date,
+    author: commit.author,
+    title: commit.subject,
+    summary: `${commit.shortHash} ${commit.subject}`,
+    url: repoUrl ? `${repoUrl}/commit/${commit.hash}` : "",
+    tags: ["commit", source],
+  };
+  normalized.searchText = [
+    normalized.hash,
+    normalized.shortHash,
+    normalized.date,
+    normalized.author,
+    normalized.title,
+    normalized.summary,
+    source,
+  ]
+    .join(" ")
+    .toLowerCase();
+  return normalized;
+}
+
 export function evidenceSignals(project) {
   const screenshots = parseList(project.screenshotUrls || project.screenshots);
   const demoUrl = normalizeUrl(project.demoUrl);
@@ -143,7 +232,7 @@ async function readTextIfExists(path) {
 }
 
 export function normalizeOfficialProject(projectDirName, payload = {}, readme = "", options = DEFAULTS) {
-  const officialArchiveUrl = `${options.officialRepoUrl}/tree/main/projects/${encodeURIComponent(projectDirName)}`;
+  const officialArchiveUrl = "";
   const name = firstNonEmpty(payload.name, projectDirName);
   const repoUrl =
     normalizeUrl(payload.repoUrl) ||
@@ -167,6 +256,7 @@ export function normalizeOfficialProject(projectDirName, payload = {}, readme = 
     teamMembers: cleanText(payload.teamMembers),
     sourceKinds: ["official-repo"],
     officialArchiveUrl,
+    officialSnapshotPath: `projects/${projectDirName}`,
     projectWallUrl: "",
     links: [officialArchiveUrl, repoUrl, demoUrl].filter(Boolean),
   };
@@ -229,10 +319,40 @@ function buildSearchText(project) {
     project.description,
     project.techStack,
     project.teamMembers,
+    project.officialSnapshotPath,
     ...(project.links || []),
   ]
     .join(" ")
     .toLowerCase();
+}
+
+async function readTopLevelProjectResources(projectDirPath, projectDirName, officialRepoPath) {
+  const entries = await readdir(projectDirPath, { withFileTypes: true }).catch(() => []);
+  const resources = [];
+  for (const entry of entries) {
+    if (!entry.isFile()) continue;
+    const extension = extname(entry.name).toLowerCase();
+    if (!PROJECT_RESOURCE_EXTENSIONS.has(extension)) continue;
+    const filePath = join(projectDirPath, entry.name);
+    const content = await readTextIfExists(filePath);
+    if (!content) continue;
+    const path = localSnapshotPath(officialRepoPath, filePath);
+    resources.push(
+      normalizeResource({
+        id: `official-snapshot:${path}`,
+        type: "resource",
+        source: "official-local-snapshot",
+        kind: extension === ".md" ? "Project Markdown" : "Project Metadata",
+        title: markdownTitle(content, `${projectDirName} / ${entry.name}`),
+        path,
+        url: "",
+        summary: content,
+        content,
+        tags: ["project", projectDirName, extension.slice(1)],
+      }),
+    );
+  }
+  return resources;
 }
 
 export async function readOfficialProjects(officialRepoPath, options = DEFAULTS) {
@@ -260,6 +380,78 @@ export async function readOfficialProjects(officialRepoPath, options = DEFAULTS)
     projects.push(normalizeOfficialProject(entry, payload, readme, options));
   }
   return projects;
+}
+
+export async function readOfficialResources(officialRepoPath, options = DEFAULTS) {
+  const resources = [];
+  for (const filename of ROOT_RESOURCE_FILES) {
+    const filePath = resolve(officialRepoPath, filename);
+    const content = await readTextIfExists(filePath);
+    if (!content) continue;
+    resources.push(
+      normalizeResource({
+        id: `official:${filename}`,
+        type: "resource",
+        source: "official-repo",
+        kind: filename === "LICENSE" ? "License" : "Official Document",
+        title: markdownTitle(content, filename),
+        path: filename,
+        url: repoBlobUrl(options.officialRepoUrl, "main", filename),
+        summary: content,
+        content,
+        tags: ["official", basename(filename, extname(filename)).toLowerCase()],
+      }),
+    );
+  }
+
+  const projectsPath = resolve(officialRepoPath, "projects");
+  const entries = await readdir(projectsPath, { withFileTypes: true }).catch(() => []);
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    resources.push(...(await readTopLevelProjectResources(join(projectsPath, entry.name), entry.name, officialRepoPath)));
+  }
+  return resources.sort((a, b) => a.path.localeCompare(b.path));
+}
+
+async function gitBranch(repoPath) {
+  try {
+    const { stdout } = await execFileAsync("git", ["-C", repoPath, "branch", "--show-current"]);
+    return stdout.trim();
+  } catch {
+    return "";
+  }
+}
+
+export async function readGitCommits(repoPath, source, repoUrl = "", maxCount = 30) {
+  try {
+    const { stdout } = await execFileAsync("git", [
+      "-C",
+      repoPath,
+      "log",
+      `--max-count=${maxCount}`,
+      "--date=iso-strict",
+      "--pretty=format:%H%x09%h%x09%ad%x09%an%x09%s",
+    ]);
+    return stdout
+      .split(/\r?\n/)
+      .filter(Boolean)
+      .map((line) => {
+        const [hash, shortHash, date, author, ...subjectParts] = line.split("\t");
+        return normalizeCommit(
+          {
+            hash,
+            shortHash,
+            date,
+            author,
+            subject: subjectParts.join("\t"),
+          },
+          source,
+          repoUrl,
+        );
+      });
+  } catch {
+    return [];
+  }
 }
 
 export async function readDynamicProjects(launchlensPath, options = DEFAULTS) {
@@ -299,13 +491,63 @@ export function mergeProjects(projects) {
   return [...byKey.values()].sort((a, b) => b.readinessScore - a.readinessScore || a.name.localeCompare(b.name));
 }
 
+function projectSearchRecord(project) {
+  return {
+    id: project.id,
+    type: "project",
+    source: project.sourceKinds?.join(" + ") || "project",
+    title: project.name,
+    summary: project.summary || project.tagline || project.description,
+    url: project.repoUrl || project.demoUrl || project.projectWallUrl || project.officialArchiveUrl || "",
+    tags: [project.track, project.category, ...(project.sourceKinds || [])].filter(Boolean),
+    searchText: project.searchText,
+  };
+}
+
+function resourceSearchRecord(resource) {
+  return {
+    id: resource.id,
+    type: "resource",
+    source: resource.source,
+    title: resource.title,
+    summary: resource.summary,
+    url: resource.url,
+    tags: [resource.kind, ...(resource.tags || [])].filter(Boolean),
+    searchText: resource.searchText,
+  };
+}
+
+function commitSearchRecord(commit) {
+  return {
+    id: commit.id,
+    type: "commit",
+    source: commit.source,
+    title: commit.title,
+    summary: `${commit.shortHash} / ${commit.author} / ${commit.date}`,
+    url: commit.url,
+    tags: commit.tags || [],
+    searchText: commit.searchText,
+  };
+}
+
 export async function buildProjectIndex(options = DEFAULTS) {
   const resolved = { ...DEFAULTS, ...options };
-  const [officialProjects, dynamicProjects] = await Promise.all([
+  const [officialProjects, dynamicProjects, officialResources, officialCommits, aggregatorCommits, officialBranch] = await Promise.all([
     readOfficialProjects(resolved.officialRepoPath, resolved),
     readDynamicProjects(resolved.launchlensPath, resolved),
+    readOfficialResources(resolved.officialRepoPath, resolved),
+    readGitCommits(resolved.officialRepoPath, "official-local-snapshot", "", 40),
+    readGitCommits(ROOT, "aggregator-repo", resolved.aggregatorRepoUrl, 40),
+    gitBranch(resolved.officialRepoPath),
   ]);
   const projects = mergeProjects([...officialProjects, ...dynamicProjects]);
+  const resources = officialResources;
+  const commits = [...officialCommits, ...aggregatorCommits];
+  const searchRecords = [
+    ...projects.map(projectSearchRecord),
+    ...resources.map(resourceSearchRecord),
+    ...commits.map(commitSearchRecord),
+  ];
   const tracks = [...new Set(projects.map((project) => project.track).filter(Boolean))].sort();
   const categories = [...new Set(projects.map((project) => project.category).filter(Boolean))].sort();
   const generatedAt = new Date().toISOString();
@@ -317,7 +559,9 @@ export async function buildProjectIndex(options = DEFAULTS) {
       officialRepo: {
         url: resolved.officialRepoUrl,
         localPath: resolved.officialRepoPath,
-        note: "Official UCWS archive. Project ownership remains with each team.",
+        localBranch: officialBranch,
+        publicBranch: "main",
+        note: "Official UCWS archive root documents are public on main. Local project snapshot content can include newer submission-branch files.",
       },
       launchlens: {
         repoUrl: resolved.launchlensRepoUrl,
@@ -354,6 +598,10 @@ export async function buildProjectIndex(options = DEFAULTS) {
       projects: projects.length,
       officialProjects: officialProjects.length,
       dynamicProjects: dynamicProjects.length,
+      resources: resources.length,
+      officialCommits: officialCommits.length,
+      aggregatorCommits: aggregatorCommits.length,
+      searchableRecords: searchRecords.length,
       repos: projects.filter((project) => project.evidence.hasRepo).length,
       demos: projects.filter((project) => project.evidence.hasDemo).length,
       tracks: tracks.length,
@@ -361,12 +609,16 @@ export async function buildProjectIndex(options = DEFAULTS) {
     },
     tracks,
     categories,
+    resources,
+    commits,
+    searchRecords,
     projectLinks: projects.map((project) => ({
       name: project.name,
       category: project.category,
       repoUrl: project.repoUrl,
       demoUrl: project.demoUrl,
       officialArchiveUrl: project.officialArchiveUrl,
+      officialSnapshotPath: project.officialSnapshotPath,
       projectWallUrl: project.projectWallUrl,
     })),
     projects,

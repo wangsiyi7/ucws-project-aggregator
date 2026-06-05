@@ -3,48 +3,56 @@
   const strings = {
     en: {
       "brand.eyebrow": "UCWS Singapore 2026",
-      "brand.title": "Project Aggregator",
+      "brand.title": "Project Searcher",
       "link.aggregatorRepo": "Aggregator Repo",
       "link.official": "Official UCWS Repo",
       "link.launchlensRepo": "LaunchLens Repo",
       "link.launchlensDemo": "LaunchLens Demo",
-      "hero.eyebrow": "Companion Index",
-      "hero.title": "Search project evidence, source links, and reusable judging norms.",
+      "hero.eyebrow": "Companion Search Index",
+      "hero.title": "Search projects, official resources, and commit history in one place.",
       "hero.body":
-        "This demo reads a normalized UCWS project index generated from the official archive and the LaunchLens Project Wall snapshot. It is built to help judges and agents compare evidence without mixing private tokens into the data layer.",
-      "status.loading": "Loading project index...",
-      "status.ready": "Index ready",
+        "This demo reads a normalized UCWS search index generated from the official archive, LaunchLens Project Wall snapshot, official resource documents, and commit history. It helps judges and agents find evidence without mixing private tokens into the data layer.",
+      "status.loading": "Loading search index...",
+      "status.ready": "Search index ready",
       "status.generated": "Generated",
       "status.official": "Official",
       "status.launchlens": "LaunchLens",
       "status.openArchive": "UCWS GitHub archive",
       "status.openDemo": "open demo",
-      "placeholder.search": "Search project, repo, category, stack, evidence...",
+      "placeholder.search": "Search project, repo, category, official docs, commits...",
+      "filter.allRecords": "All records",
+      "filter.projects": "Projects",
+      "filter.resources": "Official resources",
+      "filter.commits": "Commit history",
       "filter.allCategories": "All categories",
       "filter.allEvidence": "All evidence",
       "filter.hasRepo": "Has repo",
       "filter.hasDemo": "Has demo",
       "filter.gaps": "Evidence gaps",
       "button.brief": "Build Review Brief",
-      "index.eyebrow": "Project Index",
-      "index.title": "Normalized records",
+      "index.eyebrow": "Search Index",
+      "index.title": "Projects, resources, and commits",
       "assist.eyebrow": "Judge Assist",
       "assist.title": "Evidence brief",
-      "assist.empty": "Filter projects, then build a review brief.",
+      "assist.empty": "Filter records, then build a review brief.",
       "resource.norms": "Aggregation Norms",
       "resource.interop": "Interop Notes",
       "resource.skill": "Codex Skill",
       "resource.json": "Project Index JSON",
       "stat.projects": "Projects",
-      "stat.official": "Official",
-      "stat.dynamic": "Dynamic",
+      "stat.resources": "Resources",
+      "stat.commits": "Commits",
+      "stat.searchable": "Searchable",
       "stat.repos": "Repos",
       "stat.demos": "Demos",
-      "stat.categories": "Categories",
       "source.officialWall": "Official + Wall",
       "source.official": "Official",
+      "source.snapshot": "Official snapshot",
       "source.wall": "Wall",
       "source.indexed": "Indexed",
+      "type.project": "Project",
+      "type.resource": "Resource",
+      "type.commit": "Commit",
       "evidence.repo": "Repo",
       "evidence.demo": "Demo",
       "evidence.screens": "Screens",
@@ -53,68 +61,85 @@
       "label.projectWall": "Project wall",
       "label.officialArchive": "Official archive",
       "label.trackUnknown": "Track unknown",
-      "empty.projects": "No projects match the current filters.",
+      "label.open": "Open",
+      "label.path": "Path",
+      "label.source": "Source",
+      "label.commit": "Commit",
+      "label.author": "Author",
+      "empty.records": "No records match the current filters.",
       "empty.summary": "No summary available yet.",
       "empty.links": "No public links yet",
-      "count.projects": "{count} projects",
-      "brief.title": "UCWS Project Aggregator Review Brief",
-      "brief.generated": "Generated from {count} filtered projects.",
-      "brief.spread": "Category spread:",
+      "count.records": "{count} records",
+      "brief.title": "UCWS Project Searcher Review Brief",
+      "brief.generated": "Generated from {count} filtered record(s).",
+      "brief.spread": "Record spread:",
+      "brief.projects": "Projects",
+      "brief.resources": "Official resources",
+      "brief.commits": "Commits",
       "brief.gaps": "Evidence gaps:",
       "brief.missingRepo": "Missing repo evidence",
       "brief.missingDemo": "Missing demo evidence",
       "brief.none": "none",
       "brief.judgePass": "Suggested judge pass:",
-      "brief.start": "Start with projects that have both repo and demo evidence.",
-      "brief.follow": "Use missing evidence lists as follow-up questions.",
+      "brief.start": "Start with project records that have both repo and demo evidence.",
+      "brief.resourcePass": "Use official resource records to answer event, security, and submission-policy questions.",
+      "brief.commitPass": "Use commit history records to trace what changed and when.",
       "brief.launchlens": "Open LaunchLens for deeper scoring, repo scanning, and AI synthesis.",
       "error.load": "Could not load data/project-index.json",
       "error.build": "Run npm.cmd run build, then reload the demo.",
     },
     zh: {
       "brand.eyebrow": "UCWS 新加坡 2026",
-      "brand.title": "项目聚合器",
+      "brand.title": "项目检索器",
       "link.aggregatorRepo": "聚合器仓库",
       "link.official": "UCWS 官方仓库",
       "link.launchlensRepo": "LaunchLens 仓库",
       "link.launchlensDemo": "LaunchLens Demo",
-      "hero.eyebrow": "配套索引",
-      "hero.title": "搜索项目证据、来源链接和可复用评审规范。",
+      "hero.eyebrow": "配套检索索引",
+      "hero.title": "在一个入口检索项目、官方资料和 commit 历史。",
       "hero.body":
-        "这个 demo 读取由 UCWS 官方归档和 LaunchLens 项目墙快照生成的标准化项目索引，帮助评委和 Agent 比较证据，同时避免把私密 token 混入数据层。",
-      "status.loading": "正在载入项目索引...",
-      "status.ready": "索引已就绪",
+        "这个 demo 读取由 UCWS 官方归档、LaunchLens 项目墙快照、官方资料文档和 commit 历史生成的标准化检索索引，帮助评委和 Agent 查找证据，同时避免把私密 token 混入数据层。",
+      "status.loading": "正在载入检索索引...",
+      "status.ready": "检索索引已就绪",
       "status.generated": "生成时间",
       "status.official": "官方来源",
       "status.launchlens": "LaunchLens",
       "status.openArchive": "UCWS GitHub 归档",
       "status.openDemo": "打开 demo",
-      "placeholder.search": "搜索项目、仓库、分类、技术栈、证据...",
+      "placeholder.search": "搜索项目、仓库、分类、官方文档、commit...",
+      "filter.allRecords": "全部记录",
+      "filter.projects": "项目",
+      "filter.resources": "官方资料",
+      "filter.commits": "Commit 历史",
       "filter.allCategories": "全部分类",
       "filter.allEvidence": "全部证据",
       "filter.hasRepo": "有仓库",
       "filter.hasDemo": "有 Demo",
       "filter.gaps": "证据缺口",
       "button.brief": "生成评审摘要",
-      "index.eyebrow": "项目索引",
-      "index.title": "标准化记录",
+      "index.eyebrow": "检索索引",
+      "index.title": "项目、资料和 commit",
       "assist.eyebrow": "评委辅助",
       "assist.title": "证据摘要",
-      "assist.empty": "先筛选项目，再生成评审摘要。",
+      "assist.empty": "先筛选记录，再生成评审摘要。",
       "resource.norms": "聚合规范",
       "resource.interop": "互操作说明",
       "resource.skill": "Codex Skill",
       "resource.json": "项目索引 JSON",
       "stat.projects": "项目",
-      "stat.official": "官方归档",
-      "stat.dynamic": "动态墙",
+      "stat.resources": "资料",
+      "stat.commits": "Commit",
+      "stat.searchable": "可检索",
       "stat.repos": "仓库",
       "stat.demos": "Demo",
-      "stat.categories": "分类",
       "source.officialWall": "官方 + 项目墙",
       "source.official": "官方归档",
+      "source.snapshot": "官方快照",
       "source.wall": "项目墙",
       "source.indexed": "已索引",
+      "type.project": "项目",
+      "type.resource": "资料",
+      "type.commit": "Commit",
       "evidence.repo": "仓库",
       "evidence.demo": "Demo",
       "evidence.screens": "截图",
@@ -123,20 +148,29 @@
       "label.projectWall": "项目墙",
       "label.officialArchive": "官方归档",
       "label.trackUnknown": "赛道未知",
-      "empty.projects": "当前筛选条件下没有项目。",
+      "label.open": "打开",
+      "label.path": "路径",
+      "label.source": "来源",
+      "label.commit": "提交",
+      "label.author": "作者",
+      "empty.records": "当前筛选条件下没有记录。",
       "empty.summary": "暂时没有摘要。",
       "empty.links": "暂无公开链接",
-      "count.projects": "{count} 个项目",
-      "brief.title": "UCWS 项目聚合器评审摘要",
-      "brief.generated": "基于 {count} 个筛选项目生成。",
-      "brief.spread": "分类分布：",
+      "count.records": "{count} 条记录",
+      "brief.title": "UCWS 项目检索器评审摘要",
+      "brief.generated": "基于 {count} 条筛选记录生成。",
+      "brief.spread": "记录分布：",
+      "brief.projects": "项目",
+      "brief.resources": "官方资料",
+      "brief.commits": "Commit",
       "brief.gaps": "证据缺口：",
       "brief.missingRepo": "缺少仓库证据",
       "brief.missingDemo": "缺少 Demo 证据",
       "brief.none": "无",
       "brief.judgePass": "建议评审路径：",
-      "brief.start": "优先查看同时具备仓库和 Demo 证据的项目。",
-      "brief.follow": "把缺失证据列表作为追问清单。",
+      "brief.start": "优先查看同时具备仓库和 Demo 证据的项目记录。",
+      "brief.resourcePass": "用官方资料记录回答活动、安全、提交规范等问题。",
+      "brief.commitPass": "用 commit 历史追踪变更内容和时间。",
       "brief.launchlens": "打开 LaunchLens 做更深入的评分、仓库扫描和 AI 梳理。",
       "error.load": "无法读取 data/project-index.json",
       "error.build": "请先运行 npm.cmd run build，然后刷新 demo。",
@@ -146,6 +180,7 @@
   const state = {
     index: null,
     query: "",
+    scope: "all",
     category: "all",
     evidence: "all",
     language: localStorage.getItem(LANGUAGE_KEY) === "zh" ? "zh" : "en",
@@ -155,6 +190,7 @@
     statusPanel: document.getElementById("statusPanel"),
     statsGrid: document.getElementById("statsGrid"),
     searchInput: document.getElementById("searchInput"),
+    scopeSelect: document.getElementById("scopeSelect"),
     categorySelect: document.getElementById("categorySelect"),
     evidenceSelect: document.getElementById("evidenceSelect"),
     briefButton: document.getElementById("briefButton"),
@@ -181,20 +217,64 @@
       .replaceAll('"', "&quot;");
   }
 
-  function filteredProjects() {
-    const projects = state.index?.projects || [];
+  function recordSourceLabel(source) {
+    if (source === "official-repo") return t("source.official");
+    if (source === "official-local-snapshot") return t("source.snapshot");
+    if (source === "dynamic-wall") return t("source.wall");
+    if (source?.includes("official-repo") && source?.includes("dynamic-wall")) return t("source.officialWall");
+    return source || t("source.indexed");
+  }
+
+  function typeLabel(type) {
+    return t(`type.${type}`) || type;
+  }
+
+  function allRecords() {
+    if (state.index?.searchRecords?.length) return state.index.searchRecords;
+    return (state.index?.projects || []).map((project) => ({
+      id: project.id,
+      type: "project",
+      source: project.sourceKinds?.join(" + "),
+      title: project.name,
+      summary: project.summary,
+      url: project.repoUrl || project.demoUrl,
+      tags: [project.track, project.category].filter(Boolean),
+      searchText: project.searchText,
+    }));
+  }
+
+  function projectById(id) {
+    return (state.index?.projects || []).find((project) => project.id === id);
+  }
+
+  function resourceById(id) {
+    return (state.index?.resources || []).find((resource) => resource.id === id);
+  }
+
+  function commitById(id) {
+    return (state.index?.commits || []).find((commit) => commit.id === id);
+  }
+
+  function filteredRecords() {
     const query = state.query.trim().toLowerCase();
-    return projects.filter((project) => {
-      const matchesQuery = !query || (project.searchText || "").includes(query);
-      const matchesCategory = state.category === "all" || project.category === state.category;
-      const signals = project.evidence || {};
-      const hasGap = !signals.hasRepo || !signals.hasDemo || !signals.hasScreenshots || !signals.hasTeam;
-      const matchesEvidence =
-        state.evidence === "all" ||
-        (state.evidence === "repo" && signals.hasRepo) ||
-        (state.evidence === "demo" && signals.hasDemo) ||
-        (state.evidence === "gaps" && hasGap);
-      return matchesQuery && matchesCategory && matchesEvidence;
+    return allRecords().filter((record) => {
+      if (state.scope !== "all" && record.type !== state.scope) return false;
+      if (query && !(record.searchText || "").includes(query)) return false;
+
+      if (record.type === "project") {
+        const project = projectById(record.id);
+        const matchesCategory = state.category === "all" || project?.category === state.category;
+        const signals = project?.evidence || {};
+        const hasGap = !signals.hasRepo || !signals.hasDemo || !signals.hasScreenshots || !signals.hasTeam;
+        const matchesEvidence =
+          state.evidence === "all" ||
+          (state.evidence === "repo" && signals.hasRepo) ||
+          (state.evidence === "demo" && signals.hasDemo) ||
+          (state.evidence === "gaps" && hasGap);
+        return matchesCategory && matchesEvidence;
+      }
+
+      return state.category === "all" && state.evidence === "all";
     });
   }
 
@@ -210,21 +290,17 @@
     refs.langZhBtn.classList.toggle("active", state.language === "zh");
     refs.langEnBtn.setAttribute("aria-pressed", String(state.language === "en"));
     refs.langZhBtn.setAttribute("aria-pressed", String(state.language === "zh"));
-    refs.evidenceSelect.querySelector('[value="all"]').textContent = t("filter.allEvidence");
-    refs.evidenceSelect.querySelector('[value="repo"]').textContent = t("filter.hasRepo");
-    refs.evidenceSelect.querySelector('[value="demo"]').textContent = t("filter.hasDemo");
-    refs.evidenceSelect.querySelector('[value="gaps"]').textContent = t("filter.gaps");
   }
 
   function renderStats() {
     const stats = state.index?.stats || {};
     const items = [
       [t("stat.projects"), stats.projects || 0],
-      [t("stat.official"), stats.officialProjects || 0],
-      [t("stat.dynamic"), stats.dynamicProjects || 0],
+      [t("stat.resources"), stats.resources || 0],
+      [t("stat.commits"), (stats.officialCommits || 0) + (stats.aggregatorCommits || 0)],
+      [t("stat.searchable"), stats.searchableRecords || allRecords().length],
       [t("stat.repos"), stats.repos || 0],
       [t("stat.demos"), stats.demos || 0],
-      [t("stat.categories"), stats.categories || 0],
     ];
     refs.statsGrid.innerHTML = items
       .map(([label, value]) => `<div class="stat"><strong>${html(value)}</strong><span>${html(label)}</span></div>`)
@@ -240,16 +316,8 @@
     refs.categorySelect.value = state.category;
   }
 
-  function sourceLabel(project) {
-    const kinds = project.sourceKinds || [];
-    if (kinds.includes("official-repo") && kinds.includes("dynamic-wall")) return t("source.officialWall");
-    if (kinds.includes("official-repo")) return t("source.official");
-    if (kinds.includes("dynamic-wall")) return t("source.wall");
-    return t("source.indexed");
-  }
-
   function evidencePills(project) {
-    const signals = project.evidence || {};
+    const signals = project?.evidence || {};
     const items = [
       [t("evidence.repo"), signals.hasRepo],
       [t("evidence.demo"), signals.hasDemo],
@@ -262,39 +330,111 @@
       .join("");
   }
 
-  function renderProjects() {
-    const projects = filteredProjects();
-    refs.resultCount.textContent = t("count.projects", { count: projects.length });
-    if (!projects.length) {
-      refs.projectList.innerHTML = `<div class="empty">${html(t("empty.projects"))}</div>`;
+  function recordTags(record) {
+    return (record.tags || [])
+      .filter(Boolean)
+      .slice(0, 8)
+      .map((tag) => `<span>${html(tag)}</span>`)
+      .join("");
+  }
+
+  function renderProjectRecord(record) {
+    const project = projectById(record.id);
+    if (!project) return "";
+    const links = [
+      project.repoUrl && `<a href="${html(project.repoUrl)}">${html(t("evidence.repo"))}</a>`,
+      project.demoUrl && `<a href="${html(project.demoUrl)}">${html(t("evidence.demo"))}</a>`,
+      project.projectWallUrl && `<a href="${html(project.projectWallUrl)}">${html(t("label.projectWall"))}</a>`,
+    ]
+      .filter(Boolean)
+      .join("");
+    return `
+      <article class="project-card result-card">
+        <div class="project-head">
+          <div>
+            <p class="eyebrow">${html(typeLabel(record.type))} / ${html(recordSourceLabel(record.source))}</p>
+            <h4>${html(project.name)}</h4>
+          </div>
+          <span class="score">${html(project.readinessScore || 0)}</span>
+        </div>
+        <p class="tagline">${html(project.tagline || project.summary || t("empty.summary"))}</p>
+        <div class="meta-row">
+          <span>${html(project.category || typeLabel(record.type))}</span>
+          <span>${html(project.track || t("label.trackUnknown"))}</span>
+          ${project.officialSnapshotPath ? `<span>${html(project.officialSnapshotPath)}</span>` : ""}
+        </div>
+        <div class="evidence-row">${evidencePills(project)}</div>
+        <div class="link-row">${links || `<span class="muted">${html(t("empty.links"))}</span>`}</div>
+      </article>
+    `;
+  }
+
+  function renderResourceRecord(record) {
+    const resource = resourceById(record.id) || record;
+    const headings = (resource.headings || []).slice(0, 6);
+    return `
+      <article class="project-card result-card">
+        <div class="project-head">
+          <div>
+            <p class="eyebrow">${html(typeLabel("resource"))} / ${html(recordSourceLabel(resource.source))}</p>
+            <h4>${html(resource.title)}</h4>
+          </div>
+        </div>
+        <p class="tagline">${html(resource.summary || t("empty.summary"))}</p>
+        <div class="meta-row">
+          <span>${html(resource.kind || typeLabel("resource"))}</span>
+          <span>${html(t("label.path"))}: ${html(resource.path || "")}</span>
+        </div>
+        <div class="radar-tags">${headings.map((heading) => `<span>${html(heading)}</span>`).join("")}</div>
+        <div class="link-row">${
+          resource.url ? `<a href="${html(resource.url)}">${html(t("label.open"))}</a>` : `<span class="muted">${html(recordSourceLabel(resource.source))}</span>`
+        }</div>
+      </article>
+    `;
+  }
+
+  function renderCommitRecord(record) {
+    const commit = commitById(record.id) || record;
+    return `
+      <article class="project-card result-card">
+        <div class="project-head">
+          <div>
+            <p class="eyebrow">${html(typeLabel("commit"))} / ${html(recordSourceLabel(commit.source))}</p>
+            <h4>${html(commit.title)}</h4>
+          </div>
+          <span class="score">${html(commit.shortHash || "")}</span>
+        </div>
+        <p class="tagline">${html(commit.summary || "")}</p>
+        <div class="meta-row">
+          <span>${html(t("label.author"))}: ${html(commit.author || "")}</span>
+          <span>${html(commit.date || "")}</span>
+        </div>
+        <div class="link-row">${
+          commit.url ? `<a href="${html(commit.url)}">${html(t("label.commit"))}</a>` : `<span class="muted">${html(t("source.snapshot"))}</span>`
+        }</div>
+      </article>
+    `;
+  }
+
+  function renderRecords() {
+    const records = filteredRecords();
+    refs.resultCount.textContent = t("count.records", { count: records.length });
+    if (!records.length) {
+      refs.projectList.innerHTML = `<div class="empty">${html(t("empty.records"))}</div>`;
       return;
     }
-    refs.projectList.innerHTML = projects
-      .map((project) => {
-        const links = [
-          project.repoUrl && `<a href="${html(project.repoUrl)}">${html(t("evidence.repo"))}</a>`,
-          project.demoUrl && `<a href="${html(project.demoUrl)}">${html(t("evidence.demo"))}</a>`,
-          project.officialArchiveUrl && `<a href="${html(project.officialArchiveUrl)}">${html(t("label.officialArchive"))}</a>`,
-          project.projectWallUrl && `<a href="${html(project.projectWallUrl)}">${html(t("label.projectWall"))}</a>`,
-        ]
-          .filter(Boolean)
-          .join("");
+
+    refs.projectList.innerHTML = records
+      .map((record) => {
+        if (record.type === "project") return renderProjectRecord(record);
+        if (record.type === "resource") return renderResourceRecord(record);
+        if (record.type === "commit") return renderCommitRecord(record);
         return `
-          <article class="project-card">
-            <div class="project-head">
-              <div>
-                <p class="eyebrow">${html(sourceLabel(project))}</p>
-                <h4>${html(project.name)}</h4>
-              </div>
-              <span class="score">${html(project.readinessScore || 0)}</span>
-            </div>
-            <p class="tagline">${html(project.tagline || project.summary || t("empty.summary"))}</p>
-            <div class="meta-row">
-              <span>${html(project.category || "Project")}</span>
-              <span>${html(project.track || t("label.trackUnknown"))}</span>
-            </div>
-            <div class="evidence-row">${evidencePills(project)}</div>
-            <div class="link-row">${links || `<span class="muted">${html(t("empty.links"))}</span>`}</div>
+          <article class="project-card result-card">
+            <p class="eyebrow">${html(typeLabel(record.type))}</p>
+            <h4>${html(record.title)}</h4>
+            <p class="tagline">${html(record.summary || "")}</p>
+            <div class="radar-tags">${recordTags(record)}</div>
           </article>
         `;
       })
@@ -302,20 +442,22 @@
   }
 
   function buildBrief() {
-    const projects = filteredProjects();
+    const records = filteredRecords();
+    const projects = records.filter((record) => record.type === "project").map((record) => projectById(record.id)).filter(Boolean);
     const missingRepo = projects.filter((project) => !project.evidence?.hasRepo).map((project) => project.name);
     const missingDemo = projects.filter((project) => !project.evidence?.hasDemo).map((project) => project.name);
-    const byCategory = projects.reduce((acc, project) => {
-      const key = project.category || "Project";
-      acc[key] = (acc[key] || 0) + 1;
+    const spread = records.reduce((acc, record) => {
+      acc[record.type] = (acc[record.type] || 0) + 1;
       return acc;
     }, {});
     const lines = [
       t("brief.title"),
-      t("brief.generated", { count: projects.length }),
+      t("brief.generated", { count: records.length }),
       "",
       t("brief.spread"),
-      ...Object.entries(byCategory).map(([category, count]) => `- ${category}: ${count}`),
+      `- ${t("brief.projects")}: ${spread.project || 0}`,
+      `- ${t("brief.resources")}: ${spread.resource || 0}`,
+      `- ${t("brief.commits")}: ${spread.commit || 0}`,
       "",
       t("brief.gaps"),
       `- ${t("brief.missingRepo")}: ${missingRepo.length ? missingRepo.join(", ") : t("brief.none")}`,
@@ -323,7 +465,8 @@
       "",
       t("brief.judgePass"),
       `- ${t("brief.start")}`,
-      `- ${t("brief.follow")}`,
+      `- ${t("brief.resourcePass")}`,
+      `- ${t("brief.commitPass")}`,
       `- ${t("brief.launchlens")}`,
     ];
     refs.briefOutput.textContent = lines.join("\n");
@@ -345,7 +488,9 @@
     renderStatus();
     renderStats();
     renderCategoryOptions();
-    renderProjects();
+    refs.scopeSelect.value = state.scope;
+    refs.evidenceSelect.value = state.evidence;
+    renderRecords();
   }
 
   async function load() {
@@ -362,15 +507,19 @@
 
   refs.searchInput.addEventListener("input", () => {
     state.query = refs.searchInput.value;
-    renderProjects();
+    renderRecords();
+  });
+  refs.scopeSelect.addEventListener("change", () => {
+    state.scope = refs.scopeSelect.value;
+    renderRecords();
   });
   refs.categorySelect.addEventListener("change", () => {
     state.category = refs.categorySelect.value;
-    renderProjects();
+    renderRecords();
   });
   refs.evidenceSelect.addEventListener("change", () => {
     state.evidence = refs.evidenceSelect.value;
-    renderProjects();
+    renderRecords();
   });
   refs.briefButton.addEventListener("click", buildBrief);
   refs.langEnBtn.addEventListener("click", () => {

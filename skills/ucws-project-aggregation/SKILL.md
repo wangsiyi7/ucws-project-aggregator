@@ -1,6 +1,6 @@
 # UCWS Project Aggregation Skill
 
-Use this skill when Codex needs to aggregate UCWS Singapore Hackathon 2026 project data, update the companion demo, or prepare judge-facing project comparisons.
+Use this skill when Codex needs to aggregate UCWS Singapore Hackathon 2026 project data, update the companion searcher demo, or prepare judge-facing project/resource/commit comparisons.
 
 ## Inputs
 
@@ -18,11 +18,14 @@ Use this skill when Codex needs to aggregate UCWS Singapore Hackathon 2026 proje
 2. Build the index:
    - Run `npm.cmd run build` in `ucws-project-aggregator`.
    - Inspect `data/project-index.json`.
+   - Confirm `projects`, `resources`, `commits`, and `searchRecords` are present.
 3. Validate:
    - Run `npm.cmd test`.
-   - Confirm project counts, evidence signals, and links.
+   - Confirm project counts, resource counts, commit counts, evidence signals, and links.
 4. Summarize for reviewers:
    - Group by category and track.
+   - Surface official resource records that match the review question.
+   - Surface commit records when the user asks what changed or when it changed.
    - List projects missing repo, demo, screenshots, or team context.
    - Do not invent missing evidence.
 5. Keep repositories linked:

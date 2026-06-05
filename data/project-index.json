@@ -1,11 +1,13 @@
 {
   "schemaVersion": "2026-06-05.ucws.project-index.v1",
-  "generatedAt": "2026-06-05T13:02:05.628Z",
+  "generatedAt": "2026-06-05T14:33:13.793Z",
   "sources": {
     "officialRepo": {
       "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026",
       "localPath": "C:\\Users\\35398\\Desktop\\UCWS 2026\\_tmp_ucws_official_repo",
-      "note": "Official UCWS archive. Project ownership remains with each team."
+      "localBranch": "launchlens-submission",
+      "publicBranch": "main",
+      "note": "Official UCWS archive root documents are public on main. Local project snapshot content can include newer submission-branch files."
     },
     "launchlens": {
       "repoUrl": "https://github.com/wangsiyi7/launchlens",
@@ -54,6 +56,10 @@
     "projects": 1,
     "officialProjects": 1,
     "dynamicProjects": 0,
+    "resources": 22,
+    "officialCommits": 2,
+    "aggregatorCommits": 5,
+    "searchableRecords": 30,
     "repos": 1,
     "demos": 1,
     "tracks": 1,
@@ -65,13 +71,1141 @@
   "categories": [
     "Skill / Workflow"
   ],
+  "resources": [
+    {
+      "id": "official:LICENSE",
+      "type": "resource",
+      "source": "official-repo",
+      "kind": "License",
+      "title": "License",
+      "path": "LICENSE",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/LICENSE",
+      "summary": "# License **No License** This repository and all content within it are provided as-is for the UCWS Hackathon Singapore 2026 platform and community support purposes only. ## Usage Rights - **This repository is NOT open source.** - **All rights reserved** to EPICConnector and respective contributors. - This platform is provided to support hackathon participants in project submission, documentation, and resource sharin...",
+      "content": "# License **No License** This repository and all content within it are provided as-is for the UCWS Hackathon Singapore 2026 platform and community support purposes only. ## Usage Rights - **This repository is NOT open source.** - **All rights reserved** to EPICConnector and respective contributors. - This platform is provided to support hackathon participants in project submission, documentation, and resource sharing. ## Intellectual Property ### Submitted Projects All hackathon projects submitted to this repository retain their intellectual property rights with their respective creators and teams. By submitting projects to this platform, teams grant EPICConnector the right to: - Display and showcase submitted projects - Archive and preserve project documentation - Reference projects for community and commercial purposes - Facilitate connections with potential partners, investors, and collaborators - Benefit from future commercialization opportunities in alignment with team interests ### Platform Content Documentation, guidelines, and support materials provided by EPICConnector are proprietary and may not be reproduced, distributed, or used without explicit permission from EPICConnector. ## Disclaimer This repository is provided \"as-is\" without warranties of any kind, express or implied. EPICConnector shall not be liable for any damages arising from the use or inability to use this repository or its contents. --- **© 2026 EPICConnector. All Rights Reserved.**",
+      "tags": [
+        "official",
+        "license"
+      ],
+      "headings": [
+        "License",
+        "Usage Rights",
+        "Intellectual Property",
+        "Submitted Projects",
+        "Platform Content",
+        "Disclaimer"
+      ],
+      "searchText": "license license license # license **no license** this repository and all content within it are provided as-is for the ucws hackathon singapore 2026 platform and community support purposes only. ## usage rights - **this repository is not open source.** - **all rights reserved** to epicconnector and respective contributors. - this platform is provided to support hackathon participants in project submission, documentation, and resource sharin... # license **no license** this repository and all content within it are provided as-is for the ucws hackathon singapore 2026 platform and community support purposes only. ## usage rights - **this repository is not open source.** - **all rights reserved** to epicconnector and respective contributors. - this platform is provided to support hackathon participants in project submission, documentation, and resource sharing. ## intellectual property ### submitted projects all hackathon projects submitted to this repository retain their intellectual property rights with their respective creators and teams. by submitting projects to this platform, teams grant epicconnector the right to: - display and showcase submitted projects - archive and preserve project documentation - reference projects for community and commercial purposes - facilitate connections with potential partners, investors, and collaborators - benefit from future commercialization opportunities in alignment with team interests ### platform content documentation, guidelines, and support materials provided by epicconnector are proprietary and may not be reproduced, distributed, or used without explicit permission from epicconnector. ## disclaimer this repository is provided \"as-is\" without warranties of any kind, express or implied. epicconnector shall not be liable for any damages arising from the use or inability to use this repository or its contents. --- **© 2026 epicconnector. all rights reserved.** license usage rights intellectual property submitted projects platform content disclaimer official license"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/ASSETS.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Asset Index",
+      "path": "projects/launchlens/ASSETS.md",
+      "url": "",
+      "summary": "# LaunchLens Asset Index > 中文 | English 本文件整理本次为 UCWS Singapore Hackathon 2026 生成的仓库内资产，方便提交、复盘和 GitHub 展示。 ## App 文件 | 文件 | 用途 | | --- | --- | | `index.html` | LaunchLens 主界面，包含中英切换、Temple Mode、Classic Mode、Project Wall 表单、评分输出、Optional LLM 面板 | | `styles.css` | 页面视觉样式、Temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、Temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、GitHub 发布和提交脚本入口 | ## 视觉资产 | 文件 |...",
+      "content": "# LaunchLens Asset Index > 中文 | English 本文件整理本次为 UCWS Singapore Hackathon 2026 生成的仓库内资产，方便提交、复盘和 GitHub 展示。 ## App 文件 | 文件 | 用途 | | --- | --- | | `index.html` | LaunchLens 主界面，包含中英切换、Temple Mode、Classic Mode、Project Wall 表单、评分输出、Optional LLM 面板 | | `styles.css` | 页面视觉样式、Temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、Temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、GitHub 发布和提交脚本入口 | ## 视觉资产 | 文件 | 用途 | | --- | --- | | `assets/logo.svg` | 项目 logo，可用于 Project Wall logo 字段 | | `assets/social-card.svg` | 社交分享图 / GitHub 预览图备用 | | `assets/temple-background.png` | 原创生成的 2.5D 古迹空间背景，用于 Temple Mode | | `assets/screenshot.png` | 英文桌面版 Temple Mode 项目截图 | | `assets/screenshot-zh.png` | 中文桌面版 Temple Mode 项目截图 | | `assets/screenshot-mobile.png` | 移动版 Temple Mode 项目截图 | ## 比赛提交材料 | 文件 | 用途 | | --- | --- | | `README.md` | GitHub 仓库首页，中英双语版本 | | `PROJECT_WALL_FIELDS.md` | Project Wall 字段复制源 | | `SUBMISSION.md` | 完整提交文案草稿 | | `JUDGING_BRIEF.md` | 面向评委的项目价值、UCWS 适配和证据简报 | | `DEMO_VIDEO_SCRIPT.md` | 60-90 秒录屏或现场演示脚本 | | `FINAL_SUBMISSION_RUNBOOK.md` | 最终提交执行清单 | | `FINAL_READINESS_REPORT.md` | 自动生成的最终就绪报告，列出当前 payload、检查项和外部缺口 | | `SPACE_INTERACTION_SPEC.md` | Temple Mode / Classic Mode 空间交互规格 | | `SUBMISSION_AUDIT.md` | 当前完成度、阻塞项和验证状态 | | `HACKATHON_STRATEGY.md` | 参赛策略与定位 | | `PROJECT_WALL_RESEARCH.md` | 官方 Project Wall/API 研究记录 | | `SOURCE.md` | 临时公开源码说明页 | ## 自动化脚本 | 文件 | 用途 | | --- | --- | | `tools/serve.mjs` | 在 `http://localhost:8080/launchlens/` 启动本地 demo | | `tools/serve-public-root.mjs` | 只暴露 `launchlens/` 目录给临时公网 tunnel | | `tools/build-project-payload.mjs` | 生成 `p...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Asset Index",
+        "App 文件",
+        "视觉资产",
+        "比赛提交材料",
+        "自动化脚本",
+        "配置与部署",
+        "生成包",
+        "LLM API 预留",
+        "English Summary"
+      ],
+      "searchText": "launchlens asset index project markdown projects/launchlens/assets.md # launchlens asset index > 中文 | english 本文件整理本次为 ucws singapore hackathon 2026 生成的仓库内资产，方便提交、复盘和 github 展示。 ## app 文件 | 文件 | 用途 | | --- | --- | | `index.html` | launchlens 主界面，包含中英切换、temple mode、classic mode、project wall 表单、评分输出、optional llm 面板 | | `styles.css` | 页面视觉样式、temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、github 发布和提交脚本入口 | ## 视觉资产 | 文件 |... # launchlens asset index > 中文 | english 本文件整理本次为 ucws singapore hackathon 2026 生成的仓库内资产，方便提交、复盘和 github 展示。 ## app 文件 | 文件 | 用途 | | --- | --- | | `index.html` | launchlens 主界面，包含中英切换、temple mode、classic mode、project wall 表单、评分输出、optional llm 面板 | | `styles.css` | 页面视觉样式、temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、github 发布和提交脚本入口 | ## 视觉资产 | 文件 | 用途 | | --- | --- | | `assets/logo.svg` | 项目 logo，可用于 project wall logo 字段 | | `assets/social-card.svg` | 社交分享图 / github 预览图备用 | | `assets/temple-background.png` | 原创生成的 2.5d 古迹空间背景，用于 temple mode | | `assets/screenshot.png` | 英文桌面版 temple mode 项目截图 | | `assets/screenshot-zh.png` | 中文桌面版 temple mode 项目截图 | | `assets/screenshot-mobile.png` | 移动版 temple mode 项目截图 | ## 比赛提交材料 | 文件 | 用途 | | --- | --- | | `readme.md` | github 仓库首页，中英双语版本 | | `project_wall_fields.md` | project wall 字段复制源 | | `submission.md` | 完整提交文案草稿 | | `judging_brief.md` | 面向评委的项目价值、ucws 适配和证据简报 | | `demo_video_script.md` | 60-90 秒录屏或现场演示脚本 | | `final_submission_runbook.md` | 最终提交执行清单 | | `final_readiness_report.md` | 自动生成的最终就绪报告，列出当前 payload、检查项和外部缺口 | | `space_interaction_spec.md` | temple mode / classic mode 空间交互规格 | | `submission_audit.md` | 当前完成度、阻塞项和验证状态 | | `hackathon_strategy.md` | 参赛策略与定位 | | `project_wall_research.md` | 官方 project wall/api 研究记录 | | `source.md` | 临时公开源码说明页 | ## 自动化脚本 | 文件 | 用途 | | --- | --- | | `tools/serve.mjs` | 在 `http://localhost:8080/launchlens/` 启动本地 demo | | `tools/serve-public-root.mjs` | 只暴露 `launchlens/` 目录给临时公网 tunnel | | `tools/build-project-payload.mjs` | 生成 `p... launchlens asset index app 文件 视觉资产 比赛提交材料 自动化脚本 配置与部署 生成包 llm api 预留 english summary project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/DEMO_VIDEO_SCRIPT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Demo Video Script",
+      "path": "projects/launchlens/DEMO_VIDEO_SCRIPT.md",
+      "url": "",
+      "summary": "# LaunchLens Demo Video Script Target length: 60-90 seconds. ## Scene 1: Open Narration: ```text This is LaunchLens, a UCWS Project Wall submission copilot for hackathon teams. It helps builders turn rough notes into a scored, ready-to-submit project package. ``` Action: - Open `http://127.0.0.1:8080/launchlens/`. - Show the Temple Mode first screen. - Point out the readiness score and the six spatial workflow nodes...",
+      "content": "# LaunchLens Demo Video Script Target length: 60-90 seconds. ## Scene 1: Open Narration: ```text This is LaunchLens, a UCWS Project Wall submission copilot for hackathon teams. It helps builders turn rough notes into a scored, ready-to-submit project package. ``` Action: - Open `http://127.0.0.1:8080/launchlens/`. - Show the Temple Mode first screen. - Point out the readiness score and the six spatial workflow nodes. - Click `中文`, then `EN`, to show bilingual app support. ## Scene 2: Temple Mode Narration: ```text The default experience is Temple Mode. Each node maps to a required part of the submission workflow: project story, evidence, scoring, optional LLM refinement, generated materials, and final handoff. ``` Action: - Click `Project Altar`. - Click `Evidence Steps`. - Click `Score Gate`. - Click `Oracle LLM`. - Click `Archive Hall`. - Click `Final Door`. ## Scene 3: Oracle LLM Narration: ```text Oracle LLM is a reserved OpenAI-compatible model slot. Teams can use their own endpoint, model, and API key to improve the current submission copy, while the key stays in the browser session. ``` Action: - Click `Oracle LLM`. - Click `Open Oracle`. - Show the endpoint, model, and API key fields. ## Scene 4: Classic Mode Narration: ```text For speed and reliability, Classic Mode keeps the full two-column form. Teams can edit Project Wall fields directly and run the review agent at any time. ``` Action: - Switch to `Classic`. - Show project fields. - Click `Run Review Agent`. - Show Community Vote, AI Evaluation, and Expert Judges cards. ## Scene 5: Generated Outputs Narration:...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Demo Video Script",
+        "Scene 1: Open",
+        "Scene 2: Temple Mode",
+        "Scene 3: Oracle LLM",
+        "Scene 4: Classic Mode",
+        "Scene 5: Generated Outputs",
+        "Scene 6: Final Handoff",
+        "Closing Line"
+      ],
+      "searchText": "launchlens demo video script project markdown projects/launchlens/demo_video_script.md # launchlens demo video script target length: 60-90 seconds. ## scene 1: open narration: ```text this is launchlens, a ucws project wall submission copilot for hackathon teams. it helps builders turn rough notes into a scored, ready-to-submit project package. ``` action: - open `http://127.0.0.1:8080/launchlens/`. - show the temple mode first screen. - point out the readiness score and the six spatial workflow nodes... # launchlens demo video script target length: 60-90 seconds. ## scene 1: open narration: ```text this is launchlens, a ucws project wall submission copilot for hackathon teams. it helps builders turn rough notes into a scored, ready-to-submit project package. ``` action: - open `http://127.0.0.1:8080/launchlens/`. - show the temple mode first screen. - point out the readiness score and the six spatial workflow nodes. - click `中文`, then `en`, to show bilingual app support. ## scene 2: temple mode narration: ```text the default experience is temple mode. each node maps to a required part of the submission workflow: project story, evidence, scoring, optional llm refinement, generated materials, and final handoff. ``` action: - click `project altar`. - click `evidence steps`. - click `score gate`. - click `oracle llm`. - click `archive hall`. - click `final door`. ## scene 3: oracle llm narration: ```text oracle llm is a reserved openai-compatible model slot. teams can use their own endpoint, model, and api key to improve the current submission copy, while the key stays in the browser session. ``` action: - click `oracle llm`. - click `open oracle`. - show the endpoint, model, and api key fields. ## scene 4: classic mode narration: ```text for speed and reliability, classic mode keeps the full two-column form. teams can edit project wall fields directly and run the review agent at any time. ``` action: - switch to `classic`. - show project fields. - click `run review agent`. - show community vote, ai evaluation, and expert judges cards. ## scene 5: generated outputs narration:... launchlens demo video script scene 1: open scene 2: temple mode scene 3: oracle llm scene 4: classic mode scene 5: generated outputs scene 6: final handoff closing line project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/DEPLOYMENT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Deployment",
+      "path": "projects/launchlens/DEPLOYMENT.md",
+      "url": "",
+      "summary": "# LaunchLens Deployment LaunchLens is a static app. Deploy the `launchlens/` folder as the site root. ## Netlify 1. Create a new Netlify site from the `launchlens/` folder. 2. Build command: leave empty. 3. Publish directory: `.`. 4. After deploy, open the generated URL and confirm the app loads. 5. Add the URL to `SUBMISSION.md` and Project Wall. The included `netlify.toml` already sets the publish directory and fa...",
+      "content": "# LaunchLens Deployment LaunchLens is a static app. Deploy the `launchlens/` folder as the site root. ## Netlify 1. Create a new Netlify site from the `launchlens/` folder. 2. Build command: leave empty. 3. Publish directory: `.`. 4. After deploy, open the generated URL and confirm the app loads. 5. Add the URL to `SUBMISSION.md` and Project Wall. The included `netlify.toml` already sets the publish directory and fallback route. ## Vercel 1. Import the repo into Vercel. 2. Set project root to `launchlens`. 3. Framework preset: Other. 4. Build command: leave empty. 5. Output directory: `.`. 6. Add the production URL to `SUBMISSION.md` and Project Wall. ## GitHub Pages 1. Push the repo to GitHub. 2. In repository settings, enable Pages. 3. Set Pages source to GitHub Actions. 4. The included `.github/workflows/pages.yml` will publish the static site. 5. Add the Pages URL to `SUBMISSION.md` and Project Wall. Push helper: ```powershell node tools/push-github.mjs https://github.com/YOUR_ACCOUNT/launchlens.git ``` Token-based create and publish helper: ```powershell $env:GITHUB_TOKEN=\"your-github-token\" node tools/publish-github.mjs launchlens ``` This can create or reuse the GitHub repository, regenerate and commit `project-payload.json` with the expected GitHub Pages URL, then push `main`. After GitHub Pages deploys, the likely public URL will be: ```text https://YOUR_ACCOUNT.github.io/launchlens/ ``` ## Local validation ```bash cd launchlens node tools/serve.mjs ``` Open: ```text http://localhost:8080/launchlens/ ``` Run tests: ```bash node tests/scoring.test.mjs ``` ## Build...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Deployment",
+        "Netlify",
+        "Vercel",
+        "GitHub Pages",
+        "Local validation",
+        "Build Project Wall payload",
+        "Submit to Epic Connector with your own token"
+      ],
+      "searchText": "launchlens deployment project markdown projects/launchlens/deployment.md # launchlens deployment launchlens is a static app. deploy the `launchlens/` folder as the site root. ## netlify 1. create a new netlify site from the `launchlens/` folder. 2. build command: leave empty. 3. publish directory: `.`. 4. after deploy, open the generated url and confirm the app loads. 5. add the url to `submission.md` and project wall. the included `netlify.toml` already sets the publish directory and fa... # launchlens deployment launchlens is a static app. deploy the `launchlens/` folder as the site root. ## netlify 1. create a new netlify site from the `launchlens/` folder. 2. build command: leave empty. 3. publish directory: `.`. 4. after deploy, open the generated url and confirm the app loads. 5. add the url to `submission.md` and project wall. the included `netlify.toml` already sets the publish directory and fallback route. ## vercel 1. import the repo into vercel. 2. set project root to `launchlens`. 3. framework preset: other. 4. build command: leave empty. 5. output directory: `.`. 6. add the production url to `submission.md` and project wall. ## github pages 1. push the repo to github. 2. in repository settings, enable pages. 3. set pages source to github actions. 4. the included `.github/workflows/pages.yml` will publish the static site. 5. add the pages url to `submission.md` and project wall. push helper: ```powershell node tools/push-github.mjs https://github.com/your_account/launchlens.git ``` token-based create and publish helper: ```powershell $env:github_token=\"your-github-token\" node tools/publish-github.mjs launchlens ``` this can create or reuse the github repository, regenerate and commit `project-payload.json` with the expected github pages url, then push `main`. after github pages deploys, the likely public url will be: ```text https://your_account.github.io/launchlens/ ``` ## local validation ```bash cd launchlens node tools/serve.mjs ``` open: ```text http://localhost:8080/launchlens/ ``` run tests: ```bash node tests/scoring.test.mjs ``` ## build... launchlens deployment netlify vercel github pages local validation build project wall payload submit to epic connector with your own token project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/FINAL_READINESS_REPORT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Final Readiness Report / 最终提交就绪报告",
+      "path": "projects/launchlens/FINAL_READINESS_REPORT.md",
+      "url": "",
+      "summary": "# Final Readiness Report / 最终提交就绪报告 Generated by `node tools/final-readiness-report.mjs`. ## Summary / 摘要 LaunchLens is locally submission-ready as an app and repository package. The remaining blockers are external submission inputs: a stable public demo URL, an HTTPS GitHub repository URL, real team member names, and Epic Connector login/token for the actual Project Wall submission. LaunchLens 本地 App、仓库资产和提交包已经就绪。剩...",
+      "content": "# Final Readiness Report / 最终提交就绪报告 Generated by `node tools/final-readiness-report.mjs`. ## Summary / 摘要 LaunchLens is locally submission-ready as an app and repository package. The remaining blockers are external submission inputs: a stable public demo URL, an HTTPS GitHub repository URL, real team member names, and Epic Connector login/token for the actual Project Wall submission. LaunchLens 本地 App、仓库资产和提交包已经就绪。剩余阻塞来自外部提交信息：稳定公开 Demo URL、HTTPS GitHub 仓库 URL、真实团队成员，以及 Epic Connector 登录/token。 ## Current Payload / 当前 Payload | Field | Value | | --- | --- | | Project | LaunchLens | | Track | Application | | Demo URL | https://your-demo-url.example.com | | Repo URL | https://github.com/YOUR_ACCOUNT/launchlens | | Screenshot URLs | [\"https://your-demo-url.example.com/assets/screenshot.png\"] | | Logo URL | https://your-demo-url.example.com/assets/logo.svg | | Team Members | [{\"name\":\"Add submitting team members\",\"role\":\"Builder\",\"links\":{}}] | ## Checks / 检查 | Check | Status | Evidence | | --- | --- | --- | | Local source files | Ready | All required app, docs, scripts, and workflow files exist. | | Temple Mode assets | Ready | Background=2899711 bytes; EN screenshot=1626107 bytes; ZH screenshot=1629539 bytes; mobile screenshot=298127 bytes. | | Git state | Ready | Clean working tree. | | Git remote | Needs input | No GitHub remote configured yet. | | Local demo | Ready | HTTP 200; LaunchLens=true; Temple=true | | Project Wall payload | Needs input | Submission payload is not ready:<br>- demoUrl still contains a placeholder.<br>- logoUrl still contains a placeholder.<br>- scr...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Final Readiness Report / 最终提交就绪报告",
+        "Summary / 摘要",
+        "Current Payload / 当前 Payload",
+        "Checks / 检查",
+        "Environment Inputs / 环境输入",
+        "Required Final Actions / 最终必做",
+        "Validation Output / 校验输出"
+      ],
+      "searchText": "final readiness report / 最终提交就绪报告 project markdown projects/launchlens/final_readiness_report.md # final readiness report / 最终提交就绪报告 generated by `node tools/final-readiness-report.mjs`. ## summary / 摘要 launchlens is locally submission-ready as an app and repository package. the remaining blockers are external submission inputs: a stable public demo url, an https github repository url, real team member names, and epic connector login/token for the actual project wall submission. launchlens 本地 app、仓库资产和提交包已经就绪。剩... # final readiness report / 最终提交就绪报告 generated by `node tools/final-readiness-report.mjs`. ## summary / 摘要 launchlens is locally submission-ready as an app and repository package. the remaining blockers are external submission inputs: a stable public demo url, an https github repository url, real team member names, and epic connector login/token for the actual project wall submission. launchlens 本地 app、仓库资产和提交包已经就绪。剩余阻塞来自外部提交信息：稳定公开 demo url、https github 仓库 url、真实团队成员，以及 epic connector 登录/token。 ## current payload / 当前 payload | field | value | | --- | --- | | project | launchlens | | track | application | | demo url | https://your-demo-url.example.com | | repo url | https://github.com/your_account/launchlens | | screenshot urls | [\"https://your-demo-url.example.com/assets/screenshot.png\"] | | logo url | https://your-demo-url.example.com/assets/logo.svg | | team members | [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] | ## checks / 检查 | check | status | evidence | | --- | --- | --- | | local source files | ready | all required app, docs, scripts, and workflow files exist. | | temple mode assets | ready | background=2899711 bytes; en screenshot=1626107 bytes; zh screenshot=1629539 bytes; mobile screenshot=298127 bytes. | | git state | ready | clean working tree. | | git remote | needs input | no github remote configured yet. | | local demo | ready | http 200; launchlens=true; temple=true | | project wall payload | needs input | submission payload is not ready:<br>- demourl still contains a placeholder.<br>- logourl still contains a placeholder.<br>- scr... final readiness report / 最终提交就绪报告 summary / 摘要 current payload / 当前 payload checks / 检查 environment inputs / 环境输入 required final actions / 最终必做 validation output / 校验输出 project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/FINAL_SUBMISSION_RUNBOOK.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Final Submission Runbook",
+      "path": "projects/launchlens/FINAL_SUBMISSION_RUNBOOK.md",
+      "url": "",
+      "summary": "# Final Submission Runbook Use this as the last-mile checklist for submitting LaunchLens to the UCWS Singapore Hackathon 2026 Project Wall. ## Current Readiness | Item | Status | Evidence | | --- | --- | --- | | Working app | Ready | `index.html`, `styles.css`, `app.js` | | Local Git repo | Ready | branch `main` | | Temporary public demo | Currently unavailable | Cloudflare returned 530 / TLS edge errors; localtunne...",
+      "content": "# Final Submission Runbook Use this as the last-mile checklist for submitting LaunchLens to the UCWS Singapore Hackathon 2026 Project Wall. ## Current Readiness | Item | Status | Evidence | | --- | --- | --- | | Working app | Ready | `index.html`, `styles.css`, `app.js` | | Local Git repo | Ready | branch `main` | | Temporary public demo | Currently unavailable | Cloudflare returned 530 / TLS edge errors; localtunnel returned 502 / 503 | | Screenshots | Ready | `assets/screenshot.png`, `assets/screenshot-mobile.png` | | Project Wall copy | Ready | `PROJECT_WALL_FIELDS.md`, `SUBMISSION.md` | | GitHub repository | Needs account access | provide remote URL or `GITHUB_TOKEN` | | Final Project Wall payload | Needs final demo URL, GitHub URL, and team names | `project-payload.json` intentionally uses placeholders | | Actual Project Wall submission | Needs Epic login token | `EPIC_TOKEN` | ## Official Constraints Already Reflected - Event: UCWS Singapore Hackathon 2026. - Tracks: Agent, Skill, Application, DeepResearch. - Selected track: Application. - Public Project Wall project list and project submission endpoint require authentication. - Hackathon project form requires an HTTPS GitHub repository URL. - Scoring lens: Community Vote, AI Evaluation, Expert Judges. ## Step 1: Publish To GitHub Preferred token-based path: ```powershell cd \"C:\\Users\\35398\\Desktop\\UCWS 2026\\launchlens\" $env:GITHUB_TOKEN=\"your-github-token\" $env:LAUNCHLENS_TEAM_MEMBERS=\"Your Name\" node tools/publish-github.mjs launchlens ``` What this does: - Creates or reuses `https://github.com/YOUR_ACCOUNT/launchl...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Final Submission Runbook",
+        "Current Readiness",
+        "Official Constraints Already Reflected",
+        "Step 1: Publish To GitHub",
+        "Step 2: Enable GitHub Pages",
+        "Step 3: Validate Payload",
+        "Step 4: Submit To Project Wall",
+        "Exact Project Wall Copy",
+        "Do Not Submit These As Final Values"
+      ],
+      "searchText": "final submission runbook project markdown projects/launchlens/final_submission_runbook.md # final submission runbook use this as the last-mile checklist for submitting launchlens to the ucws singapore hackathon 2026 project wall. ## current readiness | item | status | evidence | | --- | --- | --- | | working app | ready | `index.html`, `styles.css`, `app.js` | | local git repo | ready | branch `main` | | temporary public demo | currently unavailable | cloudflare returned 530 / tls edge errors; localtunne... # final submission runbook use this as the last-mile checklist for submitting launchlens to the ucws singapore hackathon 2026 project wall. ## current readiness | item | status | evidence | | --- | --- | --- | | working app | ready | `index.html`, `styles.css`, `app.js` | | local git repo | ready | branch `main` | | temporary public demo | currently unavailable | cloudflare returned 530 / tls edge errors; localtunnel returned 502 / 503 | | screenshots | ready | `assets/screenshot.png`, `assets/screenshot-mobile.png` | | project wall copy | ready | `project_wall_fields.md`, `submission.md` | | github repository | needs account access | provide remote url or `github_token` | | final project wall payload | needs final demo url, github url, and team names | `project-payload.json` intentionally uses placeholders | | actual project wall submission | needs epic login token | `epic_token` | ## official constraints already reflected - event: ucws singapore hackathon 2026. - tracks: agent, skill, application, deepresearch. - selected track: application. - public project wall project list and project submission endpoint require authentication. - hackathon project form requires an https github repository url. - scoring lens: community vote, ai evaluation, expert judges. ## step 1: publish to github preferred token-based path: ```powershell cd \"c:\\users\\35398\\desktop\\ucws 2026\\launchlens\" $env:github_token=\"your-github-token\" $env:launchlens_team_members=\"your name\" node tools/publish-github.mjs launchlens ``` what this does: - creates or reuses `https://github.com/your_account/launchl... final submission runbook current readiness official constraints already reflected step 1: publish to github step 2: enable github pages step 3: validate payload step 4: submit to project wall exact project wall copy do not submit these as final values project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/HACKATHON_STRATEGY.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Hackathon Strategy",
+      "path": "projects/launchlens/HACKATHON_STRATEGY.md",
+      "url": "",
+      "summary": "# Hackathon Strategy ## Why LaunchLens is a fast-fit UCWS project The UCWS scoring model rewards public clarity, implementation quality, and expert-level product value. LaunchLens is designed around those exact signals. ## Differentiation Many hackathon entries focus on agents, plugins, and AI workflows. LaunchLens focuses on a shared bottleneck: every team needs a stronger submission package before community voting...",
+      "content": "# Hackathon Strategy ## Why LaunchLens is a fast-fit UCWS project The UCWS scoring model rewards public clarity, implementation quality, and expert-level product value. LaunchLens is designed around those exact signals. ## Differentiation Many hackathon entries focus on agents, plugins, and AI workflows. LaunchLens focuses on a shared bottleneck: every team needs a stronger submission package before community voting, AI evaluation, and expert judging. That makes the product useful to the event ecosystem itself. ## Evaluation Alignment ### Community Vote - Immediate browser demo. - Clear first-screen utility. - Useful to other participants, not only judges. - Copy/export makes the product shareable. ### AI Evaluation - Simple repo structure. - No hidden backend dependency. - README, deployment docs, tests, and screenshots included. - Scoring logic is inspectable in JavaScript. ### Expert Judges - Solves a real deadline problem for builders. - Global applicability beyond UCWS. - Clear expansion path: authenticated Project Wall import, repo-health checks, multi-event templates, and team collaboration. ## Recommended final pitch angle LaunchLens is not another generic writing assistant. It is a submission-readiness product for hackathon teams, tuned to the workflow and evaluation reality of UCWS.",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Hackathon Strategy",
+        "Why LaunchLens is a fast-fit UCWS project",
+        "Differentiation",
+        "Evaluation Alignment",
+        "Community Vote",
+        "AI Evaluation",
+        "Expert Judges",
+        "Recommended final pitch angle"
+      ],
+      "searchText": "hackathon strategy project markdown projects/launchlens/hackathon_strategy.md # hackathon strategy ## why launchlens is a fast-fit ucws project the ucws scoring model rewards public clarity, implementation quality, and expert-level product value. launchlens is designed around those exact signals. ## differentiation many hackathon entries focus on agents, plugins, and ai workflows. launchlens focuses on a shared bottleneck: every team needs a stronger submission package before community voting... # hackathon strategy ## why launchlens is a fast-fit ucws project the ucws scoring model rewards public clarity, implementation quality, and expert-level product value. launchlens is designed around those exact signals. ## differentiation many hackathon entries focus on agents, plugins, and ai workflows. launchlens focuses on a shared bottleneck: every team needs a stronger submission package before community voting, ai evaluation, and expert judging. that makes the product useful to the event ecosystem itself. ## evaluation alignment ### community vote - immediate browser demo. - clear first-screen utility. - useful to other participants, not only judges. - copy/export makes the product shareable. ### ai evaluation - simple repo structure. - no hidden backend dependency. - readme, deployment docs, tests, and screenshots included. - scoring logic is inspectable in javascript. ### expert judges - solves a real deadline problem for builders. - global applicability beyond ucws. - clear expansion path: authenticated project wall import, repo-health checks, multi-event templates, and team collaboration. ## recommended final pitch angle launchlens is not another generic writing assistant. it is a submission-readiness product for hackathon teams, tuned to the workflow and evaluation reality of ucws. hackathon strategy why launchlens is a fast-fit ucws project differentiation evaluation alignment community vote ai evaluation expert judges recommended final pitch angle project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/JUDGING_BRIEF.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Judging Brief",
+      "path": "projects/launchlens/JUDGING_BRIEF.md",
+      "url": "",
+      "summary": "# LaunchLens Judging Brief ## One-Line Summary LaunchLens turns rough hackathon notes into scored, copy-ready Project Wall submission materials, with a spatial Temple Mode and a reliable Classic Mode. ## Why This Project Exists Hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. UCWS submissions must satisfy community voters, AI evaluation, an...",
+      "content": "# LaunchLens Judging Brief ## One-Line Summary LaunchLens turns rough hackathon notes into scored, copy-ready Project Wall submission materials, with a spatial Temple Mode and a reliable Classic Mode. ## Why This Project Exists Hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. UCWS submissions must satisfy community voters, AI evaluation, and expert judges at the same time. LaunchLens focuses on that final-mile problem. ## UCWS Fit | UCWS Lens | LaunchLens Response | | --- | --- | | Real product value | Helps any UCWS builder prepare a stronger submission before deadline. | | Execution quality | Complete bilingual browser app with scoring, generated outputs, copy/export, local autosave, Temple Mode, Classic Mode, and optional LLM refinement. | | Global scalability | Works for hackathons, accelerators, pitch events, demo days, and product launch reviews beyond UCWS. | | Community vote | Makes project value readable and shareable in minutes. | | AI evaluation | Encourages GitHub repo URL, evidence fields, screenshots, tech stack, README, and structured submission copy. | | Expert judges | Clarifies user pain, product workflow, proof, business relevance, and final submission readiness. | ## Product Walkthrough 1. Open LaunchLens. 2. Start in Temple Mode, the spatial submission workflow. 3. Click six nodes: - Project Altar: project story - Evidence Steps: demo, repo, screenshots, team - Score Gate: readiness score - Oracle LLM: optional OpenAI-compatible enhancement - Archive Hall: generated materials...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Judging Brief",
+        "One-Line Summary",
+        "Why This Project Exists",
+        "UCWS Fit",
+        "Product Walkthrough",
+        "Current Proof",
+        "What Makes It Different",
+        "Remaining External Inputs"
+      ],
+      "searchText": "launchlens judging brief project markdown projects/launchlens/judging_brief.md # launchlens judging brief ## one-line summary launchlens turns rough hackathon notes into scored, copy-ready project wall submission materials, with a spatial temple mode and a reliable classic mode. ## why this project exists hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. ucws submissions must satisfy community voters, ai evaluation, an... # launchlens judging brief ## one-line summary launchlens turns rough hackathon notes into scored, copy-ready project wall submission materials, with a spatial temple mode and a reliable classic mode. ## why this project exists hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. ucws submissions must satisfy community voters, ai evaluation, and expert judges at the same time. launchlens focuses on that final-mile problem. ## ucws fit | ucws lens | launchlens response | | --- | --- | | real product value | helps any ucws builder prepare a stronger submission before deadline. | | execution quality | complete bilingual browser app with scoring, generated outputs, copy/export, local autosave, temple mode, classic mode, and optional llm refinement. | | global scalability | works for hackathons, accelerators, pitch events, demo days, and product launch reviews beyond ucws. | | community vote | makes project value readable and shareable in minutes. | | ai evaluation | encourages github repo url, evidence fields, screenshots, tech stack, readme, and structured submission copy. | | expert judges | clarifies user pain, product workflow, proof, business relevance, and final submission readiness. | ## product walkthrough 1. open launchlens. 2. start in temple mode, the spatial submission workflow. 3. click six nodes: - project altar: project story - evidence steps: demo, repo, screenshots, team - score gate: readiness score - oracle llm: optional openai-compatible enhancement - archive hall: generated materials... launchlens judging brief one-line summary why this project exists ucws fit product walkthrough current proof what makes it different remaining external inputs project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/netlify.toml",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Metadata",
+      "title": "launchlens / netlify.toml",
+      "path": "projects/launchlens/netlify.toml",
+      "url": "",
+      "summary": "[build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] X-Content-Type-Options = \"nosniff\" Referrer-Policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200",
+      "content": "[build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] X-Content-Type-Options = \"nosniff\" Referrer-Policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200",
+      "tags": [
+        "project",
+        "launchlens",
+        "toml"
+      ],
+      "headings": [],
+      "searchText": "launchlens / netlify.toml project metadata projects/launchlens/netlify.toml [build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] x-content-type-options = \"nosniff\" referrer-policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200 [build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] x-content-type-options = \"nosniff\" referrer-policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200 project launchlens toml"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/package.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Metadata",
+      "title": "launchlens / package.json",
+      "path": "projects/launchlens/package.json",
+      "url": "",
+      "summary": "{ \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"UCWS Project Wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/fina...",
+      "content": "{ \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"UCWS Project Wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/final-readiness-report.mjs\", \"create:github\": \"node tools/create-github-repo.mjs\", \"publish:github\": \"node tools/publish-github.mjs\", \"push:github\": \"node tools/push-github.mjs\", \"complete:submission\": \"node tools/complete-submission.mjs\", \"submit\": \"node tools/submit-project.mjs\" } }",
+      "tags": [
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "headings": [],
+      "searchText": "launchlens / package.json project metadata projects/launchlens/package.json { \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"ucws project wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/fina... { \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"ucws project wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/final-readiness-report.mjs\", \"create:github\": \"node tools/create-github-repo.mjs\", \"publish:github\": \"node tools/publish-github.mjs\", \"push:github\": \"node tools/push-github.mjs\", \"complete:submission\": \"node tools/complete-submission.mjs\", \"submit\": \"node tools/submit-project.mjs\" } } project launchlens json"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/PROJECT_WALL_FIELDS.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Project Wall Fields",
+      "path": "projects/launchlens/PROJECT_WALL_FIELDS.md",
+      "url": "",
+      "summary": "# Project Wall Fields Use this file as the copy-paste source for the UCWS Project Wall submission. ## Required ### Project Name LaunchLens ### Track Application ### Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ### Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have...",
+      "content": "# Project Wall Fields Use this file as the copy-paste source for the UCWS Project Wall submission. ## Required ### Project Name LaunchLens ### Track Application ### Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ### Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly. LaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. It helps builders move from rough notes to a credible public submission in minutes. The current version includes Temple Mode, a 2.5D spatial submission workflow with six clickable nodes for project story, evidence, score, Oracle LLM, generated archive, and final GitHub / Project Wall handoff. Classic Mode remains available for fast form editing and stable export. The first use case is UCWS Singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. ### Demo URL Local review: `http://localhost:8080/launchlens/` Public demo URL: ```text https://your-demo-url.example.com ``` Replace this placeholder with a stable GitHub Pages / Netlify / Vercel URL before final judging. If using GitHub Pages: ```text https://YOUR_ACCOUNT.github.io/launchlens/ ```...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Project Wall Fields",
+        "Required",
+        "Project Name",
+        "Track",
+        "Tagline",
+        "Description",
+        "Demo URL",
+        "Repo URL",
+        "Tech Stack",
+        "Project Screenshot",
+        "Team Members",
+        "Optional"
+      ],
+      "searchText": "project wall fields project markdown projects/launchlens/project_wall_fields.md # project wall fields use this file as the copy-paste source for the ucws project wall submission. ## required ### project name launchlens ### track application ### tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ### description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have... # project wall fields use this file as the copy-paste source for the ucws project wall submission. ## required ### project name launchlens ### track application ### tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ### description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. ### demo url local review: `http://localhost:8080/launchlens/` public demo url: ```text https://your-demo-url.example.com ``` replace this placeholder with a stable github pages / netlify / vercel url before final judging. if using github pages: ```text https://your_account.github.io/launchlens/ ```... project wall fields required project name track tagline description demo url repo url tech stack project screenshot team members optional project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/PROJECT_WALL_RESEARCH.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Project Wall Research Notes",
+      "path": "projects/launchlens/PROJECT_WALL_RESEARCH.md",
+      "url": "",
+      "summary": "# Project Wall Research Notes ## Sources checked - Official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - Project Wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - Event API: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - Project API discovered from frontend chunk: `/api/projects?ev...",
+      "content": "# Project Wall Research Notes ## Sources checked - Official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - Project Wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - Event API: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - Project API discovered from frontend chunk: `/api/projects?eventId={eventId}&sort={sort}&limit=20&offset={offset}` - Public web search for UCWS-related repos, skills, and submissions ## Access finding The Project Wall frontend loads the event metadata publicly, but the project list endpoint returns HTTP 401 without a logged-in Epic Connector token. The static page and frontend chunks confirm that project list data is fetched from `/api/projects`, but complete anonymous export is blocked. Latest re-check on June 5, 2026 (Asia/Shanghai): event metadata is still public, project submission and editing are still enabled, current participants are 545, and the anonymous Project API still returns HTTP 401. Event ID discovered: ```text 364d3219-5907-48b6-a34d-e95f90b10579 ``` ## Event facts from the official API - Title: UCWS Singapore Hackathon -- 2026 - Format: hybrid - Location: Singapore - Participants: 545 current participants reported by the API on June 5, 2026 - Tracks: Agent, Skill, Application, DeepResearch - Submission enabled: true - Project edit enabled: true - Demo Day: June 13, 2026 ## Observed opportunity Public search results and visible ecosystem context show many builder-tool, agent, and skill-plugin submissions....",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Project Wall Research Notes",
+        "Sources checked",
+        "Access finding",
+        "Event facts from the official API",
+        "Observed opportunity",
+        "Submission strategy",
+        "GitHub repository finding"
+      ],
+      "searchText": "project wall research notes project markdown projects/launchlens/project_wall_research.md # project wall research notes ## sources checked - official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - project wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - event api: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - project api discovered from frontend chunk: `/api/projects?ev... # project wall research notes ## sources checked - official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - project wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - event api: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - project api discovered from frontend chunk: `/api/projects?eventid={eventid}&sort={sort}&limit=20&offset={offset}` - public web search for ucws-related repos, skills, and submissions ## access finding the project wall frontend loads the event metadata publicly, but the project list endpoint returns http 401 without a logged-in epic connector token. the static page and frontend chunks confirm that project list data is fetched from `/api/projects`, but complete anonymous export is blocked. latest re-check on june 5, 2026 (asia/shanghai): event metadata is still public, project submission and editing are still enabled, current participants are 545, and the anonymous project api still returns http 401. event id discovered: ```text 364d3219-5907-48b6-a34d-e95f90b10579 ``` ## event facts from the official api - title: ucws singapore hackathon -- 2026 - format: hybrid - location: singapore - participants: 545 current participants reported by the api on june 5, 2026 - tracks: agent, skill, application, deepresearch - submission enabled: true - project edit enabled: true - demo day: june 13, 2026 ## observed opportunity public search results and visible ecosystem context show many builder-tool, agent, and skill-plugin submissions.... project wall research notes sources checked access finding event facts from the official api observed opportunity submission strategy github repository finding project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/project-payload.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Metadata",
+      "title": "launchlens / project-payload.json",
+      "path": "projects/launchlens/project-payload.json",
+      "url": "",
+      "summary": "{ \"name\": \"LaunchLens\", \"track\": \"Application\", \"tagline\": \"Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages.\", \"description\": \"LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and...",
+      "content": "{ \"name\": \"LaunchLens\", \"track\": \"Application\", \"tagline\": \"Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages.\", \"description\": \"LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly.\\n\\nLaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. It helps builders move from rough notes to a credible public submission in minutes.\\n\\nThe current version includes Temple Mode, a 2.5D spatial submission workflow with six clickable nodes for project story, evidence, score, Oracle LLM, generated archive, and final GitHub / Project Wall handoff. Classic Mode remains available for fast form editing and stable export.\\n\\nThe first use case is UCWS Singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.\", \"demoUrl\": \"https://your-demo-url.example.com\", \"repoUrl\": \"https://github.com/YOUR_ACCOUNT/launchlens\", \"techStack\": \"HTML, CSS, JavaScript, browser localStorage, 2.5D generated bitmap background, optional OpenAI-compatible chat completion endpoint\", \"screenshotUrls\": \"[\\\"https://your-demo-url.example.com/assets/screenshot.png\\\"]\", \"logoUrl\": \"https://your-demo-url.example.com/assets/logo.svg\", \"d...",
+      "tags": [
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "headings": [],
+      "searchText": "launchlens / project-payload.json project metadata projects/launchlens/project-payload.json { \"name\": \"launchlens\", \"track\": \"application\", \"tagline\": \"turn rough hackathon ideas into scored, ready-to-submit project wall packages.\", \"description\": \"launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and... { \"name\": \"launchlens\", \"track\": \"application\", \"tagline\": \"turn rough hackathon ideas into scored, ready-to-submit project wall packages.\", \"description\": \"launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly.\\n\\nlaunchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes.\\n\\nthe current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export.\\n\\nthe first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.\", \"demourl\": \"https://your-demo-url.example.com\", \"repourl\": \"https://github.com/your_account/launchlens\", \"techstack\": \"html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint\", \"screenshoturls\": \"[\\\"https://your-demo-url.example.com/assets/screenshot.png\\\"]\", \"logourl\": \"https://your-demo-url.example.com/assets/logo.svg\", \"d... project launchlens json"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/README.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens",
+      "path": "projects/launchlens/README.md",
+      "url": "",
+      "summary": "# LaunchLens > 中文 | [English](#english) 把粗糙的 Hackathon 项目想法、README 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 Project Wall 材料包。 LaunchLens 是为 **UCWS Singapore Hackathon 2026** 准备的浏览器端提交助手。它对齐 Project Wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、README、90 秒 pitch、冲刺计划和风险修复清单。 ![LaunchLens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：Demo URL、Repo URL、技术栈、截图、团队成员、项目描述、评委视角、AI 自动评估视角、社区投票视角都要同时兼顾。LaunchLen...",
+      "content": "# LaunchLens > 中文 | [English](#english) 把粗糙的 Hackathon 项目想法、README 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 Project Wall 材料包。 LaunchLens 是为 **UCWS Singapore Hackathon 2026** 准备的浏览器端提交助手。它对齐 Project Wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、README、90 秒 pitch、冲刺计划和风险修复清单。 ![LaunchLens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：Demo URL、Repo URL、技术栈、截图、团队成员、项目描述、评委视角、AI 自动评估视角、社区投票视角都要同时兼顾。LaunchLens 解决的是这条最后一公里。 它不是一个静态宣传页，而是一个第一屏即可使用的 App。 ## 适配比赛 - 比赛：UCWS Singapore Hackathon 2026 - 赛道：Application - 评分视角：Community Vote、AI Evaluation、Expert Judges - 提交字段：项目名、赛道、tagline、description、Demo URL、Repo URL、tech stack、screenshots、logo、team members - 项目墙限制：最终 Repo URL 应使用 HTTPS GitHub 仓库链接 ## 核心功能 - Project Wall 字段体检：检查项目名、赛道、tagline、描述、Demo URL、Repo URL、技术栈、截图和团队成员。 - 三类评分：按社区可读性、AI 可评估性、专家评审价值生成 readiness score。 - 自动生成材料：Submission Pack、README、Pitch、Sprint Plan、Fix List。 - 本地自动保存：使用浏览器 `localStorage` 保存草稿。 - 一键复制和 JSON 导出：方便直接粘贴到 Project Wall。 - App 中英切换：界面、Temple 节点、评分说明、修复建议和生成材料均支持 English / 中文。 - 预留大模型 API：内置 Optional LLM 面板，支持 OpenAI-compatible chat completions。 - Temple Mode + Classic Mode：默认展示 2.5D 空间化提交神殿，同时保留稳定双栏表单工具。 ## 空间交互 LaunchLens 已实现 `Temple Mode + Classic Mode` 双模式： - Temple Mode：空间化提交神殿，用 6 个热点引导项目输入、证据检查、评分、大模型润色、材料整理和最终提交，默认作为演示第一屏。 - Classic Mode：保留当前双栏工具布局，用于快速填表、生成材料和稳定提交。 空间交互规格见 `SPACE_INTERACTION_SPEC.md`。V1 已按规格实现 `Oracle LLM` 一级节点、`Final Door` 提交节点、移动端底部导航和 Temple / Classic 顶部切换，并继续复用原有评分、导出和 LLM 逻辑。 ## 大模型 API 预留能力 App 里已经预留了大模型增强入口： - Endpoint：例如 `https://api.openai.com/v1/chat/completions` - Model：例如 `gpt-4.1-mini` - API key：用户自己的...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens",
+        "项目定位",
+        "适配比赛",
+        "核心功能",
+        "空间交互",
+        "大模型 API 预留能力",
+        "快速运行",
+        "GitHub 发布",
+        "Project Wall 提交",
+        "资产清单",
+        "技术栈",
+        "English"
+      ],
+      "searchText": "launchlens project markdown projects/launchlens/readme.md # launchlens > 中文 | [english](#english) 把粗糙的 hackathon 项目想法、readme 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 project wall 材料包。 launchlens 是为 **ucws singapore hackathon 2026** 准备的浏览器端提交助手。它对齐 project wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、readme、90 秒 pitch、冲刺计划和风险修复清单。 ![launchlens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：demo url、repo url、技术栈、截图、团队成员、项目描述、评委视角、ai 自动评估视角、社区投票视角都要同时兼顾。launchlen... # launchlens > 中文 | [english](#english) 把粗糙的 hackathon 项目想法、readme 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 project wall 材料包。 launchlens 是为 **ucws singapore hackathon 2026** 准备的浏览器端提交助手。它对齐 project wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、readme、90 秒 pitch、冲刺计划和风险修复清单。 ![launchlens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：demo url、repo url、技术栈、截图、团队成员、项目描述、评委视角、ai 自动评估视角、社区投票视角都要同时兼顾。launchlens 解决的是这条最后一公里。 它不是一个静态宣传页，而是一个第一屏即可使用的 app。 ## 适配比赛 - 比赛：ucws singapore hackathon 2026 - 赛道：application - 评分视角：community vote、ai evaluation、expert judges - 提交字段：项目名、赛道、tagline、description、demo url、repo url、tech stack、screenshots、logo、team members - 项目墙限制：最终 repo url 应使用 https github 仓库链接 ## 核心功能 - project wall 字段体检：检查项目名、赛道、tagline、描述、demo url、repo url、技术栈、截图和团队成员。 - 三类评分：按社区可读性、ai 可评估性、专家评审价值生成 readiness score。 - 自动生成材料：submission pack、readme、pitch、sprint plan、fix list。 - 本地自动保存：使用浏览器 `localstorage` 保存草稿。 - 一键复制和 json 导出：方便直接粘贴到 project wall。 - app 中英切换：界面、temple 节点、评分说明、修复建议和生成材料均支持 english / 中文。 - 预留大模型 api：内置 optional llm 面板，支持 openai-compatible chat completions。 - temple mode + classic mode：默认展示 2.5d 空间化提交神殿，同时保留稳定双栏表单工具。 ## 空间交互 launchlens 已实现 `temple mode + classic mode` 双模式： - temple mode：空间化提交神殿，用 6 个热点引导项目输入、证据检查、评分、大模型润色、材料整理和最终提交，默认作为演示第一屏。 - classic mode：保留当前双栏工具布局，用于快速填表、生成材料和稳定提交。 空间交互规格见 `space_interaction_spec.md`。v1 已按规格实现 `oracle llm` 一级节点、`final door` 提交节点、移动端底部导航和 temple / classic 顶部切换，并继续复用原有评分、导出和 llm 逻辑。 ## 大模型 api 预留能力 app 里已经预留了大模型增强入口： - endpoint：例如 `https://api.openai.com/v1/chat/completions` - model：例如 `gpt-4.1-mini` - api key：用户自己的... launchlens 项目定位 适配比赛 核心功能 空间交互 大模型 api 预留能力 快速运行 github 发布 project wall 提交 资产清单 技术栈 english project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SOURCE.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Source Access",
+      "path": "projects/launchlens/SOURCE.md",
+      "url": "",
+      "summary": "# LaunchLens Source Access This temporary public source page is provided for UCWS review while the stable GitHub repository is pending. ## Temporary source package Download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` Public URL status: ```text No reliable temporary public tunnel is currently available. ``` Use the local `launchlens-source.zip` or the final...",
+      "content": "# LaunchLens Source Access This temporary public source page is provided for UCWS review while the stable GitHub repository is pending. ## Temporary source package Download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` Public URL status: ```text No reliable temporary public tunnel is currently available. ``` Use the local `launchlens-source.zip` or the final GitHub repository after push. ## Stable GitHub repository The project is already initialized as a local Git repository on branch `main`. On GitHub Pages, the repository itself is the stable source of truth; the temporary zip URL is only a fallback for review before the GitHub repo is pushed. When a GitHub remote or `GITHUB_TOKEN` is available, push with one of these commands: ```powershell node tools/push-github.mjs https://github.com/YOUR_ACCOUNT/launchlens.git ``` or: ```powershell $env:GITHUB_TOKEN=\"your-github-token\" node tools/publish-github.mjs launchlens ``` The final Project Wall `repoUrl` should be the GitHub repository URL. This temporary source page is only a review fallback while GitHub publishing is pending. ## Contents - `index.html`, `styles.css`, `app.js`: the app, including Temple Mode and Classic Mode - `README.md`: project README - `ASSETS.md`: repository asset index - `assets/temple-background.png`: original generated spatial background for Temple Mode - `assets/screenshot.png`, `assets/screenshot-mobile.png`: refreshed Temple Mode screenshots - `PROJECT_WALL_FIELDS.md`: copy-paste Project Wall fields - `SUBMISSION.md`: UCWS submission draft...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Source Access",
+        "Temporary source package",
+        "Stable GitHub repository",
+        "Contents"
+      ],
+      "searchText": "launchlens source access project markdown projects/launchlens/source.md # launchlens source access this temporary public source page is provided for ucws review while the stable github repository is pending. ## temporary source package download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` public url status: ```text no reliable temporary public tunnel is currently available. ``` use the local `launchlens-source.zip` or the final... # launchlens source access this temporary public source page is provided for ucws review while the stable github repository is pending. ## temporary source package download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` public url status: ```text no reliable temporary public tunnel is currently available. ``` use the local `launchlens-source.zip` or the final github repository after push. ## stable github repository the project is already initialized as a local git repository on branch `main`. on github pages, the repository itself is the stable source of truth; the temporary zip url is only a fallback for review before the github repo is pushed. when a github remote or `github_token` is available, push with one of these commands: ```powershell node tools/push-github.mjs https://github.com/your_account/launchlens.git ``` or: ```powershell $env:github_token=\"your-github-token\" node tools/publish-github.mjs launchlens ``` the final project wall `repourl` should be the github repository url. this temporary source page is only a review fallback while github publishing is pending. ## contents - `index.html`, `styles.css`, `app.js`: the app, including temple mode and classic mode - `readme.md`: project readme - `assets.md`: repository asset index - `assets/temple-background.png`: original generated spatial background for temple mode - `assets/screenshot.png`, `assets/screenshot-mobile.png`: refreshed temple mode screenshots - `project_wall_fields.md`: copy-paste project wall fields - `submission.md`: ucws submission draft... launchlens source access temporary source package stable github repository contents project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SPACE_INTERACTION_SPEC.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "LaunchLens Space Interaction Spec",
+      "path": "projects/launchlens/SPACE_INTERACTION_SPEC.md",
+      "url": "",
+      "summary": "# LaunchLens Space Interaction Spec > 中文 | English This spec captures the spatial interaction direction for LaunchLens and documents the V1 implementation. The current Classic Mode remains available and submission-ready. ## V1 Implementation Status Implemented in the current app: ```text Temple / Classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel O...",
+      "content": "# LaunchLens Space Interaction Spec > 中文 | English This spec captures the spatial interaction direction for LaunchLens and documents the V1 implementation. The current Classic Mode remains available and submission-ready. ## V1 Implementation Status Implemented in the current app: ```text Temple / Classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel Oracle LLM first-level node Final Door submission handoff node mobile bottom node navigation existing scoring, export, and LLM logic reused desktop and mobile screenshots refreshed ``` Still intentionally out of scope for V1: ```text Three.js real 3D navigation camera walkthrough rewritten scoring or LLM logic authenticated Project Wall import without user token ``` ## Product Direction LaunchLens should evolve from a classic submission form into a spatial submission workflow: ```text LaunchLens Submission Temple LaunchLens 提交神殿 ``` The core product remains a UCWS Project Wall submission copilot. Temple Mode adds narrative, spatial memory, and stronger first-impression value without replacing the working tool. Principles: ```text Space is the story. Hotspots are the workflow. Panels are the tools. Readiness is the progress. LLM is the oracle. Submission is the final door. ``` 中文原则： ```text 空间是叙事。 热点是流程。 面板是工具。 评分是进度。 LLM 是神谕。 提交是主殿大门。 ``` ## Required Modes LaunchLens should support two modes. | Mode | Purpose | Notes | | --- | --- | --- | | Temple Mode | Spatial first impression, guided workflow, stronger product memory | Default visual experience for demos | | C...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "LaunchLens Space Interaction Spec",
+        "V1 Implementation Status",
+        "Product Direction",
+        "Required Modes",
+        "Temple Nodes",
+        "Desktop Layout",
+        "Mobile Layout",
+        "Suggested Hotspot Coordinates",
+        "Event Mapping",
+        "Oracle LLM Requirements",
+        "Final Door Requirements",
+        "Background Asset Requirements"
+      ],
+      "searchText": "launchlens space interaction spec project markdown projects/launchlens/space_interaction_spec.md # launchlens space interaction spec > 中文 | english this spec captures the spatial interaction direction for launchlens and documents the v1 implementation. the current classic mode remains available and submission-ready. ## v1 implementation status implemented in the current app: ```text temple / classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel o... # launchlens space interaction spec > 中文 | english this spec captures the spatial interaction direction for launchlens and documents the v1 implementation. the current classic mode remains available and submission-ready. ## v1 implementation status implemented in the current app: ```text temple / classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel oracle llm first-level node final door submission handoff node mobile bottom node navigation existing scoring, export, and llm logic reused desktop and mobile screenshots refreshed ``` still intentionally out of scope for v1: ```text three.js real 3d navigation camera walkthrough rewritten scoring or llm logic authenticated project wall import without user token ``` ## product direction launchlens should evolve from a classic submission form into a spatial submission workflow: ```text launchlens submission temple launchlens 提交神殿 ``` the core product remains a ucws project wall submission copilot. temple mode adds narrative, spatial memory, and stronger first-impression value without replacing the working tool. principles: ```text space is the story. hotspots are the workflow. panels are the tools. readiness is the progress. llm is the oracle. submission is the final door. ``` 中文原则： ```text 空间是叙事。 热点是流程。 面板是工具。 评分是进度。 llm 是神谕。 提交是主殿大门。 ``` ## required modes launchlens should support two modes. | mode | purpose | notes | | --- | --- | --- | | temple mode | spatial first impression, guided workflow, stronger product memory | default visual experience for demos | | c... launchlens space interaction spec v1 implementation status product direction required modes temple nodes desktop layout mobile layout suggested hotspot coordinates event mapping oracle llm requirements final door requirements background asset requirements project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SUBMISSION_AUDIT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "Submission Audit",
+      "path": "projects/launchlens/SUBMISSION_AUDIT.md",
+      "url": "",
+      "summary": "# Submission Audit ## Current State | Requirement | Status | Evidence | | --- | --- | --- | | Working demo app | Done locally | `index.html`, `app.js`, `styles.css`; local server URL `http://localhost:8080/launchlens/` | | UCWS-aligned fields | Done | `PROJECT_WALL_FIELDS.md`, `SUBMISSION.md` | | Project description | Done | `SUBMISSION.md`, generated in app | | README | Done | `README.md` | | Bilingual GitHub READM...",
+      "content": "# Submission Audit ## Current State | Requirement | Status | Evidence | | --- | --- | --- | | Working demo app | Done locally | `index.html`, `app.js`, `styles.css`; local server URL `http://localhost:8080/launchlens/` | | UCWS-aligned fields | Done | `PROJECT_WALL_FIELDS.md`, `SUBMISSION.md` | | Project description | Done | `SUBMISSION.md`, generated in app | | README | Done | `README.md` | | Bilingual GitHub README | Done | `README.md`, Chinese and English sections | | Bilingual app UI | Done | EN / 中文 switch in `index.html` and `app.js`; translated UI, Temple nodes, score notes, fixes, and generated outputs | | Repository asset index | Done | `ASSETS.md` | | Screenshot | Done | `assets/screenshot.png`, `assets/screenshot-zh.png`, `assets/screenshot-mobile.png` | | Temple Mode UI | Done | `index.html`, `styles.css`, `app.js`, `assets/temple-background.png`; six clickable workflow nodes | | Classic Mode fallback | Done | Top-level Temple / Classic toggle preserves the original two-column tool | | UI smoke test | Done | Edge + Playwright check: desktop Temple visible, Classic hidden by default, 6 nodes, Oracle opens LLM, Final Door clickable, mobile nav visible, no console errors | | Project logo | Done | `assets/logo.svg` | | Deployment config | Done | `netlify.toml`, `vercel.json`, `DEPLOYMENT.md` | | Local tests | Done | `node tests/scoring.test.mjs` | | Local Git repo | Done | branch `main`; run `git log --oneline -1` for the latest commit | | Submission zip | Done | `../LaunchLens_submission_pack.zip` | | Temporary public source page | Not currently public | `SOURCE.m...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "Submission Audit",
+        "Current State",
+        "Known External Blockers",
+        "Fastest Completion Path"
+      ],
+      "searchText": "submission audit project markdown projects/launchlens/submission_audit.md # submission audit ## current state | requirement | status | evidence | | --- | --- | --- | | working demo app | done locally | `index.html`, `app.js`, `styles.css`; local server url `http://localhost:8080/launchlens/` | | ucws-aligned fields | done | `project_wall_fields.md`, `submission.md` | | project description | done | `submission.md`, generated in app | | readme | done | `readme.md` | | bilingual github readm... # submission audit ## current state | requirement | status | evidence | | --- | --- | --- | | working demo app | done locally | `index.html`, `app.js`, `styles.css`; local server url `http://localhost:8080/launchlens/` | | ucws-aligned fields | done | `project_wall_fields.md`, `submission.md` | | project description | done | `submission.md`, generated in app | | readme | done | `readme.md` | | bilingual github readme | done | `readme.md`, chinese and english sections | | bilingual app ui | done | en / 中文 switch in `index.html` and `app.js`; translated ui, temple nodes, score notes, fixes, and generated outputs | | repository asset index | done | `assets.md` | | screenshot | done | `assets/screenshot.png`, `assets/screenshot-zh.png`, `assets/screenshot-mobile.png` | | temple mode ui | done | `index.html`, `styles.css`, `app.js`, `assets/temple-background.png`; six clickable workflow nodes | | classic mode fallback | done | top-level temple / classic toggle preserves the original two-column tool | | ui smoke test | done | edge + playwright check: desktop temple visible, classic hidden by default, 6 nodes, oracle opens llm, final door clickable, mobile nav visible, no console errors | | project logo | done | `assets/logo.svg` | | deployment config | done | `netlify.toml`, `vercel.json`, `deployment.md` | | local tests | done | `node tests/scoring.test.mjs` | | local git repo | done | branch `main`; run `git log --oneline -1` for the latest commit | | submission zip | done | `../launchlens_submission_pack.zip` | | temporary public source page | not currently public | `source.m... submission audit current state known external blockers fastest completion path project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SUBMISSION.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Markdown",
+      "title": "UCWS Project Wall Submission",
+      "path": "projects/launchlens/SUBMISSION.md",
+      "url": "",
+      "summary": "# UCWS Project Wall Submission ## Project Name LaunchLens ## Track Application ## Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ## Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that...",
+      "content": "# UCWS Project Wall Submission ## Project Name LaunchLens ## Track Application ## Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ## Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly. LaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. The current version adds a 2.5D Temple Mode inspired by a spatial submission hall: six clickable nodes guide users through project story, evidence, scoring, Oracle LLM enhancement, generated archives, and the final GitHub / Project Wall handoff. A Classic Mode remains available for fast form editing and reliable export. The first use case is UCWS Singapore 2026, where teams need to submit a project name, tagline, description, demo URL, repo URL, track, tech stack, screenshots, and team members. The broader use case is global: any hackathon, accelerator, or demo-day team can use the same workflow to move from rough notes to a credible public submission. ## Demo URL Local review URL: `http://localhost:8080/launchlens/` Public URL placeholder: ```text https://your-demo-url.example.com ``` Replace with a stable GitHub Pages / Netlify / Vercel URL before final judging. ## Repository URL Stable GitHub UR...",
+      "tags": [
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "headings": [
+        "UCWS Project Wall Submission",
+        "Project Name",
+        "Track",
+        "Tagline",
+        "Description",
+        "Demo URL",
+        "Repository URL",
+        "Tech Stack",
+        "Project Screenshot",
+        "Project Logo",
+        "Social Card",
+        "Team Members"
+      ],
+      "searchText": "ucws project wall submission project markdown projects/launchlens/submission.md # ucws project wall submission ## project name launchlens ## track application ## tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ## description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that... # ucws project wall submission ## project name launchlens ## track application ## tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ## description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. the current version adds a 2.5d temple mode inspired by a spatial submission hall: six clickable nodes guide users through project story, evidence, scoring, oracle llm enhancement, generated archives, and the final github / project wall handoff. a classic mode remains available for fast form editing and reliable export. the first use case is ucws singapore 2026, where teams need to submit a project name, tagline, description, demo url, repo url, track, tech stack, screenshots, and team members. the broader use case is global: any hackathon, accelerator, or demo-day team can use the same workflow to move from rough notes to a credible public submission. ## demo url local review url: `http://localhost:8080/launchlens/` public url placeholder: ```text https://your-demo-url.example.com ``` replace with a stable github pages / netlify / vercel url before final judging. ## repository url stable github ur... ucws project wall submission project name track tagline description demo url repository url tech stack project screenshot project logo social card team members project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/vercel.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "kind": "Project Metadata",
+      "title": "launchlens / vercel.json",
+      "path": "projects/launchlens/vercel.json",
+      "url": "",
+      "summary": "{ \"cleanUrls\": true, \"trailingSlash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"X-Content-Type-Options\", \"value\": \"nosniff\" }, { \"key\": \"Referrer-Policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] }",
+      "content": "{ \"cleanUrls\": true, \"trailingSlash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"X-Content-Type-Options\", \"value\": \"nosniff\" }, { \"key\": \"Referrer-Policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] }",
+      "tags": [
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "headings": [],
+      "searchText": "launchlens / vercel.json project metadata projects/launchlens/vercel.json { \"cleanurls\": true, \"trailingslash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"x-content-type-options\", \"value\": \"nosniff\" }, { \"key\": \"referrer-policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] } { \"cleanurls\": true, \"trailingslash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"x-content-type-options\", \"value\": \"nosniff\" }, { \"key\": \"referrer-policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] } project launchlens json"
+    },
+    {
+      "id": "official:README.md",
+      "type": "resource",
+      "source": "official-repo",
+      "kind": "Official Document",
+      "title": "UCWS Hackathon Singapore 2026",
+      "path": "README.md",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/README.md",
+      "summary": "# UCWS Hackathon Singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> Welcome to the official repository for the **UCWS Hackathon Singapore**, organized by **EPICConnector** — a global AI-native entrepreneurship community platform. --- ## About EPICConnector EPICConnector is an international community platform spanning **Ch...",
+      "content": "# UCWS Hackathon Singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> Welcome to the official repository for the **UCWS Hackathon Singapore**, organized by **EPICConnector** — a global AI-native entrepreneurship community platform. --- ## About EPICConnector EPICConnector is an international community platform spanning **China, Singapore, North America, UK, Australia, Japan, and Switzerland**. We are dedicated to: - **AI Product Incubation**: Nurturing innovative AI-driven startups from concept to market - **Global Resource Connection**: Bridging entrepreneurs with investors, mentors, and industry leaders - **Cross-border Market Activities**: Facilitating synchronized events, growth marketing, and product launch opportunities - **Startup Globalization**: Empowering AI entrepreneurs to achieve global expansion **Learn more:** [epicconnector.ai](https://epicconnector.ai) --- ## UCWS Hackathon Singapore 2026 Join us for an exciting showcase of AI innovation! The **UCWS Hackathon Singapore** is your opportunity to: - **Compete** with talented developers and entrepreneurs - **Build** groundbreaking AI products and solutions - **Network** with industry leaders, investors, and the global AI community - **Win** substantial prizes across multiple tracks ### Event Details **Date:** June 13, 2026 **Location:** Singapore **Format:** Online & Offline (with pre-event online coding phase from April onwards) **[UCWS Singapore Offline Demo Day Registration](https://luma.com/UCWS2026)** ### Registe...",
+      "tags": [
+        "official",
+        "readme"
+      ],
+      "headings": [
+        "UCWS Hackathon Singapore 2026",
+        "About EPICConnector",
+        "UCWS Hackathon Singapore 2026",
+        "Event Details",
+        "Register Now",
+        "Connect With Us",
+        "Repository Purpose",
+        "What This Is NOT",
+        "Project Submission",
+        "Intellectual Property & Commercial Rights",
+        "Contact & Support",
+        "Important Dates"
+      ],
+      "searchText": "ucws hackathon singapore 2026 official document readme.md # ucws hackathon singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> welcome to the official repository for the **ucws hackathon singapore**, organized by **epicconnector** — a global ai-native entrepreneurship community platform. --- ## about epicconnector epicconnector is an international community platform spanning **ch... # ucws hackathon singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> welcome to the official repository for the **ucws hackathon singapore**, organized by **epicconnector** — a global ai-native entrepreneurship community platform. --- ## about epicconnector epicconnector is an international community platform spanning **china, singapore, north america, uk, australia, japan, and switzerland**. we are dedicated to: - **ai product incubation**: nurturing innovative ai-driven startups from concept to market - **global resource connection**: bridging entrepreneurs with investors, mentors, and industry leaders - **cross-border market activities**: facilitating synchronized events, growth marketing, and product launch opportunities - **startup globalization**: empowering ai entrepreneurs to achieve global expansion **learn more:** [epicconnector.ai](https://epicconnector.ai) --- ## ucws hackathon singapore 2026 join us for an exciting showcase of ai innovation! the **ucws hackathon singapore** is your opportunity to: - **compete** with talented developers and entrepreneurs - **build** groundbreaking ai products and solutions - **network** with industry leaders, investors, and the global ai community - **win** substantial prizes across multiple tracks ### event details **date:** june 13, 2026 **location:** singapore **format:** online & offline (with pre-event online coding phase from april onwards) **[ucws singapore offline demo day registration](https://luma.com/ucws2026)** ### registe... ucws hackathon singapore 2026 about epicconnector ucws hackathon singapore 2026 event details register now connect with us repository purpose what this is not project submission intellectual property & commercial rights contact & support important dates official readme"
+    },
+    {
+      "id": "official:RESOURCES.md",
+      "type": "resource",
+      "source": "official-repo",
+      "kind": "Official Document",
+      "title": "Resources & Tools",
+      "path": "RESOURCES.md",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/RESOURCES.md",
+      "summary": "# Resources & Tools A curated collection of resources to help you prepare for the UCWS Hackathon Singapore 2026. --- ## Getting Started ### Official Links - **Hackathon Registration:** [UCWS Hackathon Singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaJa5h) - **Project Submission Platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **EPICConnector Web...",
+      "content": "# Resources & Tools A curated collection of resources to help you prepare for the UCWS Hackathon Singapore 2026. --- ## Getting Started ### Official Links - **Hackathon Registration:** [UCWS Hackathon Singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaJa5h) - **Project Submission Platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **EPICConnector Website:** [epicconnector.ai](https://epicconnector.ai) ### Community Channels - **WhatsApp Community:** [Join](https://chat.whatsapp.com/KAHqQ2Q4x5jBUrpUAXkvGy) - **Luma Events:** [epic_connector](https://luma.com/user/epic_connector) - **LinkedIn:** [@epic-connector](https://www.linkedin.com/company/epic-connector/) - **X (Twitter):** [@EpicConnector](https://x.com/EpicConnector) - **Instagram:** [@epicconnector_](https://www.instagram.com/epicconnector_/) - **Threads:** [@epicconnector_](https://www.threads.com/@epicconnector_) - **WeChat:** @Epicconnector --- ## Developer Benefits & Sponsor Resources ### 🎁 Referral Rewards Program Invite outstanding teams to join the hackathon and get rewarded when they make the Top 20! - **Refer 1 team** → $200 ClaudeCode Opus 4.5 / Gemini Tokens - **Refer 3 teams** → Mac mini + $300 ClaudeCode Opus 4.5 / Gemini Tokens - **Refer 5 teams** → Round-trip Flight to Singapore + Mac mini + $500 ClaudeCode Opus 4.5 / Gemini Tokens 👉 **[Register & Get Your Referral Code](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaJa5h)** --- ### 🏆 Top 20 Finalist Benefits Get rewarded for making it into the...",
+      "tags": [
+        "official",
+        "resources"
+      ],
+      "headings": [
+        "Resources & Tools",
+        "Getting Started",
+        "Official Links",
+        "Community Channels",
+        "Developer Benefits & Sponsor Resources",
+        "🎁 Referral Rewards Program",
+        "🏆 Top 20 Finalist Benefits",
+        "💡 Special Track & Technology Benefits",
+        "🤝 Partners & Sponsors",
+        "AI & Machine Learning",
+        "Frameworks & Libraries",
+        "Learning Resources"
+      ],
+      "searchText": "resources & tools official document resources.md # resources & tools a curated collection of resources to help you prepare for the ucws hackathon singapore 2026. --- ## getting started ### official links - **hackathon registration:** [ucws hackathon singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h) - **project submission platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **epicconnector web... # resources & tools a curated collection of resources to help you prepare for the ucws hackathon singapore 2026. --- ## getting started ### official links - **hackathon registration:** [ucws hackathon singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h) - **project submission platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **epicconnector website:** [epicconnector.ai](https://epicconnector.ai) ### community channels - **whatsapp community:** [join](https://chat.whatsapp.com/kahqq2q4x5jburpuaxkvgy) - **luma events:** [epic_connector](https://luma.com/user/epic_connector) - **linkedin:** [@epic-connector](https://www.linkedin.com/company/epic-connector/) - **x (twitter):** [@epicconnector](https://x.com/epicconnector) - **instagram:** [@epicconnector_](https://www.instagram.com/epicconnector_/) - **threads:** [@epicconnector_](https://www.threads.com/@epicconnector_) - **wechat:** @epicconnector --- ## developer benefits & sponsor resources ### 🎁 referral rewards program invite outstanding teams to join the hackathon and get rewarded when they make the top 20! - **refer 1 team** → $200 claudecode opus 4.5 / gemini tokens - **refer 3 teams** → mac mini + $300 claudecode opus 4.5 / gemini tokens - **refer 5 teams** → round-trip flight to singapore + mac mini + $500 claudecode opus 4.5 / gemini tokens 👉 **[register & get your referral code](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h)** --- ### 🏆 top 20 finalist benefits get rewarded for making it into the... resources & tools getting started official links community channels developer benefits & sponsor resources 🎁 referral rewards program 🏆 top 20 finalist benefits 💡 special track & technology benefits 🤝 partners & sponsors ai & machine learning frameworks & libraries learning resources official resources"
+    },
+    {
+      "id": "official:SECURITY.md",
+      "type": "resource",
+      "source": "official-repo",
+      "kind": "Official Document",
+      "title": "Security Policy",
+      "path": "SECURITY.md",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/SECURITY.md",
+      "summary": "# Security Policy ## Reporting Security Vulnerabilities If you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **Email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **Please include:** - Description of the vulnerability - Steps to reproduce - Potential impact - Your contact information **Do not:** - Post the vulnerability publicly - Sh...",
+      "content": "# Security Policy ## Reporting Security Vulnerabilities If you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **Email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **Please include:** - Description of the vulnerability - Steps to reproduce - Potential impact - Your contact information **Do not:** - Post the vulnerability publicly - Share details in issues or pull requests - Test on production systems without permission We will investigate all reports and provide updates as quickly as possible. --- ## Security Best Practices ### For Participants When building your hackathon project: 1. **Never commit secrets** - Don't include API keys, passwords, or tokens in code - Use `.env` files with `.env.example` templates - Use environment variables for sensitive data 2. **Secure dependencies** - Keep libraries and frameworks updated - Check for known vulnerabilities using tools like Snyk - Audit dependencies regularly 3. **Data protection** - Follow GDPR and data privacy regulations - Encrypt sensitive user data - Implement proper authentication and authorization 4. **Input validation** - Validate all user inputs - Prevent SQL injection, XSS, and other attacks - Use parameterized queries for databases 5. **Secure communication** - Use HTTPS for all web applications - Implement proper CORS headers - Secure API endpoints with authentication --- ## Code Review & Submission All projects submitted to this repository: - Must follow security best practices - Should not contain malicious code - Must respect i...",
+      "tags": [
+        "official",
+        "security"
+      ],
+      "headings": [
+        "Security Policy",
+        "Reporting Security Vulnerabilities",
+        "Security Best Practices",
+        "For Participants",
+        "Code Review & Submission",
+        "Dependencies & Vulnerabilities",
+        "Monitoring Dependencies",
+        "Use only official base images",
+        "Keep base images updated",
+        "Known Vulnerabilities",
+        "Python",
+        "JavaScript"
+      ],
+      "searchText": "security policy official document security.md # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - sh... # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - share details in issues or pull requests - test on production systems without permission we will investigate all reports and provide updates as quickly as possible. --- ## security best practices ### for participants when building your hackathon project: 1. **never commit secrets** - don't include api keys, passwords, or tokens in code - use `.env` files with `.env.example` templates - use environment variables for sensitive data 2. **secure dependencies** - keep libraries and frameworks updated - check for known vulnerabilities using tools like snyk - audit dependencies regularly 3. **data protection** - follow gdpr and data privacy regulations - encrypt sensitive user data - implement proper authentication and authorization 4. **input validation** - validate all user inputs - prevent sql injection, xss, and other attacks - use parameterized queries for databases 5. **secure communication** - use https for all web applications - implement proper cors headers - secure api endpoints with authentication --- ## code review & submission all projects submitted to this repository: - must follow security best practices - should not contain malicious code - must respect i... security policy reporting security vulnerabilities security best practices for participants code review & submission dependencies & vulnerabilities monitoring dependencies use only official base images keep base images updated known vulnerabilities python javascript official security"
+    }
+  ],
+  "commits": [
+    {
+      "id": "official-local-snapshot:commit:358f39d9d2dc0b7e97c4fff38015d30ef87600db",
+      "type": "commit",
+      "source": "official-local-snapshot",
+      "hash": "358f39d9d2dc0b7e97c4fff38015d30ef87600db",
+      "shortHash": "358f39d",
+      "date": "2026-06-04T19:03:14+08:00",
+      "author": "wangsiyi7",
+      "title": "Add LaunchLens project submission",
+      "summary": "358f39d Add LaunchLens project submission",
+      "url": "",
+      "tags": [
+        "commit",
+        "official-local-snapshot"
+      ],
+      "searchText": "358f39d9d2dc0b7e97c4fff38015d30ef87600db 358f39d 2026-06-04t19:03:14+08:00 wangsiyi7 add launchlens project submission 358f39d add launchlens project submission official-local-snapshot"
+    },
+    {
+      "id": "official-local-snapshot:commit:c5775f359f38014949a9e6ed14d17107b74eabb1",
+      "type": "commit",
+      "source": "official-local-snapshot",
+      "hash": "c5775f359f38014949a9e6ed14d17107b74eabb1",
+      "shortHash": "c5775f3",
+      "date": "2026-05-31T13:25:32+08:00",
+      "author": "epicconnector",
+      "title": "Add files via upload",
+      "summary": "c5775f3 Add files via upload",
+      "url": "",
+      "tags": [
+        "commit",
+        "official-local-snapshot"
+      ],
+      "searchText": "c5775f359f38014949a9e6ed14d17107b74eabb1 c5775f3 2026-05-31t13:25:32+08:00 epicconnector add files via upload c5775f3 add files via upload official-local-snapshot"
+    },
+    {
+      "id": "aggregator-repo:commit:a0570dabc7cea71ba9fc071cc95b366d5dbaa806",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "a0570dabc7cea71ba9fc071cc95b366d5dbaa806",
+      "shortHash": "a0570da",
+      "date": "2026-06-05T22:12:22+08:00",
+      "author": "wangsiyi7",
+      "title": "Finalize public repository links",
+      "summary": "a0570da Finalize public repository links",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/a0570dabc7cea71ba9fc071cc95b366d5dbaa806",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "a0570dabc7cea71ba9fc071cc95b366d5dbaa806 a0570da 2026-06-05t22:12:22+08:00 wangsiyi7 finalize public repository links a0570da finalize public repository links aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:4308174124f3c09e63f3dadacae161e50721b3b5",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "4308174124f3c09e63f3dadacae161e50721b3b5",
+      "shortHash": "4308174",
+      "date": "2026-06-05T22:02:07+08:00",
+      "author": "wangsiyi7",
+      "title": "Simplify Pages deployment workflow",
+      "summary": "4308174 Simplify Pages deployment workflow",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/4308174124f3c09e63f3dadacae161e50721b3b5",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "4308174124f3c09e63f3dadacae161e50721b3b5 4308174 2026-06-05t22:02:07+08:00 wangsiyi7 simplify pages deployment workflow 4308174 simplify pages deployment workflow aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:bd0e7ab75a12d237a568cf7054bccb5459db43f2",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "bd0e7ab75a12d237a568cf7054bccb5459db43f2",
+      "shortHash": "bd0e7ab",
+      "date": "2026-06-05T21:58:55+08:00",
+      "author": "wangsiyi7",
+      "title": "Merge GitHub repository initialization",
+      "summary": "bd0e7ab Merge GitHub repository initialization",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/bd0e7ab75a12d237a568cf7054bccb5459db43f2",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "bd0e7ab75a12d237a568cf7054bccb5459db43f2 bd0e7ab 2026-06-05t21:58:55+08:00 wangsiyi7 merge github repository initialization bd0e7ab merge github repository initialization aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:bb6bfa00d0005d9e44090ede68782a15b0ef1180",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "bb6bfa00d0005d9e44090ede68782a15b0ef1180",
+      "shortHash": "bb6bfa0",
+      "date": "2026-06-05T21:56:27+08:00",
+      "author": "希逸",
+      "title": "Initial commit",
+      "summary": "bb6bfa0 Initial commit",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/bb6bfa00d0005d9e44090ede68782a15b0ef1180",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "bb6bfa00d0005d9e44090ede68782a15b0ef1180 bb6bfa0 2026-06-05t21:56:27+08:00 希逸 initial commit bb6bfa0 initial commit aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:48548ce6ffe6e1d25db569aa961693016968c91b",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "48548ce6ffe6e1d25db569aa961693016968c91b",
+      "shortHash": "48548ce",
+      "date": "2026-06-05T21:02:44+08:00",
+      "author": "wangsiyi7",
+      "title": "Build UCWS project aggregator online demo",
+      "summary": "48548ce Build UCWS project aggregator online demo",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/48548ce6ffe6e1d25db569aa961693016968c91b",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "48548ce6ffe6e1d25db569aa961693016968c91b 48548ce 2026-06-05t21:02:44+08:00 wangsiyi7 build ucws project aggregator online demo 48548ce build ucws project aggregator online demo aggregator-repo"
+    }
+  ],
+  "searchRecords": [
+    {
+      "id": "official:launchlens",
+      "type": "project",
+      "source": "official-repo",
+      "title": "LaunchLens",
+      "summary": "LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and judges can understand quickly. LaunchLens runs a review agent over UCWS submission fields, scores readiness across community vote, AI evaluation, and expert judging, then generates Markdown, README, pitch, sprint plan, and fix-list outputs. It helps builders move from rough notes to a credible public submission in minutes. The current version includes Temple Mode, a 2.5D spatial submission workflow with six clickable nodes for project story, evidence, score, Oracle LLM, generated archive, and final GitHub / Project Wall handoff. Classic Mode remains available for fast form editing and stable export. The first use case is UCWS Singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.",
+      "url": "https://github.com/wangsiyi7/launchlens",
+      "tags": [
+        "Application",
+        "Skill / Workflow",
+        "official-repo"
+      ],
+      "searchText": "launchlens application skill / workflow turn rough hackathon ideas into scored, ready-to-submit project wall packages. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] projects/launchlens https://github.com/wangsiyi7/launchlens https://wangsiyi7.github.io/launchlens/"
+    },
+    {
+      "id": "official:LICENSE",
+      "type": "resource",
+      "source": "official-repo",
+      "title": "License",
+      "summary": "# License **No License** This repository and all content within it are provided as-is for the UCWS Hackathon Singapore 2026 platform and community support purposes only. ## Usage Rights - **This repository is NOT open source.** - **All rights reserved** to EPICConnector and respective contributors. - This platform is provided to support hackathon participants in project submission, documentation, and resource sharin...",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/LICENSE",
+      "tags": [
+        "License",
+        "official",
+        "license"
+      ],
+      "searchText": "license license license # license **no license** this repository and all content within it are provided as-is for the ucws hackathon singapore 2026 platform and community support purposes only. ## usage rights - **this repository is not open source.** - **all rights reserved** to epicconnector and respective contributors. - this platform is provided to support hackathon participants in project submission, documentation, and resource sharin... # license **no license** this repository and all content within it are provided as-is for the ucws hackathon singapore 2026 platform and community support purposes only. ## usage rights - **this repository is not open source.** - **all rights reserved** to epicconnector and respective contributors. - this platform is provided to support hackathon participants in project submission, documentation, and resource sharing. ## intellectual property ### submitted projects all hackathon projects submitted to this repository retain their intellectual property rights with their respective creators and teams. by submitting projects to this platform, teams grant epicconnector the right to: - display and showcase submitted projects - archive and preserve project documentation - reference projects for community and commercial purposes - facilitate connections with potential partners, investors, and collaborators - benefit from future commercialization opportunities in alignment with team interests ### platform content documentation, guidelines, and support materials provided by epicconnector are proprietary and may not be reproduced, distributed, or used without explicit permission from epicconnector. ## disclaimer this repository is provided \"as-is\" without warranties of any kind, express or implied. epicconnector shall not be liable for any damages arising from the use or inability to use this repository or its contents. --- **© 2026 epicconnector. all rights reserved.** license usage rights intellectual property submitted projects platform content disclaimer official license"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/ASSETS.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Asset Index",
+      "summary": "# LaunchLens Asset Index > 中文 | English 本文件整理本次为 UCWS Singapore Hackathon 2026 生成的仓库内资产，方便提交、复盘和 GitHub 展示。 ## App 文件 | 文件 | 用途 | | --- | --- | | `index.html` | LaunchLens 主界面，包含中英切换、Temple Mode、Classic Mode、Project Wall 表单、评分输出、Optional LLM 面板 | | `styles.css` | 页面视觉样式、Temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、Temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、GitHub 发布和提交脚本入口 | ## 视觉资产 | 文件 |...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens asset index project markdown projects/launchlens/assets.md # launchlens asset index > 中文 | english 本文件整理本次为 ucws singapore hackathon 2026 生成的仓库内资产，方便提交、复盘和 github 展示。 ## app 文件 | 文件 | 用途 | | --- | --- | | `index.html` | launchlens 主界面，包含中英切换、temple mode、classic mode、project wall 表单、评分输出、optional llm 面板 | | `styles.css` | 页面视觉样式、temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、github 发布和提交脚本入口 | ## 视觉资产 | 文件 |... # launchlens asset index > 中文 | english 本文件整理本次为 ucws singapore hackathon 2026 生成的仓库内资产，方便提交、复盘和 github 展示。 ## app 文件 | 文件 | 用途 | | --- | --- | | `index.html` | launchlens 主界面，包含中英切换、temple mode、classic mode、project wall 表单、评分输出、optional llm 面板 | | `styles.css` | 页面视觉样式、temple 背景层、热点布局和响应式布局 | | `app.js` | 评分逻辑、材料生成、复制导出、本地保存、temple 节点交互、大模型增强调用 | | `package.json` | 本地运行、测试、payload、github 发布和提交脚本入口 | ## 视觉资产 | 文件 | 用途 | | --- | --- | | `assets/logo.svg` | 项目 logo，可用于 project wall logo 字段 | | `assets/social-card.svg` | 社交分享图 / github 预览图备用 | | `assets/temple-background.png` | 原创生成的 2.5d 古迹空间背景，用于 temple mode | | `assets/screenshot.png` | 英文桌面版 temple mode 项目截图 | | `assets/screenshot-zh.png` | 中文桌面版 temple mode 项目截图 | | `assets/screenshot-mobile.png` | 移动版 temple mode 项目截图 | ## 比赛提交材料 | 文件 | 用途 | | --- | --- | | `readme.md` | github 仓库首页，中英双语版本 | | `project_wall_fields.md` | project wall 字段复制源 | | `submission.md` | 完整提交文案草稿 | | `judging_brief.md` | 面向评委的项目价值、ucws 适配和证据简报 | | `demo_video_script.md` | 60-90 秒录屏或现场演示脚本 | | `final_submission_runbook.md` | 最终提交执行清单 | | `final_readiness_report.md` | 自动生成的最终就绪报告，列出当前 payload、检查项和外部缺口 | | `space_interaction_spec.md` | temple mode / classic mode 空间交互规格 | | `submission_audit.md` | 当前完成度、阻塞项和验证状态 | | `hackathon_strategy.md` | 参赛策略与定位 | | `project_wall_research.md` | 官方 project wall/api 研究记录 | | `source.md` | 临时公开源码说明页 | ## 自动化脚本 | 文件 | 用途 | | --- | --- | | `tools/serve.mjs` | 在 `http://localhost:8080/launchlens/` 启动本地 demo | | `tools/serve-public-root.mjs` | 只暴露 `launchlens/` 目录给临时公网 tunnel | | `tools/build-project-payload.mjs` | 生成 `p... launchlens asset index app 文件 视觉资产 比赛提交材料 自动化脚本 配置与部署 生成包 llm api 预留 english summary project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/DEMO_VIDEO_SCRIPT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Demo Video Script",
+      "summary": "# LaunchLens Demo Video Script Target length: 60-90 seconds. ## Scene 1: Open Narration: ```text This is LaunchLens, a UCWS Project Wall submission copilot for hackathon teams. It helps builders turn rough notes into a scored, ready-to-submit project package. ``` Action: - Open `http://127.0.0.1:8080/launchlens/`. - Show the Temple Mode first screen. - Point out the readiness score and the six spatial workflow nodes...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens demo video script project markdown projects/launchlens/demo_video_script.md # launchlens demo video script target length: 60-90 seconds. ## scene 1: open narration: ```text this is launchlens, a ucws project wall submission copilot for hackathon teams. it helps builders turn rough notes into a scored, ready-to-submit project package. ``` action: - open `http://127.0.0.1:8080/launchlens/`. - show the temple mode first screen. - point out the readiness score and the six spatial workflow nodes... # launchlens demo video script target length: 60-90 seconds. ## scene 1: open narration: ```text this is launchlens, a ucws project wall submission copilot for hackathon teams. it helps builders turn rough notes into a scored, ready-to-submit project package. ``` action: - open `http://127.0.0.1:8080/launchlens/`. - show the temple mode first screen. - point out the readiness score and the six spatial workflow nodes. - click `中文`, then `en`, to show bilingual app support. ## scene 2: temple mode narration: ```text the default experience is temple mode. each node maps to a required part of the submission workflow: project story, evidence, scoring, optional llm refinement, generated materials, and final handoff. ``` action: - click `project altar`. - click `evidence steps`. - click `score gate`. - click `oracle llm`. - click `archive hall`. - click `final door`. ## scene 3: oracle llm narration: ```text oracle llm is a reserved openai-compatible model slot. teams can use their own endpoint, model, and api key to improve the current submission copy, while the key stays in the browser session. ``` action: - click `oracle llm`. - click `open oracle`. - show the endpoint, model, and api key fields. ## scene 4: classic mode narration: ```text for speed and reliability, classic mode keeps the full two-column form. teams can edit project wall fields directly and run the review agent at any time. ``` action: - switch to `classic`. - show project fields. - click `run review agent`. - show community vote, ai evaluation, and expert judges cards. ## scene 5: generated outputs narration:... launchlens demo video script scene 1: open scene 2: temple mode scene 3: oracle llm scene 4: classic mode scene 5: generated outputs scene 6: final handoff closing line project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/DEPLOYMENT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Deployment",
+      "summary": "# LaunchLens Deployment LaunchLens is a static app. Deploy the `launchlens/` folder as the site root. ## Netlify 1. Create a new Netlify site from the `launchlens/` folder. 2. Build command: leave empty. 3. Publish directory: `.`. 4. After deploy, open the generated URL and confirm the app loads. 5. Add the URL to `SUBMISSION.md` and Project Wall. The included `netlify.toml` already sets the publish directory and fa...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens deployment project markdown projects/launchlens/deployment.md # launchlens deployment launchlens is a static app. deploy the `launchlens/` folder as the site root. ## netlify 1. create a new netlify site from the `launchlens/` folder. 2. build command: leave empty. 3. publish directory: `.`. 4. after deploy, open the generated url and confirm the app loads. 5. add the url to `submission.md` and project wall. the included `netlify.toml` already sets the publish directory and fa... # launchlens deployment launchlens is a static app. deploy the `launchlens/` folder as the site root. ## netlify 1. create a new netlify site from the `launchlens/` folder. 2. build command: leave empty. 3. publish directory: `.`. 4. after deploy, open the generated url and confirm the app loads. 5. add the url to `submission.md` and project wall. the included `netlify.toml` already sets the publish directory and fallback route. ## vercel 1. import the repo into vercel. 2. set project root to `launchlens`. 3. framework preset: other. 4. build command: leave empty. 5. output directory: `.`. 6. add the production url to `submission.md` and project wall. ## github pages 1. push the repo to github. 2. in repository settings, enable pages. 3. set pages source to github actions. 4. the included `.github/workflows/pages.yml` will publish the static site. 5. add the pages url to `submission.md` and project wall. push helper: ```powershell node tools/push-github.mjs https://github.com/your_account/launchlens.git ``` token-based create and publish helper: ```powershell $env:github_token=\"your-github-token\" node tools/publish-github.mjs launchlens ``` this can create or reuse the github repository, regenerate and commit `project-payload.json` with the expected github pages url, then push `main`. after github pages deploys, the likely public url will be: ```text https://your_account.github.io/launchlens/ ``` ## local validation ```bash cd launchlens node tools/serve.mjs ``` open: ```text http://localhost:8080/launchlens/ ``` run tests: ```bash node tests/scoring.test.mjs ``` ## build... launchlens deployment netlify vercel github pages local validation build project wall payload submit to epic connector with your own token project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/FINAL_READINESS_REPORT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Final Readiness Report / 最终提交就绪报告",
+      "summary": "# Final Readiness Report / 最终提交就绪报告 Generated by `node tools/final-readiness-report.mjs`. ## Summary / 摘要 LaunchLens is locally submission-ready as an app and repository package. The remaining blockers are external submission inputs: a stable public demo URL, an HTTPS GitHub repository URL, real team member names, and Epic Connector login/token for the actual Project Wall submission. LaunchLens 本地 App、仓库资产和提交包已经就绪。剩...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "final readiness report / 最终提交就绪报告 project markdown projects/launchlens/final_readiness_report.md # final readiness report / 最终提交就绪报告 generated by `node tools/final-readiness-report.mjs`. ## summary / 摘要 launchlens is locally submission-ready as an app and repository package. the remaining blockers are external submission inputs: a stable public demo url, an https github repository url, real team member names, and epic connector login/token for the actual project wall submission. launchlens 本地 app、仓库资产和提交包已经就绪。剩... # final readiness report / 最终提交就绪报告 generated by `node tools/final-readiness-report.mjs`. ## summary / 摘要 launchlens is locally submission-ready as an app and repository package. the remaining blockers are external submission inputs: a stable public demo url, an https github repository url, real team member names, and epic connector login/token for the actual project wall submission. launchlens 本地 app、仓库资产和提交包已经就绪。剩余阻塞来自外部提交信息：稳定公开 demo url、https github 仓库 url、真实团队成员，以及 epic connector 登录/token。 ## current payload / 当前 payload | field | value | | --- | --- | | project | launchlens | | track | application | | demo url | https://your-demo-url.example.com | | repo url | https://github.com/your_account/launchlens | | screenshot urls | [\"https://your-demo-url.example.com/assets/screenshot.png\"] | | logo url | https://your-demo-url.example.com/assets/logo.svg | | team members | [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] | ## checks / 检查 | check | status | evidence | | --- | --- | --- | | local source files | ready | all required app, docs, scripts, and workflow files exist. | | temple mode assets | ready | background=2899711 bytes; en screenshot=1626107 bytes; zh screenshot=1629539 bytes; mobile screenshot=298127 bytes. | | git state | ready | clean working tree. | | git remote | needs input | no github remote configured yet. | | local demo | ready | http 200; launchlens=true; temple=true | | project wall payload | needs input | submission payload is not ready:<br>- demourl still contains a placeholder.<br>- logourl still contains a placeholder.<br>- scr... final readiness report / 最终提交就绪报告 summary / 摘要 current payload / 当前 payload checks / 检查 environment inputs / 环境输入 required final actions / 最终必做 validation output / 校验输出 project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/FINAL_SUBMISSION_RUNBOOK.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Final Submission Runbook",
+      "summary": "# Final Submission Runbook Use this as the last-mile checklist for submitting LaunchLens to the UCWS Singapore Hackathon 2026 Project Wall. ## Current Readiness | Item | Status | Evidence | | --- | --- | --- | | Working app | Ready | `index.html`, `styles.css`, `app.js` | | Local Git repo | Ready | branch `main` | | Temporary public demo | Currently unavailable | Cloudflare returned 530 / TLS edge errors; localtunne...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "final submission runbook project markdown projects/launchlens/final_submission_runbook.md # final submission runbook use this as the last-mile checklist for submitting launchlens to the ucws singapore hackathon 2026 project wall. ## current readiness | item | status | evidence | | --- | --- | --- | | working app | ready | `index.html`, `styles.css`, `app.js` | | local git repo | ready | branch `main` | | temporary public demo | currently unavailable | cloudflare returned 530 / tls edge errors; localtunne... # final submission runbook use this as the last-mile checklist for submitting launchlens to the ucws singapore hackathon 2026 project wall. ## current readiness | item | status | evidence | | --- | --- | --- | | working app | ready | `index.html`, `styles.css`, `app.js` | | local git repo | ready | branch `main` | | temporary public demo | currently unavailable | cloudflare returned 530 / tls edge errors; localtunnel returned 502 / 503 | | screenshots | ready | `assets/screenshot.png`, `assets/screenshot-mobile.png` | | project wall copy | ready | `project_wall_fields.md`, `submission.md` | | github repository | needs account access | provide remote url or `github_token` | | final project wall payload | needs final demo url, github url, and team names | `project-payload.json` intentionally uses placeholders | | actual project wall submission | needs epic login token | `epic_token` | ## official constraints already reflected - event: ucws singapore hackathon 2026. - tracks: agent, skill, application, deepresearch. - selected track: application. - public project wall project list and project submission endpoint require authentication. - hackathon project form requires an https github repository url. - scoring lens: community vote, ai evaluation, expert judges. ## step 1: publish to github preferred token-based path: ```powershell cd \"c:\\users\\35398\\desktop\\ucws 2026\\launchlens\" $env:github_token=\"your-github-token\" $env:launchlens_team_members=\"your name\" node tools/publish-github.mjs launchlens ``` what this does: - creates or reuses `https://github.com/your_account/launchl... final submission runbook current readiness official constraints already reflected step 1: publish to github step 2: enable github pages step 3: validate payload step 4: submit to project wall exact project wall copy do not submit these as final values project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/HACKATHON_STRATEGY.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Hackathon Strategy",
+      "summary": "# Hackathon Strategy ## Why LaunchLens is a fast-fit UCWS project The UCWS scoring model rewards public clarity, implementation quality, and expert-level product value. LaunchLens is designed around those exact signals. ## Differentiation Many hackathon entries focus on agents, plugins, and AI workflows. LaunchLens focuses on a shared bottleneck: every team needs a stronger submission package before community voting...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "hackathon strategy project markdown projects/launchlens/hackathon_strategy.md # hackathon strategy ## why launchlens is a fast-fit ucws project the ucws scoring model rewards public clarity, implementation quality, and expert-level product value. launchlens is designed around those exact signals. ## differentiation many hackathon entries focus on agents, plugins, and ai workflows. launchlens focuses on a shared bottleneck: every team needs a stronger submission package before community voting... # hackathon strategy ## why launchlens is a fast-fit ucws project the ucws scoring model rewards public clarity, implementation quality, and expert-level product value. launchlens is designed around those exact signals. ## differentiation many hackathon entries focus on agents, plugins, and ai workflows. launchlens focuses on a shared bottleneck: every team needs a stronger submission package before community voting, ai evaluation, and expert judging. that makes the product useful to the event ecosystem itself. ## evaluation alignment ### community vote - immediate browser demo. - clear first-screen utility. - useful to other participants, not only judges. - copy/export makes the product shareable. ### ai evaluation - simple repo structure. - no hidden backend dependency. - readme, deployment docs, tests, and screenshots included. - scoring logic is inspectable in javascript. ### expert judges - solves a real deadline problem for builders. - global applicability beyond ucws. - clear expansion path: authenticated project wall import, repo-health checks, multi-event templates, and team collaboration. ## recommended final pitch angle launchlens is not another generic writing assistant. it is a submission-readiness product for hackathon teams, tuned to the workflow and evaluation reality of ucws. hackathon strategy why launchlens is a fast-fit ucws project differentiation evaluation alignment community vote ai evaluation expert judges recommended final pitch angle project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/JUDGING_BRIEF.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Judging Brief",
+      "summary": "# LaunchLens Judging Brief ## One-Line Summary LaunchLens turns rough hackathon notes into scored, copy-ready Project Wall submission materials, with a spatial Temple Mode and a reliable Classic Mode. ## Why This Project Exists Hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. UCWS submissions must satisfy community voters, AI evaluation, an...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens judging brief project markdown projects/launchlens/judging_brief.md # launchlens judging brief ## one-line summary launchlens turns rough hackathon notes into scored, copy-ready project wall submission materials, with a spatial temple mode and a reliable classic mode. ## why this project exists hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. ucws submissions must satisfy community voters, ai evaluation, an... # launchlens judging brief ## one-line summary launchlens turns rough hackathon notes into scored, copy-ready project wall submission materials, with a spatial temple mode and a reliable classic mode. ## why this project exists hackathon teams often build working products, then lose the final hours translating that work into a clear public submission. ucws submissions must satisfy community voters, ai evaluation, and expert judges at the same time. launchlens focuses on that final-mile problem. ## ucws fit | ucws lens | launchlens response | | --- | --- | | real product value | helps any ucws builder prepare a stronger submission before deadline. | | execution quality | complete bilingual browser app with scoring, generated outputs, copy/export, local autosave, temple mode, classic mode, and optional llm refinement. | | global scalability | works for hackathons, accelerators, pitch events, demo days, and product launch reviews beyond ucws. | | community vote | makes project value readable and shareable in minutes. | | ai evaluation | encourages github repo url, evidence fields, screenshots, tech stack, readme, and structured submission copy. | | expert judges | clarifies user pain, product workflow, proof, business relevance, and final submission readiness. | ## product walkthrough 1. open launchlens. 2. start in temple mode, the spatial submission workflow. 3. click six nodes: - project altar: project story - evidence steps: demo, repo, screenshots, team - score gate: readiness score - oracle llm: optional openai-compatible enhancement - archive hall: generated materials... launchlens judging brief one-line summary why this project exists ucws fit product walkthrough current proof what makes it different remaining external inputs project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/netlify.toml",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "launchlens / netlify.toml",
+      "summary": "[build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] X-Content-Type-Options = \"nosniff\" Referrer-Policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200",
+      "url": "",
+      "tags": [
+        "Project Metadata",
+        "project",
+        "launchlens",
+        "toml"
+      ],
+      "searchText": "launchlens / netlify.toml project metadata projects/launchlens/netlify.toml [build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] x-content-type-options = \"nosniff\" referrer-policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200 [build] publish = \".\" command = \"\" [[headers]] for = \"/*\" [headers.values] x-content-type-options = \"nosniff\" referrer-policy = \"strict-origin-when-cross-origin\" [[redirects]] from = \"/*\" to = \"/index.html\" status = 200 project launchlens toml"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/package.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "launchlens / package.json",
+      "summary": "{ \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"UCWS Project Wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/fina...",
+      "url": "",
+      "tags": [
+        "Project Metadata",
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "searchText": "launchlens / package.json project metadata projects/launchlens/package.json { \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"ucws project wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/fina... { \"name\": \"launchlens\", \"version\": \"1.0.0\", \"private\": true, \"description\": \"ucws project wall readiness copilot for hackathon teams.\", \"scripts\": { \"test\": \"node tests/scoring.test.mjs\", \"serve\": \"node tools/serve.mjs\", \"serve:public-root\": \"node tools/serve-public-root.mjs\", \"payload\": \"node tools/build-project-payload.mjs\", \"validate:submission\": \"node tools/validate-submission.mjs\", \"readiness\": \"node tools/final-readiness-report.mjs\", \"create:github\": \"node tools/create-github-repo.mjs\", \"publish:github\": \"node tools/publish-github.mjs\", \"push:github\": \"node tools/push-github.mjs\", \"complete:submission\": \"node tools/complete-submission.mjs\", \"submit\": \"node tools/submit-project.mjs\" } } project launchlens json"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/PROJECT_WALL_FIELDS.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Project Wall Fields",
+      "summary": "# Project Wall Fields Use this file as the copy-paste source for the UCWS Project Wall submission. ## Required ### Project Name LaunchLens ### Track Application ### Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ### Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "project wall fields project markdown projects/launchlens/project_wall_fields.md # project wall fields use this file as the copy-paste source for the ucws project wall submission. ## required ### project name launchlens ### track application ### tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ### description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have... # project wall fields use this file as the copy-paste source for the ucws project wall submission. ## required ### project name launchlens ### track application ### tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ### description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. ### demo url local review: `http://localhost:8080/launchlens/` public demo url: ```text https://your-demo-url.example.com ``` replace this placeholder with a stable github pages / netlify / vercel url before final judging. if using github pages: ```text https://your_account.github.io/launchlens/ ```... project wall fields required project name track tagline description demo url repo url tech stack project screenshot team members optional project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/PROJECT_WALL_RESEARCH.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Project Wall Research Notes",
+      "summary": "# Project Wall Research Notes ## Sources checked - Official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - Project Wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - Event API: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - Project API discovered from frontend chunk: `/api/projects?ev...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "project wall research notes project markdown projects/launchlens/project_wall_research.md # project wall research notes ## sources checked - official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - project wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - event api: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - project api discovered from frontend chunk: `/api/projects?ev... # project wall research notes ## sources checked - official event page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy` - project wall page: `https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall` - event api: `https://evol.epicconnector.ai/api/events?slug=ucws-singapore-hackathon---2026-cxgy` - project api discovered from frontend chunk: `/api/projects?eventid={eventid}&sort={sort}&limit=20&offset={offset}` - public web search for ucws-related repos, skills, and submissions ## access finding the project wall frontend loads the event metadata publicly, but the project list endpoint returns http 401 without a logged-in epic connector token. the static page and frontend chunks confirm that project list data is fetched from `/api/projects`, but complete anonymous export is blocked. latest re-check on june 5, 2026 (asia/shanghai): event metadata is still public, project submission and editing are still enabled, current participants are 545, and the anonymous project api still returns http 401. event id discovered: ```text 364d3219-5907-48b6-a34d-e95f90b10579 ``` ## event facts from the official api - title: ucws singapore hackathon -- 2026 - format: hybrid - location: singapore - participants: 545 current participants reported by the api on june 5, 2026 - tracks: agent, skill, application, deepresearch - submission enabled: true - project edit enabled: true - demo day: june 13, 2026 ## observed opportunity public search results and visible ecosystem context show many builder-tool, agent, and skill-plugin submissions.... project wall research notes sources checked access finding event facts from the official api observed opportunity submission strategy github repository finding project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/project-payload.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "launchlens / project-payload.json",
+      "summary": "{ \"name\": \"LaunchLens\", \"track\": \"Application\", \"tagline\": \"Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages.\", \"description\": \"LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that voters, AI evaluators, and...",
+      "url": "",
+      "tags": [
+        "Project Metadata",
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "searchText": "launchlens / project-payload.json project metadata projects/launchlens/project-payload.json { \"name\": \"launchlens\", \"track\": \"application\", \"tagline\": \"turn rough hackathon ideas into scored, ready-to-submit project wall packages.\", \"description\": \"launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and... { \"name\": \"launchlens\", \"track\": \"application\", \"tagline\": \"turn rough hackathon ideas into scored, ready-to-submit project wall packages.\", \"description\": \"launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly.\\n\\nlaunchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes.\\n\\nthe current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export.\\n\\nthe first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting.\", \"demourl\": \"https://your-demo-url.example.com\", \"repourl\": \"https://github.com/your_account/launchlens\", \"techstack\": \"html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint\", \"screenshoturls\": \"[\\\"https://your-demo-url.example.com/assets/screenshot.png\\\"]\", \"logourl\": \"https://your-demo-url.example.com/assets/logo.svg\", \"d... project launchlens json"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/README.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens",
+      "summary": "# LaunchLens > 中文 | [English](#english) 把粗糙的 Hackathon 项目想法、README 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 Project Wall 材料包。 LaunchLens 是为 **UCWS Singapore Hackathon 2026** 准备的浏览器端提交助手。它对齐 Project Wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、README、90 秒 pitch、冲刺计划和风险修复清单。 ![LaunchLens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：Demo URL、Repo URL、技术栈、截图、团队成员、项目描述、评委视角、AI 自动评估视角、社区投票视角都要同时兼顾。LaunchLen...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens project markdown projects/launchlens/readme.md # launchlens > 中文 | [english](#english) 把粗糙的 hackathon 项目想法、readme 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 project wall 材料包。 launchlens 是为 **ucws singapore hackathon 2026** 准备的浏览器端提交助手。它对齐 project wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、readme、90 秒 pitch、冲刺计划和风险修复清单。 ![launchlens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：demo url、repo url、技术栈、截图、团队成员、项目描述、评委视角、ai 自动评估视角、社区投票视角都要同时兼顾。launchlen... # launchlens > 中文 | [english](#english) 把粗糙的 hackathon 项目想法、readme 草稿和比赛笔记，快速整理成可评分、可复制、可提交的 project wall 材料包。 launchlens 是为 **ucws singapore hackathon 2026** 准备的浏览器端提交助手。它对齐 project wall 字段与比赛评分逻辑，帮助参赛者检查项目完整度、生成提交文案、readme、90 秒 pitch、冲刺计划和风险修复清单。 ![launchlens desktop screenshot](assets/screenshot.png) ## 项目定位 很多队伍已经做出了可运行产品，但最后一天会卡在“怎么把产品讲清楚”：demo url、repo url、技术栈、截图、团队成员、项目描述、评委视角、ai 自动评估视角、社区投票视角都要同时兼顾。launchlens 解决的是这条最后一公里。 它不是一个静态宣传页，而是一个第一屏即可使用的 app。 ## 适配比赛 - 比赛：ucws singapore hackathon 2026 - 赛道：application - 评分视角：community vote、ai evaluation、expert judges - 提交字段：项目名、赛道、tagline、description、demo url、repo url、tech stack、screenshots、logo、team members - 项目墙限制：最终 repo url 应使用 https github 仓库链接 ## 核心功能 - project wall 字段体检：检查项目名、赛道、tagline、描述、demo url、repo url、技术栈、截图和团队成员。 - 三类评分：按社区可读性、ai 可评估性、专家评审价值生成 readiness score。 - 自动生成材料：submission pack、readme、pitch、sprint plan、fix list。 - 本地自动保存：使用浏览器 `localstorage` 保存草稿。 - 一键复制和 json 导出：方便直接粘贴到 project wall。 - app 中英切换：界面、temple 节点、评分说明、修复建议和生成材料均支持 english / 中文。 - 预留大模型 api：内置 optional llm 面板，支持 openai-compatible chat completions。 - temple mode + classic mode：默认展示 2.5d 空间化提交神殿，同时保留稳定双栏表单工具。 ## 空间交互 launchlens 已实现 `temple mode + classic mode` 双模式： - temple mode：空间化提交神殿，用 6 个热点引导项目输入、证据检查、评分、大模型润色、材料整理和最终提交，默认作为演示第一屏。 - classic mode：保留当前双栏工具布局，用于快速填表、生成材料和稳定提交。 空间交互规格见 `space_interaction_spec.md`。v1 已按规格实现 `oracle llm` 一级节点、`final door` 提交节点、移动端底部导航和 temple / classic 顶部切换，并继续复用原有评分、导出和 llm 逻辑。 ## 大模型 api 预留能力 app 里已经预留了大模型增强入口： - endpoint：例如 `https://api.openai.com/v1/chat/completions` - model：例如 `gpt-4.1-mini` - api key：用户自己的... launchlens 项目定位 适配比赛 核心功能 空间交互 大模型 api 预留能力 快速运行 github 发布 project wall 提交 资产清单 技术栈 english project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SOURCE.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Source Access",
+      "summary": "# LaunchLens Source Access This temporary public source page is provided for UCWS review while the stable GitHub repository is pending. ## Temporary source package Download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` Public URL status: ```text No reliable temporary public tunnel is currently available. ``` Use the local `launchlens-source.zip` or the final...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens source access project markdown projects/launchlens/source.md # launchlens source access this temporary public source page is provided for ucws review while the stable github repository is pending. ## temporary source package download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` public url status: ```text no reliable temporary public tunnel is currently available. ``` use the local `launchlens-source.zip` or the final... # launchlens source access this temporary public source page is provided for ucws review while the stable github repository is pending. ## temporary source package download the current source bundle while the local temporary tunnel is running: ```text launchlens-source.zip ``` public url status: ```text no reliable temporary public tunnel is currently available. ``` use the local `launchlens-source.zip` or the final github repository after push. ## stable github repository the project is already initialized as a local git repository on branch `main`. on github pages, the repository itself is the stable source of truth; the temporary zip url is only a fallback for review before the github repo is pushed. when a github remote or `github_token` is available, push with one of these commands: ```powershell node tools/push-github.mjs https://github.com/your_account/launchlens.git ``` or: ```powershell $env:github_token=\"your-github-token\" node tools/publish-github.mjs launchlens ``` the final project wall `repourl` should be the github repository url. this temporary source page is only a review fallback while github publishing is pending. ## contents - `index.html`, `styles.css`, `app.js`: the app, including temple mode and classic mode - `readme.md`: project readme - `assets.md`: repository asset index - `assets/temple-background.png`: original generated spatial background for temple mode - `assets/screenshot.png`, `assets/screenshot-mobile.png`: refreshed temple mode screenshots - `project_wall_fields.md`: copy-paste project wall fields - `submission.md`: ucws submission draft... launchlens source access temporary source package stable github repository contents project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SPACE_INTERACTION_SPEC.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "LaunchLens Space Interaction Spec",
+      "summary": "# LaunchLens Space Interaction Spec > 中文 | English This spec captures the spatial interaction direction for LaunchLens and documents the V1 implementation. The current Classic Mode remains available and submission-ready. ## V1 Implementation Status Implemented in the current app: ```text Temple / Classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel O...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "launchlens space interaction spec project markdown projects/launchlens/space_interaction_spec.md # launchlens space interaction spec > 中文 | english this spec captures the spatial interaction direction for launchlens and documents the v1 implementation. the current classic mode remains available and submission-ready. ## v1 implementation status implemented in the current app: ```text temple / classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel o... # launchlens space interaction spec > 中文 | english this spec captures the spatial interaction direction for launchlens and documents the v1 implementation. the current classic mode remains available and submission-ready. ## v1 implementation status implemented in the current app: ```text temple / classic top-level toggle original generated temple background six semantic hotspot buttons right-side active node panel oracle llm first-level node final door submission handoff node mobile bottom node navigation existing scoring, export, and llm logic reused desktop and mobile screenshots refreshed ``` still intentionally out of scope for v1: ```text three.js real 3d navigation camera walkthrough rewritten scoring or llm logic authenticated project wall import without user token ``` ## product direction launchlens should evolve from a classic submission form into a spatial submission workflow: ```text launchlens submission temple launchlens 提交神殿 ``` the core product remains a ucws project wall submission copilot. temple mode adds narrative, spatial memory, and stronger first-impression value without replacing the working tool. principles: ```text space is the story. hotspots are the workflow. panels are the tools. readiness is the progress. llm is the oracle. submission is the final door. ``` 中文原则： ```text 空间是叙事。 热点是流程。 面板是工具。 评分是进度。 llm 是神谕。 提交是主殿大门。 ``` ## required modes launchlens should support two modes. | mode | purpose | notes | | --- | --- | --- | | temple mode | spatial first impression, guided workflow, stronger product memory | default visual experience for demos | | c... launchlens space interaction spec v1 implementation status product direction required modes temple nodes desktop layout mobile layout suggested hotspot coordinates event mapping oracle llm requirements final door requirements background asset requirements project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SUBMISSION_AUDIT.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "Submission Audit",
+      "summary": "# Submission Audit ## Current State | Requirement | Status | Evidence | | --- | --- | --- | | Working demo app | Done locally | `index.html`, `app.js`, `styles.css`; local server URL `http://localhost:8080/launchlens/` | | UCWS-aligned fields | Done | `PROJECT_WALL_FIELDS.md`, `SUBMISSION.md` | | Project description | Done | `SUBMISSION.md`, generated in app | | README | Done | `README.md` | | Bilingual GitHub READM...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "submission audit project markdown projects/launchlens/submission_audit.md # submission audit ## current state | requirement | status | evidence | | --- | --- | --- | | working demo app | done locally | `index.html`, `app.js`, `styles.css`; local server url `http://localhost:8080/launchlens/` | | ucws-aligned fields | done | `project_wall_fields.md`, `submission.md` | | project description | done | `submission.md`, generated in app | | readme | done | `readme.md` | | bilingual github readm... # submission audit ## current state | requirement | status | evidence | | --- | --- | --- | | working demo app | done locally | `index.html`, `app.js`, `styles.css`; local server url `http://localhost:8080/launchlens/` | | ucws-aligned fields | done | `project_wall_fields.md`, `submission.md` | | project description | done | `submission.md`, generated in app | | readme | done | `readme.md` | | bilingual github readme | done | `readme.md`, chinese and english sections | | bilingual app ui | done | en / 中文 switch in `index.html` and `app.js`; translated ui, temple nodes, score notes, fixes, and generated outputs | | repository asset index | done | `assets.md` | | screenshot | done | `assets/screenshot.png`, `assets/screenshot-zh.png`, `assets/screenshot-mobile.png` | | temple mode ui | done | `index.html`, `styles.css`, `app.js`, `assets/temple-background.png`; six clickable workflow nodes | | classic mode fallback | done | top-level temple / classic toggle preserves the original two-column tool | | ui smoke test | done | edge + playwright check: desktop temple visible, classic hidden by default, 6 nodes, oracle opens llm, final door clickable, mobile nav visible, no console errors | | project logo | done | `assets/logo.svg` | | deployment config | done | `netlify.toml`, `vercel.json`, `deployment.md` | | local tests | done | `node tests/scoring.test.mjs` | | local git repo | done | branch `main`; run `git log --oneline -1` for the latest commit | | submission zip | done | `../launchlens_submission_pack.zip` | | temporary public source page | not currently public | `source.m... submission audit current state known external blockers fastest completion path project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/SUBMISSION.md",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "UCWS Project Wall Submission",
+      "summary": "# UCWS Project Wall Submission ## Project Name LaunchLens ## Track Application ## Tagline Turn rough hackathon ideas into scored, ready-to-submit Project Wall packages. ## Description LaunchLens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. Builders often have real work but lose the last day converting product notes into clear submissions that...",
+      "url": "",
+      "tags": [
+        "Project Markdown",
+        "project",
+        "launchlens",
+        "md"
+      ],
+      "searchText": "ucws project wall submission project markdown projects/launchlens/submission.md # ucws project wall submission ## project name launchlens ## track application ## tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ## description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that... # ucws project wall submission ## project name launchlens ## track application ## tagline turn rough hackathon ideas into scored, ready-to-submit project wall packages. ## description launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. the current version adds a 2.5d temple mode inspired by a spatial submission hall: six clickable nodes guide users through project story, evidence, scoring, oracle llm enhancement, generated archives, and the final github / project wall handoff. a classic mode remains available for fast form editing and reliable export. the first use case is ucws singapore 2026, where teams need to submit a project name, tagline, description, demo url, repo url, track, tech stack, screenshots, and team members. the broader use case is global: any hackathon, accelerator, or demo-day team can use the same workflow to move from rough notes to a credible public submission. ## demo url local review url: `http://localhost:8080/launchlens/` public url placeholder: ```text https://your-demo-url.example.com ``` replace with a stable github pages / netlify / vercel url before final judging. ## repository url stable github ur... ucws project wall submission project name track tagline description demo url repository url tech stack project screenshot project logo social card team members project launchlens md"
+    },
+    {
+      "id": "official-snapshot:projects/launchlens/vercel.json",
+      "type": "resource",
+      "source": "official-local-snapshot",
+      "title": "launchlens / vercel.json",
+      "summary": "{ \"cleanUrls\": true, \"trailingSlash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"X-Content-Type-Options\", \"value\": \"nosniff\" }, { \"key\": \"Referrer-Policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] }",
+      "url": "",
+      "tags": [
+        "Project Metadata",
+        "project",
+        "launchlens",
+        "json"
+      ],
+      "searchText": "launchlens / vercel.json project metadata projects/launchlens/vercel.json { \"cleanurls\": true, \"trailingslash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"x-content-type-options\", \"value\": \"nosniff\" }, { \"key\": \"referrer-policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] } { \"cleanurls\": true, \"trailingslash\": true, \"headers\": [ { \"source\": \"/(.*)\", \"headers\": [ { \"key\": \"x-content-type-options\", \"value\": \"nosniff\" }, { \"key\": \"referrer-policy\", \"value\": \"strict-origin-when-cross-origin\" } ] } ] } project launchlens json"
+    },
+    {
+      "id": "official:README.md",
+      "type": "resource",
+      "source": "official-repo",
+      "title": "UCWS Hackathon Singapore 2026",
+      "summary": "# UCWS Hackathon Singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> Welcome to the official repository for the **UCWS Hackathon Singapore**, organized by **EPICConnector** — a global AI-native entrepreneurship community platform. --- ## About EPICConnector EPICConnector is an international community platform spanning **Ch...",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/README.md",
+      "tags": [
+        "Official Document",
+        "official",
+        "readme"
+      ],
+      "searchText": "ucws hackathon singapore 2026 official document readme.md # ucws hackathon singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> welcome to the official repository for the **ucws hackathon singapore**, organized by **epicconnector** — a global ai-native entrepreneurship community platform. --- ## about epicconnector epicconnector is an international community platform spanning **ch... # ucws hackathon singapore 2026 <img width=\"1702\" height=\"962\" alt=\"image\" src=\"https://github.com/user-attachments/assets/570119c6-2aed-4b20-83f1-13a2b2e4e600\" /> welcome to the official repository for the **ucws hackathon singapore**, organized by **epicconnector** — a global ai-native entrepreneurship community platform. --- ## about epicconnector epicconnector is an international community platform spanning **china, singapore, north america, uk, australia, japan, and switzerland**. we are dedicated to: - **ai product incubation**: nurturing innovative ai-driven startups from concept to market - **global resource connection**: bridging entrepreneurs with investors, mentors, and industry leaders - **cross-border market activities**: facilitating synchronized events, growth marketing, and product launch opportunities - **startup globalization**: empowering ai entrepreneurs to achieve global expansion **learn more:** [epicconnector.ai](https://epicconnector.ai) --- ## ucws hackathon singapore 2026 join us for an exciting showcase of ai innovation! the **ucws hackathon singapore** is your opportunity to: - **compete** with talented developers and entrepreneurs - **build** groundbreaking ai products and solutions - **network** with industry leaders, investors, and the global ai community - **win** substantial prizes across multiple tracks ### event details **date:** june 13, 2026 **location:** singapore **format:** online & offline (with pre-event online coding phase from april onwards) **[ucws singapore offline demo day registration](https://luma.com/ucws2026)** ### registe... ucws hackathon singapore 2026 about epicconnector ucws hackathon singapore 2026 event details register now connect with us repository purpose what this is not project submission intellectual property & commercial rights contact & support important dates official readme"
+    },
+    {
+      "id": "official:RESOURCES.md",
+      "type": "resource",
+      "source": "official-repo",
+      "title": "Resources & Tools",
+      "summary": "# Resources & Tools A curated collection of resources to help you prepare for the UCWS Hackathon Singapore 2026. --- ## Getting Started ### Official Links - **Hackathon Registration:** [UCWS Hackathon Singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaJa5h) - **Project Submission Platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **EPICConnector Web...",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/RESOURCES.md",
+      "tags": [
+        "Official Document",
+        "official",
+        "resources"
+      ],
+      "searchText": "resources & tools official document resources.md # resources & tools a curated collection of resources to help you prepare for the ucws hackathon singapore 2026. --- ## getting started ### official links - **hackathon registration:** [ucws hackathon singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h) - **project submission platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **epicconnector web... # resources & tools a curated collection of resources to help you prepare for the ucws hackathon singapore 2026. --- ## getting started ### official links - **hackathon registration:** [ucws hackathon singapore 2026](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h) - **project submission platform:** [evol.epicconnector.ai](https://evol.epicconnector.ai) - **epicconnector website:** [epicconnector.ai](https://epicconnector.ai) ### community channels - **whatsapp community:** [join](https://chat.whatsapp.com/kahqq2q4x5jburpuaxkvgy) - **luma events:** [epic_connector](https://luma.com/user/epic_connector) - **linkedin:** [@epic-connector](https://www.linkedin.com/company/epic-connector/) - **x (twitter):** [@epicconnector](https://x.com/epicconnector) - **instagram:** [@epicconnector_](https://www.instagram.com/epicconnector_/) - **threads:** [@epicconnector_](https://www.threads.com/@epicconnector_) - **wechat:** @epicconnector --- ## developer benefits & sponsor resources ### 🎁 referral rewards program invite outstanding teams to join the hackathon and get rewarded when they make the top 20! - **refer 1 team** → $200 claudecode opus 4.5 / gemini tokens - **refer 3 teams** → mac mini + $300 claudecode opus 4.5 / gemini tokens - **refer 5 teams** → round-trip flight to singapore + mac mini + $500 claudecode opus 4.5 / gemini tokens 👉 **[register & get your referral code](https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy?invite=2geaja5h)** --- ### 🏆 top 20 finalist benefits get rewarded for making it into the... resources & tools getting started official links community channels developer benefits & sponsor resources 🎁 referral rewards program 🏆 top 20 finalist benefits 💡 special track & technology benefits 🤝 partners & sponsors ai & machine learning frameworks & libraries learning resources official resources"
+    },
+    {
+      "id": "official:SECURITY.md",
+      "type": "resource",
+      "source": "official-repo",
+      "title": "Security Policy",
+      "summary": "# Security Policy ## Reporting Security Vulnerabilities If you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **Email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **Please include:** - Description of the vulnerability - Steps to reproduce - Potential impact - Your contact information **Do not:** - Post the vulnerability publicly - Sh...",
+      "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/blob/main/SECURITY.md",
+      "tags": [
+        "Official Document",
+        "official",
+        "security"
+      ],
+      "searchText": "security policy official document security.md # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - sh... # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - share details in issues or pull requests - test on production systems without permission we will investigate all reports and provide updates as quickly as possible. --- ## security best practices ### for participants when building your hackathon project: 1. **never commit secrets** - don't include api keys, passwords, or tokens in code - use `.env` files with `.env.example` templates - use environment variables for sensitive data 2. **secure dependencies** - keep libraries and frameworks updated - check for known vulnerabilities using tools like snyk - audit dependencies regularly 3. **data protection** - follow gdpr and data privacy regulations - encrypt sensitive user data - implement proper authentication and authorization 4. **input validation** - validate all user inputs - prevent sql injection, xss, and other attacks - use parameterized queries for databases 5. **secure communication** - use https for all web applications - implement proper cors headers - secure api endpoints with authentication --- ## code review & submission all projects submitted to this repository: - must follow security best practices - should not contain malicious code - must respect i... security policy reporting security vulnerabilities security best practices for participants code review & submission dependencies & vulnerabilities monitoring dependencies use only official base images keep base images updated known vulnerabilities python javascript official security"
+    },
+    {
+      "id": "official-local-snapshot:commit:358f39d9d2dc0b7e97c4fff38015d30ef87600db",
+      "type": "commit",
+      "source": "official-local-snapshot",
+      "title": "Add LaunchLens project submission",
+      "summary": "358f39d / wangsiyi7 / 2026-06-04T19:03:14+08:00",
+      "url": "",
+      "tags": [
+        "commit",
+        "official-local-snapshot"
+      ],
+      "searchText": "358f39d9d2dc0b7e97c4fff38015d30ef87600db 358f39d 2026-06-04t19:03:14+08:00 wangsiyi7 add launchlens project submission 358f39d add launchlens project submission official-local-snapshot"
+    },
+    {
+      "id": "official-local-snapshot:commit:c5775f359f38014949a9e6ed14d17107b74eabb1",
+      "type": "commit",
+      "source": "official-local-snapshot",
+      "title": "Add files via upload",
+      "summary": "c5775f3 / epicconnector / 2026-05-31T13:25:32+08:00",
+      "url": "",
+      "tags": [
+        "commit",
+        "official-local-snapshot"
+      ],
+      "searchText": "c5775f359f38014949a9e6ed14d17107b74eabb1 c5775f3 2026-05-31t13:25:32+08:00 epicconnector add files via upload c5775f3 add files via upload official-local-snapshot"
+    },
+    {
+      "id": "aggregator-repo:commit:a0570dabc7cea71ba9fc071cc95b366d5dbaa806",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Finalize public repository links",
+      "summary": "a0570da / wangsiyi7 / 2026-06-05T22:12:22+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/a0570dabc7cea71ba9fc071cc95b366d5dbaa806",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "a0570dabc7cea71ba9fc071cc95b366d5dbaa806 a0570da 2026-06-05t22:12:22+08:00 wangsiyi7 finalize public repository links a0570da finalize public repository links aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:4308174124f3c09e63f3dadacae161e50721b3b5",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Simplify Pages deployment workflow",
+      "summary": "4308174 / wangsiyi7 / 2026-06-05T22:02:07+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/4308174124f3c09e63f3dadacae161e50721b3b5",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "4308174124f3c09e63f3dadacae161e50721b3b5 4308174 2026-06-05t22:02:07+08:00 wangsiyi7 simplify pages deployment workflow 4308174 simplify pages deployment workflow aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:bd0e7ab75a12d237a568cf7054bccb5459db43f2",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Merge GitHub repository initialization",
+      "summary": "bd0e7ab / wangsiyi7 / 2026-06-05T21:58:55+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/bd0e7ab75a12d237a568cf7054bccb5459db43f2",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "bd0e7ab75a12d237a568cf7054bccb5459db43f2 bd0e7ab 2026-06-05t21:58:55+08:00 wangsiyi7 merge github repository initialization bd0e7ab merge github repository initialization aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:bb6bfa00d0005d9e44090ede68782a15b0ef1180",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Initial commit",
+      "summary": "bb6bfa0 / 希逸 / 2026-06-05T21:56:27+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/bb6bfa00d0005d9e44090ede68782a15b0ef1180",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "bb6bfa00d0005d9e44090ede68782a15b0ef1180 bb6bfa0 2026-06-05t21:56:27+08:00 希逸 initial commit bb6bfa0 initial commit aggregator-repo"
+    },
+    {
+      "id": "aggregator-repo:commit:48548ce6ffe6e1d25db569aa961693016968c91b",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Build UCWS project aggregator online demo",
+      "summary": "48548ce / wangsiyi7 / 2026-06-05T21:02:44+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/48548ce6ffe6e1d25db569aa961693016968c91b",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "48548ce6ffe6e1d25db569aa961693016968c91b 48548ce 2026-06-05t21:02:44+08:00 wangsiyi7 build ucws project aggregator online demo 48548ce build ucws project aggregator online demo aggregator-repo"
+    }
+  ],
   "projectLinks": [
     {
       "name": "LaunchLens",
       "category": "Skill / Workflow",
       "repoUrl": "https://github.com/wangsiyi7/launchlens",
       "demoUrl": "https://wangsiyi7.github.io/launchlens/",
-      "officialArchiveUrl": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
+      "officialArchiveUrl": "",
+      "officialSnapshotPath": "projects/launchlens",
       "projectWallUrl": ""
     }
   ],
@@ -95,10 +1229,10 @@
       "sourceKinds": [
         "official-repo"
       ],
-      "officialArchiveUrl": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
+      "officialArchiveUrl": "",
+      "officialSnapshotPath": "projects/launchlens",
       "projectWallUrl": "",
       "links": [
-        "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026/tree/main/projects/launchlens",
         "https://github.com/wangsiyi7/launchlens",
         "https://wangsiyi7.github.io/launchlens/"
       ],
@@ -110,7 +1244,7 @@
         "hasSummary": true
       },
       "readinessScore": 100,
-      "searchText": "launchlens application skill / workflow turn rough hackathon ideas into scored, ready-to-submit project wall packages. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] https://github.com/epicconnectorai/ucws-singapore-hackathon-2026/tree/main/projects/launchlens https://github.com/wangsiyi7/launchlens https://wangsiyi7.github.io/launchlens/"
+      "searchText": "launchlens application skill / workflow turn rough hackathon ideas into scored, ready-to-submit project wall packages. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. launchlens is a browser-based submission copilot for hackathon teams, solo builders, community reviewers, and demo-day organizers. builders often have real work but lose the last day converting product notes into clear submissions that voters, ai evaluators, and judges can understand quickly. launchlens runs a review agent over ucws submission fields, scores readiness across community vote, ai evaluation, and expert judging, then generates markdown, readme, pitch, sprint plan, and fix-list outputs. it helps builders move from rough notes to a credible public submission in minutes. the current version includes temple mode, a 2.5d spatial submission workflow with six clickable nodes for project story, evidence, score, oracle llm, generated archive, and final github / project wall handoff. classic mode remains available for fast form editing and stable export. the first use case is ucws singapore 2026, but the product is global: any hackathon, accelerator, or demo-day team can use the same workflow before submitting. html, css, javascript, browser localstorage, 2.5d generated bitmap background, optional openai-compatible chat completion endpoint [{\"name\":\"add submitting team members\",\"role\":\"builder\",\"links\":{}}] projects/launchlens https://github.com/wangsiyi7/launchlens https://wangsiyi7.github.io/launchlens/"
     }
   ]
 }

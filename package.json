@@ -2,7 +2,7 @@
   "name": "ucws-project-aggregator",
   "version": "0.1.0",
   "private": true,
-  "description": "Companion UCWS project index, norms, skill, and judge-facing demo for LaunchLens.",
+  "description": "Companion UCWS project search index, norms, skill, and judge-facing searcher demo for LaunchLens.",
   "type": "module",
   "homepage": "https://wangsiyi7.github.io/ucws-project-aggregator/",
   "repository": {

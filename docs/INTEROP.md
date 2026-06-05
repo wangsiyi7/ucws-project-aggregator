@@ -6,16 +6,17 @@ This companion project is designed to sit beside `launchlens` in the workspace:
 UCWS 2026/
   _tmp_ucws_official_repo/      Official UCWS archive mirror
   launchlens/                   Builder and judge workspace
-  ucws-project-aggregator/      Companion index, demo, norms, and skill
+  ucws-project-aggregator/      Companion search index, demo, norms, and skill
 ```
 
 ## Data Flow
 
-1. The official UCWS repository contributes archived project folders under `projects/`.
-2. LaunchLens runs authenticated Project Wall sync and writes `data/ucws-project-wall.json`.
-3. This project runs `npm.cmd run build`.
-4. `data/project-index.json` becomes the shared, judge-friendly project index.
-5. The demo reads `data/project-index.json` and links back to LaunchLens for deeper work.
+1. The official UCWS repository contributes public root documents and local project snapshot files.
+2. The local official mirror contributes commit history for the current official snapshot branch.
+3. LaunchLens runs authenticated Project Wall sync and writes `data/ucws-project-wall.json`.
+4. This project runs `npm.cmd run build`.
+5. `data/project-index.json` becomes the shared, judge-friendly search index.
+6. The demo reads `projects`, `resources`, `commits`, and `searchRecords` from that JSON and links back to LaunchLens for deeper work.
 
 ## Commands
 
@@ -41,8 +42,7 @@ The static demo is published with GitHub Pages at:
 ```text
 https://wangsiyi7.github.io/ucws-project-aggregator/
 ```
-
-Until that repository exists, the local demo URL is:
+The local demo URL is:
 
 ```text
 http://127.0.0.1:8082/
