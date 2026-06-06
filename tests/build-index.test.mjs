@@ -98,10 +98,16 @@ assert.equal(index.stats.projects, 2);
 assert.equal(index.stats.officialProjects, 1);
 assert.equal(index.stats.dynamicProjects, 1);
 assert.equal(index.stats.resources >= 2, true);
+assert.equal(index.stats.aggregatorResources >= 4, true);
 assert.equal(index.stats.searchableRecords >= 4, true);
 assert.equal(index.projectLinks.length, 2);
 assert.equal(index.resources.some((resource) => resource.title === "UCWS Fixture"), true);
+assert.equal(index.resources.some((resource) => resource.path === "SUBMISSION_FORM.en.md"), true);
+assert.equal(index.resources.some((resource) => resource.path === "SUBMISSION_FORM.zh-CN.md"), true);
 assert.equal(index.searchRecords.some((record) => record.type === "resource"), true);
 assert.equal(index.searchRecords.some((record) => record.type === "project"), true);
+assert.equal(index.skill.path, "skills/ucws-project-aggregation/SKILL.md");
+assert.equal(index.skill.interfacePath, "skills/ucws-project-aggregation/agents/openai.yaml");
+assert.equal(index.submissionForms.length, 2);
 
 console.log("ucws-project-aggregator build-index tests passed");

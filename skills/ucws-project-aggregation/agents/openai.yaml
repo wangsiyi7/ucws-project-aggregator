@@ -1,0 +1,6 @@
+interface:
+  display_name: "UCWS Project Aggregation"
+  short_description: "Source-bounded UCWS search and submission workflow"
+  default_prompt: "Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields."
+policy:
+  allow_implicit_invocation: true

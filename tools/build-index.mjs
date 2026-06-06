@@ -10,6 +10,16 @@ const execFileAsync = promisify(execFile);
 
 const ROOT_RESOURCE_FILES = ["README.md", "RESOURCES.md", "SECURITY.md", "LICENSE"];
 const PROJECT_RESOURCE_EXTENSIONS = new Set([".md", ".json", ".toml", ".yml", ".yaml"]);
+const AGGREGATOR_RESOURCE_FILES = [
+  { path: "README.md", kind: "Aggregator Overview", tags: ["aggregator", "overview"] },
+  { path: "SUBMISSION_FORM.en.md", kind: "Submission Form", tags: ["aggregator", "submission", "english"] },
+  { path: "SUBMISSION_FORM.zh-CN.md", kind: "Submission Form", tags: ["aggregator", "submission", "chinese"] },
+  { path: "docs/AGENT_HANDOFF.md", kind: "Agent Handoff", tags: ["aggregator", "agent", "handoff"] },
+  { path: "docs/INTEROP.md", kind: "Interop Note", tags: ["aggregator", "interop"] },
+  { path: "docs/UCWS_PROJECT_NORMS.md", kind: "Norms", tags: ["aggregator", "norms", "source-boundary"] },
+  { path: "skills/ucws-project-aggregation/SKILL.md", kind: "Codex Skill", tags: ["aggregator", "skill", "agent"] },
+  { path: "skills/ucws-project-aggregation/agents/openai.yaml", kind: "Skill Metadata", tags: ["aggregator", "skill", "metadata"] },
+];
 const MAX_RESOURCE_CHARS = 1600;
 
 export const DEFAULTS = {
@@ -413,6 +423,30 @@ export async function readOfficialResources(officialRepoPath, options = DEFAULTS
   return resources.sort((a, b) => a.path.localeCompare(b.path));
 }
 
+export async function readAggregatorResources(aggregatorPath = ROOT, options = DEFAULTS) {
+  const resources = [];
+  for (const entry of AGGREGATOR_RESOURCE_FILES) {
+    const filePath = resolve(aggregatorPath, entry.path);
+    const content = await readTextIfExists(filePath);
+    if (!content) continue;
+    resources.push(
+      normalizeResource({
+        id: `aggregator:${entry.path}`,
+        type: "resource",
+        source: "aggregator-repo",
+        kind: entry.kind,
+        title: markdownTitle(content, basename(entry.path)),
+        path: entry.path,
+        url: repoBlobUrl(options.aggregatorRepoUrl, "main", entry.path),
+        summary: content,
+        content,
+        tags: entry.tags,
+      }),
+    );
+  }
+  return resources.sort((a, b) => a.path.localeCompare(b.path));
+}
+
 async function gitBranch(repoPath) {
   try {
     const { stdout } = await execFileAsync("git", ["-C", repoPath, "branch", "--show-current"]);
@@ -532,16 +566,25 @@ function commitSearchRecord(commit) {
 
 export async function buildProjectIndex(options = DEFAULTS) {
   const resolved = { ...DEFAULTS, ...options };
-  const [officialProjects, dynamicProjects, officialResources, officialCommits, aggregatorCommits, officialBranch] = await Promise.all([
+  const [
+    officialProjects,
+    dynamicProjects,
+    officialResources,
+    aggregatorResources,
+    officialCommits,
+    aggregatorCommits,
+    officialBranch,
+  ] = await Promise.all([
     readOfficialProjects(resolved.officialRepoPath, resolved),
     readDynamicProjects(resolved.launchlensPath, resolved),
     readOfficialResources(resolved.officialRepoPath, resolved),
+    readAggregatorResources(ROOT, resolved),
     readGitCommits(resolved.officialRepoPath, "official-local-snapshot", "", 40),
     readGitCommits(ROOT, "aggregator-repo", resolved.aggregatorRepoUrl, 40),
     gitBranch(resolved.officialRepoPath),
   ]);
   const projects = mergeProjects([...officialProjects, ...dynamicProjects]);
-  const resources = officialResources;
+  const resources = [...officialResources, ...aggregatorResources];
   const commits = [...officialCommits, ...aggregatorCommits];
   const searchRecords = [
     ...projects.map(projectSearchRecord),
@@ -578,6 +621,10 @@ export async function buildProjectIndex(options = DEFAULTS) {
         repoUrl: resolved.aggregatorRepoUrl,
         demoUrl: resolved.aggregatorDemoUrl,
         localDemoPath: "index.html",
+        skillPath: "skills/ucws-project-aggregation/SKILL.md",
+        skillInterfacePath: "skills/ucws-project-aggregation/agents/openai.yaml",
+        agentHandoffPath: "docs/AGENT_HANDOFF.md",
+        submissionForms: ["SUBMISSION_FORM.en.md", "SUBMISSION_FORM.zh-CN.md"],
       },
     },
     norms: {
@@ -592,13 +639,37 @@ export async function buildProjectIndex(options = DEFAULTS) {
     },
     skill: {
       path: "skills/ucws-project-aggregation/SKILL.md",
-      purpose: "Give Codex or another agent a repeatable workflow for UCWS project aggregation and judge-facing synthesis.",
+      interfacePath: "skills/ucws-project-aggregation/agents/openai.yaml",
+      purpose:
+        "Give Codex or another agent a repeatable, source-bounded workflow for UCWS project aggregation, bilingual submission copy, and judge-facing synthesis.",
+      defaultPrompt:
+        "Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields.",
+      agentUseCases: [
+        "Refresh the normalized UCWS search index.",
+        "Search official resources, local snapshots, Project Wall records, and aggregator docs without blurring sources.",
+        "Prepare English and Chinese Project Wall copy.",
+        "Generate a concise Agent handoff for later review work.",
+      ],
     },
+    submissionForms: [
+      {
+        language: "en",
+        path: "SUBMISSION_FORM.en.md",
+        url: repoBlobUrl(resolved.aggregatorRepoUrl, "main", "SUBMISSION_FORM.en.md"),
+      },
+      {
+        language: "zh-CN",
+        path: "SUBMISSION_FORM.zh-CN.md",
+        url: repoBlobUrl(resolved.aggregatorRepoUrl, "main", "SUBMISSION_FORM.zh-CN.md"),
+      },
+    ],
     stats: {
       projects: projects.length,
       officialProjects: officialProjects.length,
       dynamicProjects: dynamicProjects.length,
       resources: resources.length,
+      officialResources: officialResources.length,
+      aggregatorResources: aggregatorResources.length,
       officialCommits: officialCommits.length,
       aggregatorCommits: aggregatorCommits.length,
       searchableRecords: searchRecords.length,

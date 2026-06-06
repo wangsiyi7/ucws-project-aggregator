@@ -2,7 +2,7 @@
   "name": "ucws-project-aggregator",
   "version": "0.1.0",
   "private": true,
-  "description": "Companion UCWS project search index, norms, skill, and judge-facing searcher demo for LaunchLens.",
+  "description": "Source-bounded UCWS project searcher, reusable Codex skill, bilingual submission forms, and Agent handoff demo for LaunchLens.",
   "type": "module",
   "homepage": "https://wangsiyi7.github.io/ucws-project-aggregator/",
   "repository": {
@@ -21,7 +21,9 @@
     "hackathon",
     "project-wall",
     "launchlens",
-    "codex-skill"
+    "codex-skill",
+    "agent-handoff",
+    "submission-form"
   ],
-  "license": "UNLICENSED"
+  "license": "MIT"
 }

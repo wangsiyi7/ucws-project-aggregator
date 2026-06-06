@@ -6,7 +6,7 @@
     <title>UCWS Project Searcher</title>
     <meta
       name="description"
-          content="A searchable companion index for UCWS Singapore Hackathon 2026 projects, official resources, and commit history."
+          content="A searchable companion index and Agent skill layer for UCWS Singapore Hackathon 2026 projects, official resources, submission forms, and commit history."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,7 +21,7 @@
           <button id="langEnBtn" type="button" class="active" aria-pressed="true">EN</button>
           <button id="langZhBtn" type="button" aria-pressed="false">中文</button>
         </div>
-        <a href="https://github.com/wangsiyi7/ucws-project-aggregator" data-i18n="link.aggregatorRepo">Aggregator Repo</a>
+        <a href="https://github.com/wangsiyi7/ucws-project-aggregator" data-i18n="link.aggregatorRepo">Skill Repo</a>
         <a href="https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026" data-i18n="link.official">Official UCWS Repo</a>
         <a href="https://github.com/wangsiyi7/launchlens" data-i18n="link.launchlensRepo">LaunchLens Repo</a>
         <a href="https://wangsiyi7.github.io/launchlens/" data-i18n="link.launchlensDemo">LaunchLens Demo</a>
@@ -31,12 +31,13 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Companion Index</p>
-          <h2 data-i18n="hero.title">Search projects, official resources, and commit history in one place.</h2>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Companion Skill Index</p>
+          <h2 data-i18n="hero.title">Search projects, resources, commits, and agent-ready skill context.</h2>
           <p data-i18n="hero.body">
             This demo reads a normalized UCWS search index generated from the official archive,
-            LaunchLens Project Wall snapshot, official resource documents, and commit history.
-            It helps judges and agents find evidence without mixing private tokens into the data layer.
+            LaunchLens Project Wall snapshot, official resource documents, submission forms, skill
+            metadata, and commit history. It helps judges and agents find evidence without mixing
+            private tokens into the data layer.
           </p>
         </div>
         <div id="statusPanel" class="status-panel" aria-live="polite" data-i18n="status.loading">Loading project index...</div>
@@ -47,11 +48,11 @@
       </section>
 
       <section class="controls" aria-label="Project filters">
-        <input id="searchInput" type="search" placeholder="Search project, repo, category, official docs, commits..." data-i18n-placeholder="placeholder.search" />
+        <input id="searchInput" type="search" placeholder="Search project, repo, skill, submission forms, docs, commits..." data-i18n-placeholder="placeholder.search" />
         <select id="scopeSelect" aria-label="Record scope">
           <option value="all" data-i18n="filter.allRecords">All records</option>
           <option value="project" data-i18n="filter.projects">Projects</option>
-          <option value="resource" data-i18n="filter.resources">Official resources</option>
+          <option value="resource" data-i18n="filter.resources">Resources and skill docs</option>
           <option value="commit" data-i18n="filter.commits">Commit history</option>
         </select>
         <select id="categorySelect" aria-label="Category filter">
@@ -64,6 +65,7 @@
           <option value="gaps" data-i18n="filter.gaps">Evidence gaps</option>
         </select>
         <button id="briefButton" type="button" data-i18n="button.brief">Build Review Brief</button>
+        <button id="agentPromptButton" type="button" class="secondary" data-i18n="button.agent">Build Agent Handoff</button>
       </section>
 
       <section class="content-grid">
@@ -82,14 +84,17 @@
           <div class="section-head">
             <div>
               <p class="eyebrow" data-i18n="assist.eyebrow">Judge Assist</p>
-              <h3 data-i18n="assist.title">Evidence brief</h3>
+              <h3 data-i18n="assist.title">Evidence and agent brief</h3>
             </div>
           </div>
           <pre id="briefOutput" tabindex="0" data-i18n="assist.empty">Filter projects, then build a review brief.</pre>
           <div class="resource-list">
             <a href="docs/UCWS_PROJECT_NORMS.md" data-i18n="resource.norms">Aggregation Norms</a>
             <a href="docs/INTEROP.md" data-i18n="resource.interop">Interop Notes</a>
-            <a href="skills/ucws-project-aggregation/SKILL.md" data-i18n="resource.skill">Codex Skill</a>
+            <a href="docs/AGENT_HANDOFF.md" data-i18n="resource.agentHandoff">Agent Handoff</a>
+            <a href="skills/ucws-project-aggregation/SKILL.md" data-i18n="resource.skill">UCWS Skill</a>
+            <a href="SUBMISSION_FORM.en.md" data-i18n="resource.submissionEn">Submission Form EN</a>
+            <a href="SUBMISSION_FORM.zh-CN.md" data-i18n="resource.submissionZh">Submission Form 中文</a>
             <a href="data/project-index.json" data-i18n="resource.json">Project Index JSON</a>
           </div>
         </aside>

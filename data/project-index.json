@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-06-05.ucws.project-index.v1",
-  "generatedAt": "2026-06-05T14:36:52.785Z",
+  "generatedAt": "2026-06-06T06:22:59.738Z",
   "sources": {
     "officialRepo": {
       "url": "https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026",
@@ -23,7 +23,14 @@
     "aggregator": {
       "repoUrl": "https://github.com/wangsiyi7/ucws-project-aggregator",
       "demoUrl": "https://wangsiyi7.github.io/ucws-project-aggregator/",
-      "localDemoPath": "index.html"
+      "localDemoPath": "index.html",
+      "skillPath": "skills/ucws-project-aggregation/SKILL.md",
+      "skillInterfacePath": "skills/ucws-project-aggregation/agents/openai.yaml",
+      "agentHandoffPath": "docs/AGENT_HANDOFF.md",
+      "submissionForms": [
+        "SUBMISSION_FORM.en.md",
+        "SUBMISSION_FORM.zh-CN.md"
+      ]
     }
   },
   "norms": {
@@ -50,16 +57,38 @@
   },
   "skill": {
     "path": "skills/ucws-project-aggregation/SKILL.md",
-    "purpose": "Give Codex or another agent a repeatable workflow for UCWS project aggregation and judge-facing synthesis."
+    "interfacePath": "skills/ucws-project-aggregation/agents/openai.yaml",
+    "purpose": "Give Codex or another agent a repeatable, source-bounded workflow for UCWS project aggregation, bilingual submission copy, and judge-facing synthesis.",
+    "defaultPrompt": "Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields.",
+    "agentUseCases": [
+      "Refresh the normalized UCWS search index.",
+      "Search official resources, local snapshots, Project Wall records, and aggregator docs without blurring sources.",
+      "Prepare English and Chinese Project Wall copy.",
+      "Generate a concise Agent handoff for later review work."
+    ]
   },
+  "submissionForms": [
+    {
+      "language": "en",
+      "path": "SUBMISSION_FORM.en.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.en.md"
+    },
+    {
+      "language": "zh-CN",
+      "path": "SUBMISSION_FORM.zh-CN.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.zh-CN.md"
+    }
+  ],
   "stats": {
     "projects": 1,
     "officialProjects": 1,
     "dynamicProjects": 0,
-    "resources": 22,
+    "resources": 30,
+    "officialResources": 22,
+    "aggregatorResources": 8,
     "officialCommits": 2,
-    "aggregatorCommits": 6,
-    "searchableRecords": 31,
+    "aggregatorCommits": 7,
+    "searchableRecords": 40,
     "repos": 1,
     "demos": 1,
     "tracks": 1,
@@ -642,6 +671,215 @@
         "JavaScript"
       ],
       "searchText": "security policy official document security.md # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - sh... # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - share details in issues or pull requests - test on production systems without permission we will investigate all reports and provide updates as quickly as possible. --- ## security best practices ### for participants when building your hackathon project: 1. **never commit secrets** - don't include api keys, passwords, or tokens in code - use `.env` files with `.env.example` templates - use environment variables for sensitive data 2. **secure dependencies** - keep libraries and frameworks updated - check for known vulnerabilities using tools like snyk - audit dependencies regularly 3. **data protection** - follow gdpr and data privacy regulations - encrypt sensitive user data - implement proper authentication and authorization 4. **input validation** - validate all user inputs - prevent sql injection, xss, and other attacks - use parameterized queries for databases 5. **secure communication** - use https for all web applications - implement proper cors headers - secure api endpoints with authentication --- ## code review & submission all projects submitted to this repository: - must follow security best practices - should not contain malicious code - must respect i... security policy reporting security vulnerabilities security best practices for participants code review & submission dependencies & vulnerabilities monitoring dependencies use only official base images keep base images updated known vulnerabilities python javascript official security"
+    },
+    {
+      "id": "aggregator:docs/AGENT_HANDOFF.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Agent Handoff",
+      "title": "Agent Handoff",
+      "path": "docs/AGENT_HANDOFF.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/AGENT_HANDOFF.md",
+      "summary": "# Agent Handoff Use this file when another Agent needs to continue UCWS project search, review, or submission work from the public demo link. ## Stable Entry Points - Repository: https://github.com/wangsiyi7/ucws-project-aggregator - Demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - Search index: `data/project-index.json` - Skill: `skills/ucws-project-aggregation/SKILL.md` - English submission form: `SUBM...",
+      "content": "# Agent Handoff Use this file when another Agent needs to continue UCWS project search, review, or submission work from the public demo link. ## Stable Entry Points - Repository: https://github.com/wangsiyi7/ucws-project-aggregator - Demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - Search index: `data/project-index.json` - Skill: `skills/ucws-project-aggregation/SKILL.md` - English submission form: `SUBMISSION_FORM.en.md` - Chinese submission form: `SUBMISSION_FORM.zh-CN.md` - Source norms: `docs/UCWS_PROJECT_NORMS.md` ## Suggested Agent Prompt ```text Use $ucws-project-aggregation in ucws-project-aggregator. Read data/project-index.json before summarizing projects. Use docs/UCWS_PROJECT_NORMS.md for source boundaries. Use SUBMISSION_FORM.en.md and SUBMISSION_FORM.zh-CN.md for Project Wall copy. Treat the official UCWS repository as a cited source, not copied product content. Report evidence gaps instead of inventing missing repo, demo, screenshot, or team data. ``` ## Maintenance Loop 1. Refresh LaunchLens dynamic wall data when authenticated access is available. 2. Run `npm.cmd run build`. 3. Run `npm.cmd test`. 4. Inspect generated `resources`, `commits`, `searchRecords`, `skill`, and `submissionForms`. 5. Push both `main` and `gh-pages` when the public demo changes. ## Boundary Rule This repository should remain a reference and complement. It can index public official documents, local snapshots, project-wall outputs, and its own skill/submission materials, but it should not blur those sources or repackage unsupported content as original work.",
+      "tags": [
+        "aggregator",
+        "agent",
+        "handoff"
+      ],
+      "headings": [
+        "Agent Handoff",
+        "Stable Entry Points",
+        "Suggested Agent Prompt",
+        "Maintenance Loop",
+        "Boundary Rule"
+      ],
+      "searchText": "agent handoff agent handoff docs/agent_handoff.md # agent handoff use this file when another agent needs to continue ucws project search, review, or submission work from the public demo link. ## stable entry points - repository: https://github.com/wangsiyi7/ucws-project-aggregator - demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - search index: `data/project-index.json` - skill: `skills/ucws-project-aggregation/skill.md` - english submission form: `subm... # agent handoff use this file when another agent needs to continue ucws project search, review, or submission work from the public demo link. ## stable entry points - repository: https://github.com/wangsiyi7/ucws-project-aggregator - demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - search index: `data/project-index.json` - skill: `skills/ucws-project-aggregation/skill.md` - english submission form: `submission_form.en.md` - chinese submission form: `submission_form.zh-cn.md` - source norms: `docs/ucws_project_norms.md` ## suggested agent prompt ```text use $ucws-project-aggregation in ucws-project-aggregator. read data/project-index.json before summarizing projects. use docs/ucws_project_norms.md for source boundaries. use submission_form.en.md and submission_form.zh-cn.md for project wall copy. treat the official ucws repository as a cited source, not copied product content. report evidence gaps instead of inventing missing repo, demo, screenshot, or team data. ``` ## maintenance loop 1. refresh launchlens dynamic wall data when authenticated access is available. 2. run `npm.cmd run build`. 3. run `npm.cmd test`. 4. inspect generated `resources`, `commits`, `searchrecords`, `skill`, and `submissionforms`. 5. push both `main` and `gh-pages` when the public demo changes. ## boundary rule this repository should remain a reference and complement. it can index public official documents, local snapshots, project-wall outputs, and its own skill/submission materials, but it should not blur those sources or repackage unsupported content as original work. agent handoff stable entry points suggested agent prompt maintenance loop boundary rule aggregator agent handoff"
+    },
+    {
+      "id": "aggregator:docs/INTEROP.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Interop Note",
+      "title": "Interop With LaunchLens And UCWS Repositories",
+      "path": "docs/INTEROP.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/INTEROP.md",
+      "summary": "# Interop With LaunchLens And UCWS Repositories This companion project is designed to sit beside `launchlens` in the workspace: ```text UCWS 2026/ _tmp_ucws_official_repo/ Official UCWS archive mirror launchlens/ Builder and judge workspace ucws-project-aggregator/ Companion search index, demo, submission forms, norms, and skill ``` ## Data Flow 1. The official UCWS repository contributes public root documents and l...",
+      "content": "# Interop With LaunchLens And UCWS Repositories This companion project is designed to sit beside `launchlens` in the workspace: ```text UCWS 2026/ _tmp_ucws_official_repo/ Official UCWS archive mirror launchlens/ Builder and judge workspace ucws-project-aggregator/ Companion search index, demo, submission forms, norms, and skill ``` ## Data Flow 1. The official UCWS repository contributes public root documents and local project snapshot files. 2. The local official mirror contributes commit history for the current official snapshot branch. 3. LaunchLens runs authenticated Project Wall sync and writes `data/ucws-project-wall.json`. 4. This project runs `npm.cmd run build`. 5. This project indexes its own skill, Agent handoff notes, and bilingual submission forms as `aggregator-repo` resources. 6. `data/project-index.json` becomes the shared, judge-friendly and Agent-friendly search index. 7. The demo reads `projects`, `resources`, `commits`, `skill`, `submissionForms`, and `searchRecords` from that JSON and links back to LaunchLens for deeper work. ## Commands ```powershell cd \"C:\\Users\\35398\\Desktop\\UCWS 2026\\launchlens\" npm.cmd run sync:ucws cd \"C:\\Users\\35398\\Desktop\\UCWS 2026\\ucws-project-aggregator\" npm.cmd run build npm.cmd run serve ``` ## Repository Links - Official UCWS archive: https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026 - LaunchLens: https://github.com/wangsiyi7/launchlens - Companion aggregator repository: https://github.com/wangsiyi7/ucws-project-aggregator ## Agent Layer Use the public demo link as a human-readable view and `data/project-i...",
+      "tags": [
+        "aggregator",
+        "interop"
+      ],
+      "headings": [
+        "Interop With LaunchLens And UCWS Repositories",
+        "Data Flow",
+        "Commands",
+        "Repository Links",
+        "Agent Layer",
+        "Publish Pattern"
+      ],
+      "searchText": "interop with launchlens and ucws repositories interop note docs/interop.md # interop with launchlens and ucws repositories this companion project is designed to sit beside `launchlens` in the workspace: ```text ucws 2026/ _tmp_ucws_official_repo/ official ucws archive mirror launchlens/ builder and judge workspace ucws-project-aggregator/ companion search index, demo, submission forms, norms, and skill ``` ## data flow 1. the official ucws repository contributes public root documents and l... # interop with launchlens and ucws repositories this companion project is designed to sit beside `launchlens` in the workspace: ```text ucws 2026/ _tmp_ucws_official_repo/ official ucws archive mirror launchlens/ builder and judge workspace ucws-project-aggregator/ companion search index, demo, submission forms, norms, and skill ``` ## data flow 1. the official ucws repository contributes public root documents and local project snapshot files. 2. the local official mirror contributes commit history for the current official snapshot branch. 3. launchlens runs authenticated project wall sync and writes `data/ucws-project-wall.json`. 4. this project runs `npm.cmd run build`. 5. this project indexes its own skill, agent handoff notes, and bilingual submission forms as `aggregator-repo` resources. 6. `data/project-index.json` becomes the shared, judge-friendly and agent-friendly search index. 7. the demo reads `projects`, `resources`, `commits`, `skill`, `submissionforms`, and `searchrecords` from that json and links back to launchlens for deeper work. ## commands ```powershell cd \"c:\\users\\35398\\desktop\\ucws 2026\\launchlens\" npm.cmd run sync:ucws cd \"c:\\users\\35398\\desktop\\ucws 2026\\ucws-project-aggregator\" npm.cmd run build npm.cmd run serve ``` ## repository links - official ucws archive: https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 - launchlens: https://github.com/wangsiyi7/launchlens - companion aggregator repository: https://github.com/wangsiyi7/ucws-project-aggregator ## agent layer use the public demo link as a human-readable view and `data/project-i... interop with launchlens and ucws repositories data flow commands repository links agent layer publish pattern aggregator interop"
+    },
+    {
+      "id": "aggregator:docs/UCWS_PROJECT_NORMS.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Norms",
+      "title": "UCWS Project Aggregation Norms",
+      "path": "docs/UCWS_PROJECT_NORMS.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/UCWS_PROJECT_NORMS.md",
+      "summary": "# UCWS Project Aggregation Norms These norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. The repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean Agent handoff. ## Source Boundaries - Official arc...",
+      "content": "# UCWS Project Aggregation Norms These norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. The repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean Agent handoff. ## Source Boundaries - Official archive records come from the UCWS official GitHub repository. - Official resource records come from public root files such as `README.md`, `RESOURCES.md`, `SECURITY.md`, and `LICENSE`. - Official local snapshot records come from the local `_tmp_ucws_official_repo` mirror, including project submission files that may be newer than public `main`. - Commit records come from local Git history for the official mirror and this aggregator repository. - Dynamic wall records come from LaunchLens output at `../launchlens/data/ucws-project-wall.json`. - Aggregator resource records come from this repository's README, docs, submission forms, skill files, and generated index. - Keep `sourceKinds` on every normalized project so reviewers can distinguish official archive data from dynamic wall data. - Do not copy private project content unless it is already present in the official archive or authenticated wall snapshot. - Do not generate public GitHub URLs for local-only official snapshot commits or files. ## Reference And Complement Rule - Treat the official UCWS repository as a cited source of truth, not as product content to repackage. - Treat LaunchLens as the builder/judging...",
+      "tags": [
+        "aggregator",
+        "norms",
+        "source-boundary"
+      ],
+      "headings": [
+        "UCWS Project Aggregation Norms",
+        "Source Boundaries",
+        "Reference And Complement Rule",
+        "Token Safety",
+        "Evidence Standard",
+        "Taxonomy",
+        "Judge-Facing Summary Rules",
+        "Agent Handoff Rules"
+      ],
+      "searchText": "ucws project aggregation norms norms docs/ucws_project_norms.md # ucws project aggregation norms these norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. the repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean agent handoff. ## source boundaries - official arc... # ucws project aggregation norms these norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. the repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean agent handoff. ## source boundaries - official archive records come from the ucws official github repository. - official resource records come from public root files such as `readme.md`, `resources.md`, `security.md`, and `license`. - official local snapshot records come from the local `_tmp_ucws_official_repo` mirror, including project submission files that may be newer than public `main`. - commit records come from local git history for the official mirror and this aggregator repository. - dynamic wall records come from launchlens output at `../launchlens/data/ucws-project-wall.json`. - aggregator resource records come from this repository's readme, docs, submission forms, skill files, and generated index. - keep `sourcekinds` on every normalized project so reviewers can distinguish official archive data from dynamic wall data. - do not copy private project content unless it is already present in the official archive or authenticated wall snapshot. - do not generate public github urls for local-only official snapshot commits or files. ## reference and complement rule - treat the official ucws repository as a cited source of truth, not as product content to repackage. - treat launchlens as the builder/judging... ucws project aggregation norms source boundaries reference and complement rule token safety evidence standard taxonomy judge-facing summary rules agent handoff rules aggregator norms source-boundary"
+    },
+    {
+      "id": "aggregator:README.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Aggregator Overview",
+      "title": "UCWS Project Searcher",
+      "path": "README.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/README.md",
+      "summary": "# UCWS Project Searcher > English by default. The demo has an EN / 中文 language switch. Companion project for LaunchLens. It builds a searchable UCWS Singapore Hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. The online demo helps judges, organizers, and agents find evidence across sources instead o...",
+      "content": "# UCWS Project Searcher > English by default. The demo has an EN / 中文 language switch. Companion project for LaunchLens. It builds a searchable UCWS Singapore Hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. The online demo helps judges, organizers, and agents find evidence across sources instead of opening many pages manually. The repository name and public path remain `ucws-project-aggregator/`, but the project is intentionally skill-first: it is a reusable, source-bounded workflow for project-wall retrieval, evidence review, bilingual submission copy, and Agent handoff. ## Online Links - GitHub repository: https://github.com/wangsiyi7/ucws-project-aggregator - GitHub Pages demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - Local demo: http://127.0.0.1:8082/ ## Sources - Official UCWS repository: https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026 - UCWS event page: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy - UCWS Project Wall: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall - LaunchLens repository: https://github.com/wangsiyi7/launchlens - LaunchLens demo: https://wangsiyi7.github.io/launchlens/ ## What This Repository Adds - A normalized `data/project-index.json` generated from the official UCWS archive, LaunchLens dynamic-wall snapshot, official documents, project snapshot files, and commit history. - A static searcher demo for judges, organizers, and follow...",
+      "tags": [
+        "aggregator",
+        "overview"
+      ],
+      "headings": [
+        "UCWS Project Searcher",
+        "Online Links",
+        "Sources",
+        "What This Repository Adds",
+        "Run Locally",
+        "Data Contract",
+        "Publish To GitHub",
+        "Interop With LaunchLens",
+        "Submission Forms",
+        "Skill Stance",
+        "中文说明"
+      ],
+      "searchText": "ucws project searcher aggregator overview readme.md # ucws project searcher > english by default. the demo has an en / 中文 language switch. companion project for launchlens. it builds a searchable ucws singapore hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. the online demo helps judges, organizers, and agents find evidence across sources instead o... # ucws project searcher > english by default. the demo has an en / 中文 language switch. companion project for launchlens. it builds a searchable ucws singapore hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. the online demo helps judges, organizers, and agents find evidence across sources instead of opening many pages manually. the repository name and public path remain `ucws-project-aggregator/`, but the project is intentionally skill-first: it is a reusable, source-bounded workflow for project-wall retrieval, evidence review, bilingual submission copy, and agent handoff. ## online links - github repository: https://github.com/wangsiyi7/ucws-project-aggregator - github pages demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - local demo: http://127.0.0.1:8082/ ## sources - official ucws repository: https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 - ucws event page: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy - ucws project wall: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall - launchlens repository: https://github.com/wangsiyi7/launchlens - launchlens demo: https://wangsiyi7.github.io/launchlens/ ## what this repository adds - a normalized `data/project-index.json` generated from the official ucws archive, launchlens dynamic-wall snapshot, official documents, project snapshot files, and commit history. - a static searcher demo for judges, organizers, and follow... ucws project searcher online links sources what this repository adds run locally data contract publish to github interop with launchlens submission forms skill stance 中文说明 aggregator overview"
+    },
+    {
+      "id": "aggregator:skills/ucws-project-aggregation/agents/openai.yaml",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Skill Metadata",
+      "title": "openai.yaml",
+      "path": "skills/ucws-project-aggregation/agents/openai.yaml",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/skills/ucws-project-aggregation/agents/openai.yaml",
+      "summary": "interface: display_name: \"UCWS Project Aggregation\" short_description: \"Source-bounded UCWS search and submission workflow\" default_prompt: \"Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true",
+      "content": "interface: display_name: \"UCWS Project Aggregation\" short_description: \"Source-bounded UCWS search and submission workflow\" default_prompt: \"Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true",
+      "tags": [
+        "aggregator",
+        "skill",
+        "metadata"
+      ],
+      "headings": [],
+      "searchText": "openai.yaml skill metadata skills/ucws-project-aggregation/agents/openai.yaml interface: display_name: \"ucws project aggregation\" short_description: \"source-bounded ucws search and submission workflow\" default_prompt: \"use $ucws-project-aggregation to refresh the ucws project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true interface: display_name: \"ucws project aggregation\" short_description: \"source-bounded ucws search and submission workflow\" default_prompt: \"use $ucws-project-aggregation to refresh the ucws project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true aggregator skill metadata"
+    },
+    {
+      "id": "aggregator:skills/ucws-project-aggregation/SKILL.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Codex Skill",
+      "title": "UCWS Project Aggregation",
+      "path": "skills/ucws-project-aggregation/SKILL.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/skills/ucws-project-aggregation/SKILL.md",
+      "summary": "--- name: ucws-project-aggregation description: Aggregate and maintain source-bounded UCWS Project Wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. Use when Codex needs to refresh ucws-project-aggregator, compare UCWS projects, prepare Project Wall copy in English or Chinese, or hand off a long-running hackathon project search workflow. --- # UCWS...",
+      "content": "--- name: ucws-project-aggregation description: Aggregate and maintain source-bounded UCWS Project Wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. Use when Codex needs to refresh ucws-project-aggregator, compare UCWS projects, prepare Project Wall copy in English or Chinese, or hand off a long-running hackathon project search workflow. --- # UCWS Project Aggregation Use this skill as a long-term companion workflow for UCWS and similar hackathon project walls. The goal is retrieval, normalization, evidence review, and submission support. Do not treat the official UCWS repository as source material to copy wholesale; treat it as a cited reference layer that remains distinct from LaunchLens, dynamic wall data, and this aggregator. ## Workspace Inputs - Official UCWS mirror: `../_tmp_ucws_official_repo` - LaunchLens repository: `../launchlens` - Dynamic wall snapshot: `../launchlens/data/ucws-project-wall.json` - Aggregator root: `../ucws-project-aggregator` - Generated search index: `data/project-index.json` - Bilingual submission copy: `SUBMISSION_FORM.en.md` and `SUBMISSION_FORM.zh-CN.md` ## Core Workflow 1. Check source health. - Confirm the official mirror exists. - Confirm LaunchLens has `data/ucws-project-wall.json`. - If LaunchLens reports `TOKEN_MISSING`, say authenticated dynamic-wall enumeration still needs `EPIC_TOKEN`. 2. Refresh the index. - Run `npm.cmd run build` in `ucws-project-aggregator`. - Inspect `data/project-index.json`. - Confirm `projects`, `resources`, `commits`, `searchRecords`,...",
+      "tags": [
+        "aggregator",
+        "skill",
+        "agent"
+      ],
+      "headings": [
+        "UCWS Project Aggregation",
+        "Workspace Inputs",
+        "Core Workflow",
+        "Source Boundaries",
+        "Agent Handoff",
+        "Output Rules"
+      ],
+      "searchText": "ucws project aggregation codex skill skills/ucws-project-aggregation/skill.md --- name: ucws-project-aggregation description: aggregate and maintain source-bounded ucws project wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. use when codex needs to refresh ucws-project-aggregator, compare ucws projects, prepare project wall copy in english or chinese, or hand off a long-running hackathon project search workflow. --- # ucws... --- name: ucws-project-aggregation description: aggregate and maintain source-bounded ucws project wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. use when codex needs to refresh ucws-project-aggregator, compare ucws projects, prepare project wall copy in english or chinese, or hand off a long-running hackathon project search workflow. --- # ucws project aggregation use this skill as a long-term companion workflow for ucws and similar hackathon project walls. the goal is retrieval, normalization, evidence review, and submission support. do not treat the official ucws repository as source material to copy wholesale; treat it as a cited reference layer that remains distinct from launchlens, dynamic wall data, and this aggregator. ## workspace inputs - official ucws mirror: `../_tmp_ucws_official_repo` - launchlens repository: `../launchlens` - dynamic wall snapshot: `../launchlens/data/ucws-project-wall.json` - aggregator root: `../ucws-project-aggregator` - generated search index: `data/project-index.json` - bilingual submission copy: `submission_form.en.md` and `submission_form.zh-cn.md` ## core workflow 1. check source health. - confirm the official mirror exists. - confirm launchlens has `data/ucws-project-wall.json`. - if launchlens reports `token_missing`, say authenticated dynamic-wall enumeration still needs `epic_token`. 2. refresh the index. - run `npm.cmd run build` in `ucws-project-aggregator`. - inspect `data/project-index.json`. - confirm `projects`, `resources`, `commits`, `searchrecords`,... ucws project aggregation workspace inputs core workflow source boundaries agent handoff output rules aggregator skill agent"
+    },
+    {
+      "id": "aggregator:SUBMISSION_FORM.en.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Submission Form",
+      "title": "UCWS Project Wall Submission - English",
+      "path": "SUBMISSION_FORM.en.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.en.md",
+      "summary": "# UCWS Project Wall Submission - English ## Project Name ucws-project-aggregator ## Track Skill / Workflow ## Tagline A source-bounded UCWS project searcher and reusable Agent skill for judging, evidence review, and bilingual submission support. ## Short Description ucws-project-aggregator is a companion search and skill layer for UCWS Singapore Hackathon 2026. It builds a normalized index from official UCWS resourc...",
+      "content": "# UCWS Project Wall Submission - English ## Project Name ucws-project-aggregator ## Track Skill / Workflow ## Tagline A source-bounded UCWS project searcher and reusable Agent skill for judging, evidence review, and bilingual submission support. ## Short Description ucws-project-aggregator is a companion search and skill layer for UCWS Singapore Hackathon 2026. It builds a normalized index from official UCWS resources, local official snapshots, LaunchLens Project Wall data, and commit history, then exposes a static bilingual demo that judges and follow-up Agents can search quickly. ## Long Description The project turns scattered hackathon evidence into a durable retrieval workflow. Instead of copying official content into a new product, ucws-project-aggregator keeps source boundaries visible: official archive records, local official snapshots, dynamic Project Wall records, aggregator documents, and commit history remain labeled separately in `data/project-index.json`. The online demo lets reviewers search projects, resources, commits, submission forms, norms, and skill metadata from one interface. It also generates review briefs and Agent handoff prompts so later Agents can continue the work without losing attribution, token-safety rules, or evidence gaps. This makes the project useful beyond a single UCWS submission. The same structure can support future hackathons, demo days, accelerator cohorts, and open-source project walls that need searchable evidence, bilingual submission copy, and clear AI-agent operating rules. ## Demo URL https://wangsiyi7.github.io/ucws-project-...",
+      "tags": [
+        "aggregator",
+        "submission",
+        "english"
+      ],
+      "headings": [
+        "UCWS Project Wall Submission - English",
+        "Project Name",
+        "Track",
+        "Tagline",
+        "Short Description",
+        "Long Description",
+        "Demo URL",
+        "GitHub Repository",
+        "Related LaunchLens Project",
+        "Official Reference Source",
+        "Core Features",
+        "Tech Stack"
+      ],
+      "searchText": "ucws project wall submission - english submission form submission_form.en.md # ucws project wall submission - english ## project name ucws-project-aggregator ## track skill / workflow ## tagline a source-bounded ucws project searcher and reusable agent skill for judging, evidence review, and bilingual submission support. ## short description ucws-project-aggregator is a companion search and skill layer for ucws singapore hackathon 2026. it builds a normalized index from official ucws resourc... # ucws project wall submission - english ## project name ucws-project-aggregator ## track skill / workflow ## tagline a source-bounded ucws project searcher and reusable agent skill for judging, evidence review, and bilingual submission support. ## short description ucws-project-aggregator is a companion search and skill layer for ucws singapore hackathon 2026. it builds a normalized index from official ucws resources, local official snapshots, launchlens project wall data, and commit history, then exposes a static bilingual demo that judges and follow-up agents can search quickly. ## long description the project turns scattered hackathon evidence into a durable retrieval workflow. instead of copying official content into a new product, ucws-project-aggregator keeps source boundaries visible: official archive records, local official snapshots, dynamic project wall records, aggregator documents, and commit history remain labeled separately in `data/project-index.json`. the online demo lets reviewers search projects, resources, commits, submission forms, norms, and skill metadata from one interface. it also generates review briefs and agent handoff prompts so later agents can continue the work without losing attribution, token-safety rules, or evidence gaps. this makes the project useful beyond a single ucws submission. the same structure can support future hackathons, demo days, accelerator cohorts, and open-source project walls that need searchable evidence, bilingual submission copy, and clear ai-agent operating rules. ## demo url https://wangsiyi7.github.io/ucws-project-... ucws project wall submission - english project name track tagline short description long description demo url github repository related launchlens project official reference source core features tech stack aggregator submission english"
+    },
+    {
+      "id": "aggregator:SUBMISSION_FORM.zh-CN.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "kind": "Submission Form",
+      "title": "UCWS Project Wall 提交表单 - 中文",
+      "path": "SUBMISSION_FORM.zh-CN.md",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.zh-CN.md",
+      "summary": "# UCWS Project Wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 Skill / Workflow ## 一句话介绍 一个有来源边界的 UCWS 项目检索器，以及可长期复用的 Agent Skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 UCWS Singapore Hackathon 2026 的配套检索与 skill 层。它会从 UCWS 官方资料、本地官方快照、LaunchLens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 Agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的...",
+      "content": "# UCWS Project Wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 Skill / Workflow ## 一句话介绍 一个有来源边界的 UCWS 项目检索器，以及可长期复用的 Agent Skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 UCWS Singapore Hackathon 2026 的配套检索与 skill 层。它会从 UCWS 官方资料、本地官方快照、LaunchLens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 Agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的来源标签：官方归档、本地官方快照、动态项目墙、聚合器文档和 commit 历史都会分开标记。 线上 demo 支持在一个界面里搜索项目、资料、commit、提交表单、规范和 skill 元数据。它还能生成评审摘要和 Agent handoff prompt，让后续 Agent 在继续工作时不会丢失归因、token 安全规则和证据缺口。 因此它不只是一次性的 UCWS 辅助页面，也可以演化为长期的黑客松项目墙 skill：未来的 demo day、加速器、开源项目展示和内部项目评审，都可以复用这套“来源检索 + 证据规范 + 双语提交 + Agent 交接”的流程。 ## Demo URL https://wangsiyi7.github.io/ucws-project-aggregator/ ## GitHub 仓库 https://github.com/wangsiyi7/ucws-project-aggregator ## 关联 LaunchLens 项目 - 仓库：https://github.com/wangsiyi7/launchlens - Demo：https://wangsiyi7.github.io/launchlens/ ## 官方参考来源 https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026 ## 核心功能 - 生成标准化 `data/project-index.json`，包含项目、资料、commit、提交表单记录和 skill 元数据。 - 发布静态双语检索 demo，路径保持为 `/ucws-project-aggregator/`。 - 提供 Codex skill：`skills/ucws-project-aggregation/SKILL.md`。 - 生成后续 Agent 可直接使用的 handoff prompt。 - 通过证据规范区分官方来源、本地快照、动态项目墙和聚合器生成材料。 - 准备中英文 Project Wall 提交材料。 ## 技术栈 HTML、CSS、JavaScript、Node.js、Git、GitHub Pages、Markdown、JSON、Codex skill metadata。 ## 为什么它是 Skill 这个项目最值得长期复用的部分不是静态页面本身，而是一套工作流：刷新来源、保留来源边界、生成可搜索索引、检查证据缺口、产出双语提交材料，并把上下文交接给下一个 Agent。这个流程被写入 Codex skill，所以可以持续迭代。 ## 反抄袭与归因说明 ucws-project-aggregator 是 UCWS 官方仓库的互补检索层，不声明拥有官方资料或其他团队提交内容...",
+      "tags": [
+        "aggregator",
+        "submission",
+        "chinese"
+      ],
+      "headings": [
+        "UCWS Project Wall 提交表单 - 中文",
+        "项目名称",
+        "赛道",
+        "一句话介绍",
+        "简短描述",
+        "详细描述",
+        "Demo URL",
+        "GitHub 仓库",
+        "关联 LaunchLens 项目",
+        "官方参考来源",
+        "核心功能",
+        "技术栈"
+      ],
+      "searchText": "ucws project wall 提交表单 - 中文 submission form submission_form.zh-cn.md # ucws project wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 skill / workflow ## 一句话介绍 一个有来源边界的 ucws 项目检索器，以及可长期复用的 agent skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 ucws singapore hackathon 2026 的配套检索与 skill 层。它会从 ucws 官方资料、本地官方快照、launchlens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的... # ucws project wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 skill / workflow ## 一句话介绍 一个有来源边界的 ucws 项目检索器，以及可长期复用的 agent skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 ucws singapore hackathon 2026 的配套检索与 skill 层。它会从 ucws 官方资料、本地官方快照、launchlens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的来源标签：官方归档、本地官方快照、动态项目墙、聚合器文档和 commit 历史都会分开标记。 线上 demo 支持在一个界面里搜索项目、资料、commit、提交表单、规范和 skill 元数据。它还能生成评审摘要和 agent handoff prompt，让后续 agent 在继续工作时不会丢失归因、token 安全规则和证据缺口。 因此它不只是一次性的 ucws 辅助页面，也可以演化为长期的黑客松项目墙 skill：未来的 demo day、加速器、开源项目展示和内部项目评审，都可以复用这套“来源检索 + 证据规范 + 双语提交 + agent 交接”的流程。 ## demo url https://wangsiyi7.github.io/ucws-project-aggregator/ ## github 仓库 https://github.com/wangsiyi7/ucws-project-aggregator ## 关联 launchlens 项目 - 仓库：https://github.com/wangsiyi7/launchlens - demo：https://wangsiyi7.github.io/launchlens/ ## 官方参考来源 https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 ## 核心功能 - 生成标准化 `data/project-index.json`，包含项目、资料、commit、提交表单记录和 skill 元数据。 - 发布静态双语检索 demo，路径保持为 `/ucws-project-aggregator/`。 - 提供 codex skill：`skills/ucws-project-aggregation/skill.md`。 - 生成后续 agent 可直接使用的 handoff prompt。 - 通过证据规范区分官方来源、本地快照、动态项目墙和聚合器生成材料。 - 准备中英文 project wall 提交材料。 ## 技术栈 html、css、javascript、node.js、git、github pages、markdown、json、codex skill metadata。 ## 为什么它是 skill 这个项目最值得长期复用的部分不是静态页面本身，而是一套工作流：刷新来源、保留来源边界、生成可搜索索引、检查证据缺口、产出双语提交材料，并把上下文交接给下一个 agent。这个流程被写入 codex skill，所以可以持续迭代。 ## 反抄袭与归因说明 ucws-project-aggregator 是 ucws 官方仓库的互补检索层，不声明拥有官方资料或其他团队提交内容... ucws project wall 提交表单 - 中文 项目名称 赛道 一句话介绍 简短描述 详细描述 demo url github 仓库 关联 launchlens 项目 官方参考来源 核心功能 技术栈 aggregator submission chinese"
     }
   ],
   "commits": [
@@ -678,6 +916,23 @@
         "official-local-snapshot"
       ],
       "searchText": "c5775f359f38014949a9e6ed14d17107b74eabb1 c5775f3 2026-05-31t13:25:32+08:00 epicconnector add files via upload c5775f3 add files via upload official-local-snapshot"
+    },
+    {
+      "id": "aggregator-repo:commit:16beadbd1794f67db2682433ee2a7ce7d9b23bed",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "hash": "16beadbd1794f67db2682433ee2a7ce7d9b23bed",
+      "shortHash": "16beadb",
+      "date": "2026-06-05T22:38:11+08:00",
+      "author": "wangsiyi7",
+      "title": "Refresh UCWS searcher data",
+      "summary": "16beadb Refresh UCWS searcher data",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/16beadbd1794f67db2682433ee2a7ce7d9b23bed",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "16beadbd1794f67db2682433ee2a7ce7d9b23bed 16beadb 2026-06-05t22:38:11+08:00 wangsiyi7 refresh ucws searcher data 16beadb refresh ucws searcher data aggregator-repo"
     },
     {
       "id": "aggregator-repo:commit:42168a4aa5fbe3a6f874c8f3422ea31104733eb5",
@@ -1124,6 +1379,124 @@
       "searchText": "security policy official document security.md # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - sh... # security policy ## reporting security vulnerabilities if you discover a security vulnerability in any code shared on this repository, please report it responsibly to: 📧 **email:** [incubator@epicconnector.ai](mailto:incubator@epicconnector.ai) **please include:** - description of the vulnerability - steps to reproduce - potential impact - your contact information **do not:** - post the vulnerability publicly - share details in issues or pull requests - test on production systems without permission we will investigate all reports and provide updates as quickly as possible. --- ## security best practices ### for participants when building your hackathon project: 1. **never commit secrets** - don't include api keys, passwords, or tokens in code - use `.env` files with `.env.example` templates - use environment variables for sensitive data 2. **secure dependencies** - keep libraries and frameworks updated - check for known vulnerabilities using tools like snyk - audit dependencies regularly 3. **data protection** - follow gdpr and data privacy regulations - encrypt sensitive user data - implement proper authentication and authorization 4. **input validation** - validate all user inputs - prevent sql injection, xss, and other attacks - use parameterized queries for databases 5. **secure communication** - use https for all web applications - implement proper cors headers - secure api endpoints with authentication --- ## code review & submission all projects submitted to this repository: - must follow security best practices - should not contain malicious code - must respect i... security policy reporting security vulnerabilities security best practices for participants code review & submission dependencies & vulnerabilities monitoring dependencies use only official base images keep base images updated known vulnerabilities python javascript official security"
     },
     {
+      "id": "aggregator:docs/AGENT_HANDOFF.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "Agent Handoff",
+      "summary": "# Agent Handoff Use this file when another Agent needs to continue UCWS project search, review, or submission work from the public demo link. ## Stable Entry Points - Repository: https://github.com/wangsiyi7/ucws-project-aggregator - Demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - Search index: `data/project-index.json` - Skill: `skills/ucws-project-aggregation/SKILL.md` - English submission form: `SUBM...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/AGENT_HANDOFF.md",
+      "tags": [
+        "Agent Handoff",
+        "aggregator",
+        "agent",
+        "handoff"
+      ],
+      "searchText": "agent handoff agent handoff docs/agent_handoff.md # agent handoff use this file when another agent needs to continue ucws project search, review, or submission work from the public demo link. ## stable entry points - repository: https://github.com/wangsiyi7/ucws-project-aggregator - demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - search index: `data/project-index.json` - skill: `skills/ucws-project-aggregation/skill.md` - english submission form: `subm... # agent handoff use this file when another agent needs to continue ucws project search, review, or submission work from the public demo link. ## stable entry points - repository: https://github.com/wangsiyi7/ucws-project-aggregator - demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - search index: `data/project-index.json` - skill: `skills/ucws-project-aggregation/skill.md` - english submission form: `submission_form.en.md` - chinese submission form: `submission_form.zh-cn.md` - source norms: `docs/ucws_project_norms.md` ## suggested agent prompt ```text use $ucws-project-aggregation in ucws-project-aggregator. read data/project-index.json before summarizing projects. use docs/ucws_project_norms.md for source boundaries. use submission_form.en.md and submission_form.zh-cn.md for project wall copy. treat the official ucws repository as a cited source, not copied product content. report evidence gaps instead of inventing missing repo, demo, screenshot, or team data. ``` ## maintenance loop 1. refresh launchlens dynamic wall data when authenticated access is available. 2. run `npm.cmd run build`. 3. run `npm.cmd test`. 4. inspect generated `resources`, `commits`, `searchrecords`, `skill`, and `submissionforms`. 5. push both `main` and `gh-pages` when the public demo changes. ## boundary rule this repository should remain a reference and complement. it can index public official documents, local snapshots, project-wall outputs, and its own skill/submission materials, but it should not blur those sources or repackage unsupported content as original work. agent handoff stable entry points suggested agent prompt maintenance loop boundary rule aggregator agent handoff"
+    },
+    {
+      "id": "aggregator:docs/INTEROP.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "Interop With LaunchLens And UCWS Repositories",
+      "summary": "# Interop With LaunchLens And UCWS Repositories This companion project is designed to sit beside `launchlens` in the workspace: ```text UCWS 2026/ _tmp_ucws_official_repo/ Official UCWS archive mirror launchlens/ Builder and judge workspace ucws-project-aggregator/ Companion search index, demo, submission forms, norms, and skill ``` ## Data Flow 1. The official UCWS repository contributes public root documents and l...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/INTEROP.md",
+      "tags": [
+        "Interop Note",
+        "aggregator",
+        "interop"
+      ],
+      "searchText": "interop with launchlens and ucws repositories interop note docs/interop.md # interop with launchlens and ucws repositories this companion project is designed to sit beside `launchlens` in the workspace: ```text ucws 2026/ _tmp_ucws_official_repo/ official ucws archive mirror launchlens/ builder and judge workspace ucws-project-aggregator/ companion search index, demo, submission forms, norms, and skill ``` ## data flow 1. the official ucws repository contributes public root documents and l... # interop with launchlens and ucws repositories this companion project is designed to sit beside `launchlens` in the workspace: ```text ucws 2026/ _tmp_ucws_official_repo/ official ucws archive mirror launchlens/ builder and judge workspace ucws-project-aggregator/ companion search index, demo, submission forms, norms, and skill ``` ## data flow 1. the official ucws repository contributes public root documents and local project snapshot files. 2. the local official mirror contributes commit history for the current official snapshot branch. 3. launchlens runs authenticated project wall sync and writes `data/ucws-project-wall.json`. 4. this project runs `npm.cmd run build`. 5. this project indexes its own skill, agent handoff notes, and bilingual submission forms as `aggregator-repo` resources. 6. `data/project-index.json` becomes the shared, judge-friendly and agent-friendly search index. 7. the demo reads `projects`, `resources`, `commits`, `skill`, `submissionforms`, and `searchrecords` from that json and links back to launchlens for deeper work. ## commands ```powershell cd \"c:\\users\\35398\\desktop\\ucws 2026\\launchlens\" npm.cmd run sync:ucws cd \"c:\\users\\35398\\desktop\\ucws 2026\\ucws-project-aggregator\" npm.cmd run build npm.cmd run serve ``` ## repository links - official ucws archive: https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 - launchlens: https://github.com/wangsiyi7/launchlens - companion aggregator repository: https://github.com/wangsiyi7/ucws-project-aggregator ## agent layer use the public demo link as a human-readable view and `data/project-i... interop with launchlens and ucws repositories data flow commands repository links agent layer publish pattern aggregator interop"
+    },
+    {
+      "id": "aggregator:docs/UCWS_PROJECT_NORMS.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "UCWS Project Aggregation Norms",
+      "summary": "# UCWS Project Aggregation Norms These norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. The repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean Agent handoff. ## Source Boundaries - Official arc...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/docs/UCWS_PROJECT_NORMS.md",
+      "tags": [
+        "Norms",
+        "aggregator",
+        "norms",
+        "source-boundary"
+      ],
+      "searchText": "ucws project aggregation norms norms docs/ucws_project_norms.md # ucws project aggregation norms these norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. the repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean agent handoff. ## source boundaries - official arc... # ucws project aggregation norms these norms keep the companion searcher useful for judges, organizers, and agent workflows without blurring source boundaries. the repository name and public path stay `ucws-project-aggregator/`, but the durable value should be the skill workflow: source-aware retrieval, evidence normalization, bilingual submission support, and clean agent handoff. ## source boundaries - official archive records come from the ucws official github repository. - official resource records come from public root files such as `readme.md`, `resources.md`, `security.md`, and `license`. - official local snapshot records come from the local `_tmp_ucws_official_repo` mirror, including project submission files that may be newer than public `main`. - commit records come from local git history for the official mirror and this aggregator repository. - dynamic wall records come from launchlens output at `../launchlens/data/ucws-project-wall.json`. - aggregator resource records come from this repository's readme, docs, submission forms, skill files, and generated index. - keep `sourcekinds` on every normalized project so reviewers can distinguish official archive data from dynamic wall data. - do not copy private project content unless it is already present in the official archive or authenticated wall snapshot. - do not generate public github urls for local-only official snapshot commits or files. ## reference and complement rule - treat the official ucws repository as a cited source of truth, not as product content to repackage. - treat launchlens as the builder/judging... ucws project aggregation norms source boundaries reference and complement rule token safety evidence standard taxonomy judge-facing summary rules agent handoff rules aggregator norms source-boundary"
+    },
+    {
+      "id": "aggregator:README.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "UCWS Project Searcher",
+      "summary": "# UCWS Project Searcher > English by default. The demo has an EN / 中文 language switch. Companion project for LaunchLens. It builds a searchable UCWS Singapore Hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. The online demo helps judges, organizers, and agents find evidence across sources instead o...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/README.md",
+      "tags": [
+        "Aggregator Overview",
+        "aggregator",
+        "overview"
+      ],
+      "searchText": "ucws project searcher aggregator overview readme.md # ucws project searcher > english by default. the demo has an en / 中文 language switch. companion project for launchlens. it builds a searchable ucws singapore hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. the online demo helps judges, organizers, and agents find evidence across sources instead o... # ucws project searcher > english by default. the demo has an en / 中文 language switch. companion project for launchlens. it builds a searchable ucws singapore hackathon 2026 index from project records, official repository documents, local official snapshot files, bilingual submission forms, skill metadata, and commit history. the online demo helps judges, organizers, and agents find evidence across sources instead of opening many pages manually. the repository name and public path remain `ucws-project-aggregator/`, but the project is intentionally skill-first: it is a reusable, source-bounded workflow for project-wall retrieval, evidence review, bilingual submission copy, and agent handoff. ## online links - github repository: https://github.com/wangsiyi7/ucws-project-aggregator - github pages demo: https://wangsiyi7.github.io/ucws-project-aggregator/ - local demo: http://127.0.0.1:8082/ ## sources - official ucws repository: https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 - ucws event page: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy - ucws project wall: https://evol.epicconnector.ai/events/ucws-singapore-hackathon---2026-cxgy/project-wall - launchlens repository: https://github.com/wangsiyi7/launchlens - launchlens demo: https://wangsiyi7.github.io/launchlens/ ## what this repository adds - a normalized `data/project-index.json` generated from the official ucws archive, launchlens dynamic-wall snapshot, official documents, project snapshot files, and commit history. - a static searcher demo for judges, organizers, and follow... ucws project searcher online links sources what this repository adds run locally data contract publish to github interop with launchlens submission forms skill stance 中文说明 aggregator overview"
+    },
+    {
+      "id": "aggregator:skills/ucws-project-aggregation/agents/openai.yaml",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "openai.yaml",
+      "summary": "interface: display_name: \"UCWS Project Aggregation\" short_description: \"Source-bounded UCWS search and submission workflow\" default_prompt: \"Use $ucws-project-aggregation to refresh the UCWS project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/skills/ucws-project-aggregation/agents/openai.yaml",
+      "tags": [
+        "Skill Metadata",
+        "aggregator",
+        "skill",
+        "metadata"
+      ],
+      "searchText": "openai.yaml skill metadata skills/ucws-project-aggregation/agents/openai.yaml interface: display_name: \"ucws project aggregation\" short_description: \"source-bounded ucws search and submission workflow\" default_prompt: \"use $ucws-project-aggregation to refresh the ucws project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true interface: display_name: \"ucws project aggregation\" short_description: \"source-bounded ucws search and submission workflow\" default_prompt: \"use $ucws-project-aggregation to refresh the ucws project index, summarize evidence gaps, and prepare bilingual submission fields.\" policy: allow_implicit_invocation: true aggregator skill metadata"
+    },
+    {
+      "id": "aggregator:skills/ucws-project-aggregation/SKILL.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "UCWS Project Aggregation",
+      "summary": "--- name: ucws-project-aggregation description: Aggregate and maintain source-bounded UCWS Project Wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. Use when Codex needs to refresh ucws-project-aggregator, compare UCWS projects, prepare Project Wall copy in English or Chinese, or hand off a long-running hackathon project search workflow. --- # UCWS...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/skills/ucws-project-aggregation/SKILL.md",
+      "tags": [
+        "Codex Skill",
+        "aggregator",
+        "skill",
+        "agent"
+      ],
+      "searchText": "ucws project aggregation codex skill skills/ucws-project-aggregation/skill.md --- name: ucws-project-aggregation description: aggregate and maintain source-bounded ucws project wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. use when codex needs to refresh ucws-project-aggregator, compare ucws projects, prepare project wall copy in english or chinese, or hand off a long-running hackathon project search workflow. --- # ucws... --- name: ucws-project-aggregation description: aggregate and maintain source-bounded ucws project wall indexes, official resource snapshots, commit history, bilingual submission fields, and agent-ready review briefs. use when codex needs to refresh ucws-project-aggregator, compare ucws projects, prepare project wall copy in english or chinese, or hand off a long-running hackathon project search workflow. --- # ucws project aggregation use this skill as a long-term companion workflow for ucws and similar hackathon project walls. the goal is retrieval, normalization, evidence review, and submission support. do not treat the official ucws repository as source material to copy wholesale; treat it as a cited reference layer that remains distinct from launchlens, dynamic wall data, and this aggregator. ## workspace inputs - official ucws mirror: `../_tmp_ucws_official_repo` - launchlens repository: `../launchlens` - dynamic wall snapshot: `../launchlens/data/ucws-project-wall.json` - aggregator root: `../ucws-project-aggregator` - generated search index: `data/project-index.json` - bilingual submission copy: `submission_form.en.md` and `submission_form.zh-cn.md` ## core workflow 1. check source health. - confirm the official mirror exists. - confirm launchlens has `data/ucws-project-wall.json`. - if launchlens reports `token_missing`, say authenticated dynamic-wall enumeration still needs `epic_token`. 2. refresh the index. - run `npm.cmd run build` in `ucws-project-aggregator`. - inspect `data/project-index.json`. - confirm `projects`, `resources`, `commits`, `searchrecords`,... ucws project aggregation workspace inputs core workflow source boundaries agent handoff output rules aggregator skill agent"
+    },
+    {
+      "id": "aggregator:SUBMISSION_FORM.en.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "UCWS Project Wall Submission - English",
+      "summary": "# UCWS Project Wall Submission - English ## Project Name ucws-project-aggregator ## Track Skill / Workflow ## Tagline A source-bounded UCWS project searcher and reusable Agent skill for judging, evidence review, and bilingual submission support. ## Short Description ucws-project-aggregator is a companion search and skill layer for UCWS Singapore Hackathon 2026. It builds a normalized index from official UCWS resourc...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.en.md",
+      "tags": [
+        "Submission Form",
+        "aggregator",
+        "submission",
+        "english"
+      ],
+      "searchText": "ucws project wall submission - english submission form submission_form.en.md # ucws project wall submission - english ## project name ucws-project-aggregator ## track skill / workflow ## tagline a source-bounded ucws project searcher and reusable agent skill for judging, evidence review, and bilingual submission support. ## short description ucws-project-aggregator is a companion search and skill layer for ucws singapore hackathon 2026. it builds a normalized index from official ucws resourc... # ucws project wall submission - english ## project name ucws-project-aggregator ## track skill / workflow ## tagline a source-bounded ucws project searcher and reusable agent skill for judging, evidence review, and bilingual submission support. ## short description ucws-project-aggregator is a companion search and skill layer for ucws singapore hackathon 2026. it builds a normalized index from official ucws resources, local official snapshots, launchlens project wall data, and commit history, then exposes a static bilingual demo that judges and follow-up agents can search quickly. ## long description the project turns scattered hackathon evidence into a durable retrieval workflow. instead of copying official content into a new product, ucws-project-aggregator keeps source boundaries visible: official archive records, local official snapshots, dynamic project wall records, aggregator documents, and commit history remain labeled separately in `data/project-index.json`. the online demo lets reviewers search projects, resources, commits, submission forms, norms, and skill metadata from one interface. it also generates review briefs and agent handoff prompts so later agents can continue the work without losing attribution, token-safety rules, or evidence gaps. this makes the project useful beyond a single ucws submission. the same structure can support future hackathons, demo days, accelerator cohorts, and open-source project walls that need searchable evidence, bilingual submission copy, and clear ai-agent operating rules. ## demo url https://wangsiyi7.github.io/ucws-project-... ucws project wall submission - english project name track tagline short description long description demo url github repository related launchlens project official reference source core features tech stack aggregator submission english"
+    },
+    {
+      "id": "aggregator:SUBMISSION_FORM.zh-CN.md",
+      "type": "resource",
+      "source": "aggregator-repo",
+      "title": "UCWS Project Wall 提交表单 - 中文",
+      "summary": "# UCWS Project Wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 Skill / Workflow ## 一句话介绍 一个有来源边界的 UCWS 项目检索器，以及可长期复用的 Agent Skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 UCWS Singapore Hackathon 2026 的配套检索与 skill 层。它会从 UCWS 官方资料、本地官方快照、LaunchLens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 Agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的...",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/blob/main/SUBMISSION_FORM.zh-CN.md",
+      "tags": [
+        "Submission Form",
+        "aggregator",
+        "submission",
+        "chinese"
+      ],
+      "searchText": "ucws project wall 提交表单 - 中文 submission form submission_form.zh-cn.md # ucws project wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 skill / workflow ## 一句话介绍 一个有来源边界的 ucws 项目检索器，以及可长期复用的 agent skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 ucws singapore hackathon 2026 的配套检索与 skill 层。它会从 ucws 官方资料、本地官方快照、launchlens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的... # ucws project wall 提交表单 - 中文 ## 项目名称 ucws-project-aggregator ## 赛道 skill / workflow ## 一句话介绍 一个有来源边界的 ucws 项目检索器，以及可长期复用的 agent skill，用于评审、证据检查和中英文提交材料整理。 ## 简短描述 ucws-project-aggregator 是 ucws singapore hackathon 2026 的配套检索与 skill 层。它会从 ucws 官方资料、本地官方快照、launchlens 项目墙数据和 commit 历史中生成标准化索引，并提供一个默认英文、可切换中文的静态 demo，方便评委和后续 agent 快速检索。 ## 详细描述 这个项目的目标不是复制官方仓库内容，而是把分散的黑客松证据变成一个可维护的检索工作流。`data/project-index.json` 会保留清晰的来源标签：官方归档、本地官方快照、动态项目墙、聚合器文档和 commit 历史都会分开标记。 线上 demo 支持在一个界面里搜索项目、资料、commit、提交表单、规范和 skill 元数据。它还能生成评审摘要和 agent handoff prompt，让后续 agent 在继续工作时不会丢失归因、token 安全规则和证据缺口。 因此它不只是一次性的 ucws 辅助页面，也可以演化为长期的黑客松项目墙 skill：未来的 demo day、加速器、开源项目展示和内部项目评审，都可以复用这套“来源检索 + 证据规范 + 双语提交 + agent 交接”的流程。 ## demo url https://wangsiyi7.github.io/ucws-project-aggregator/ ## github 仓库 https://github.com/wangsiyi7/ucws-project-aggregator ## 关联 launchlens 项目 - 仓库：https://github.com/wangsiyi7/launchlens - demo：https://wangsiyi7.github.io/launchlens/ ## 官方参考来源 https://github.com/epicconnectorai/ucws-singapore-hackathon-2026 ## 核心功能 - 生成标准化 `data/project-index.json`，包含项目、资料、commit、提交表单记录和 skill 元数据。 - 发布静态双语检索 demo，路径保持为 `/ucws-project-aggregator/`。 - 提供 codex skill：`skills/ucws-project-aggregation/skill.md`。 - 生成后续 agent 可直接使用的 handoff prompt。 - 通过证据规范区分官方来源、本地快照、动态项目墙和聚合器生成材料。 - 准备中英文 project wall 提交材料。 ## 技术栈 html、css、javascript、node.js、git、github pages、markdown、json、codex skill metadata。 ## 为什么它是 skill 这个项目最值得长期复用的部分不是静态页面本身，而是一套工作流：刷新来源、保留来源边界、生成可搜索索引、检查证据缺口、产出双语提交材料，并把上下文交接给下一个 agent。这个流程被写入 codex skill，所以可以持续迭代。 ## 反抄袭与归因说明 ucws-project-aggregator 是 ucws 官方仓库的互补检索层，不声明拥有官方资料或其他团队提交内容... ucws project wall 提交表单 - 中文 项目名称 赛道 一句话介绍 简短描述 详细描述 demo url github 仓库 关联 launchlens 项目 官方参考来源 核心功能 技术栈 aggregator submission chinese"
+    },
+    {
       "id": "official-local-snapshot:commit:358f39d9d2dc0b7e97c4fff38015d30ef87600db",
       "type": "commit",
       "source": "official-local-snapshot",
@@ -1148,6 +1521,19 @@
         "official-local-snapshot"
       ],
       "searchText": "c5775f359f38014949a9e6ed14d17107b74eabb1 c5775f3 2026-05-31t13:25:32+08:00 epicconnector add files via upload c5775f3 add files via upload official-local-snapshot"
+    },
+    {
+      "id": "aggregator-repo:commit:16beadbd1794f67db2682433ee2a7ce7d9b23bed",
+      "type": "commit",
+      "source": "aggregator-repo",
+      "title": "Refresh UCWS searcher data",
+      "summary": "16beadb / wangsiyi7 / 2026-06-05T22:38:11+08:00",
+      "url": "https://github.com/wangsiyi7/ucws-project-aggregator/commit/16beadbd1794f67db2682433ee2a7ce7d9b23bed",
+      "tags": [
+        "commit",
+        "aggregator-repo"
+      ],
+      "searchText": "16beadbd1794f67db2682433ee2a7ce7d9b23bed 16beadb 2026-06-05t22:38:11+08:00 wangsiyi7 refresh ucws searcher data 16beadb refresh ucws searcher data aggregator-repo"
     },
     {
       "id": "aggregator-repo:commit:42168a4aa5fbe3a6f874c8f3422ea31104733eb5",

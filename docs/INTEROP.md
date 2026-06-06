@@ -6,7 +6,7 @@ This companion project is designed to sit beside `launchlens` in the workspace:
 UCWS 2026/
   _tmp_ucws_official_repo/      Official UCWS archive mirror
   launchlens/                   Builder and judge workspace
-  ucws-project-aggregator/      Companion search index, demo, norms, and skill
+  ucws-project-aggregator/      Companion search index, demo, submission forms, norms, and skill
 ```
 
 ## Data Flow
@@ -15,8 +15,9 @@ UCWS 2026/
 2. The local official mirror contributes commit history for the current official snapshot branch.
 3. LaunchLens runs authenticated Project Wall sync and writes `data/ucws-project-wall.json`.
 4. This project runs `npm.cmd run build`.
-5. `data/project-index.json` becomes the shared, judge-friendly search index.
-6. The demo reads `projects`, `resources`, `commits`, and `searchRecords` from that JSON and links back to LaunchLens for deeper work.
+5. This project indexes its own skill, Agent handoff notes, and bilingual submission forms as `aggregator-repo` resources.
+6. `data/project-index.json` becomes the shared, judge-friendly and Agent-friendly search index.
+7. The demo reads `projects`, `resources`, `commits`, `skill`, `submissionForms`, and `searchRecords` from that JSON and links back to LaunchLens for deeper work.
 
 ## Commands
 
@@ -34,6 +35,21 @@ npm.cmd run serve
 - Official UCWS archive: https://github.com/EpicConnectorAI/UCWS-SINGAPORE-HACKATHON-2026
 - LaunchLens: https://github.com/wangsiyi7/launchlens
 - Companion aggregator repository: https://github.com/wangsiyi7/ucws-project-aggregator
+
+## Agent Layer
+
+Use the public demo link as a human-readable view and `data/project-index.json` as the machine-readable entry point. A follow-up Agent should start from:
+
+```text
+https://wangsiyi7.github.io/ucws-project-aggregator/
+data/project-index.json
+skills/ucws-project-aggregation/SKILL.md
+docs/AGENT_HANDOFF.md
+SUBMISSION_FORM.en.md
+SUBMISSION_FORM.zh-CN.md
+```
+
+The Agent should treat this repository as a reference/complement layer. It should preserve official source attribution, keep local-only snapshot material distinct, and use LaunchLens for deeper scoring or repo scanning.
 
 ## Publish Pattern
 

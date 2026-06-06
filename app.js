@@ -4,25 +4,26 @@
     en: {
       "brand.eyebrow": "UCWS Singapore 2026",
       "brand.title": "Project Searcher",
-      "link.aggregatorRepo": "Aggregator Repo",
+      "link.aggregatorRepo": "Skill Repo",
       "link.official": "Official UCWS Repo",
       "link.launchlensRepo": "LaunchLens Repo",
       "link.launchlensDemo": "LaunchLens Demo",
-      "hero.eyebrow": "Companion Search Index",
-      "hero.title": "Search projects, official resources, and commit history in one place.",
+      "hero.eyebrow": "Companion Skill Index",
+      "hero.title": "Search projects, resources, commits, and agent-ready skill context.",
       "hero.body":
-        "This demo reads a normalized UCWS search index generated from the official archive, LaunchLens Project Wall snapshot, official resource documents, and commit history. It helps judges and agents find evidence without mixing private tokens into the data layer.",
+        "This demo reads a normalized UCWS search index generated from the official archive, LaunchLens Project Wall snapshot, official resource documents, submission forms, skill metadata, and commit history. It helps judges and agents find evidence without mixing private tokens into the data layer.",
       "status.loading": "Loading search index...",
       "status.ready": "Search index ready",
       "status.generated": "Generated",
       "status.official": "Official",
       "status.launchlens": "LaunchLens",
+      "status.skillDemo": "Skill demo",
       "status.openArchive": "UCWS GitHub archive",
       "status.openDemo": "open demo",
-      "placeholder.search": "Search project, repo, category, official docs, commits...",
+      "placeholder.search": "Search project, repo, skill, submission forms, docs, commits...",
       "filter.allRecords": "All records",
       "filter.projects": "Projects",
-      "filter.resources": "Official resources",
+      "filter.resources": "Resources and skill docs",
       "filter.commits": "Commit history",
       "filter.allCategories": "All categories",
       "filter.allEvidence": "All evidence",
@@ -30,14 +31,18 @@
       "filter.hasDemo": "Has demo",
       "filter.gaps": "Evidence gaps",
       "button.brief": "Build Review Brief",
+      "button.agent": "Build Agent Handoff",
       "index.eyebrow": "Search Index",
       "index.title": "Projects, resources, and commits",
       "assist.eyebrow": "Judge Assist",
-      "assist.title": "Evidence brief",
+      "assist.title": "Evidence and agent brief",
       "assist.empty": "Filter records, then build a review brief.",
       "resource.norms": "Aggregation Norms",
       "resource.interop": "Interop Notes",
-      "resource.skill": "Codex Skill",
+      "resource.agentHandoff": "Agent Handoff",
+      "resource.skill": "UCWS Skill",
+      "resource.submissionEn": "Submission Form EN",
+      "resource.submissionZh": "Submission Form 中文",
       "resource.json": "Project Index JSON",
       "stat.projects": "Projects",
       "stat.resources": "Resources",
@@ -49,6 +54,7 @@
       "source.official": "Official",
       "source.snapshot": "Official snapshot",
       "source.wall": "Wall",
+      "source.aggregator": "Aggregator skill repo",
       "source.indexed": "Indexed",
       "type.project": "Project",
       "type.resource": "Resource",
@@ -85,31 +91,41 @@
       "brief.resourcePass": "Use official resource records to answer event, security, and submission-policy questions.",
       "brief.commitPass": "Use commit history records to trace what changed and when.",
       "brief.launchlens": "Open LaunchLens for deeper scoring, repo scanning, and AI synthesis.",
+      "agent.title": "UCWS Project Searcher Agent Handoff",
+      "agent.generated": "Generated from the live search index.",
+      "agent.prompt": "Suggested prompt:",
+      "agent.readIndex": "Read data/project-index.json before summarizing projects.",
+      "agent.useSkill": "Use the UCWS skill for source-bounded refresh, review, and bilingual submission work.",
+      "agent.forms": "Use the English and Chinese submission forms for Project Wall copy.",
+      "agent.formsLabel": "Submission forms:",
+      "agent.boundary": "Treat official UCWS content as cited reference material; do not copy unsupported or private content.",
+      "agent.launchlens": "Use LaunchLens for deeper scoring, repo scanning, and AI synthesis.",
       "error.load": "Could not load data/project-index.json",
       "error.build": "Run npm.cmd run build, then reload the demo.",
     },
     zh: {
       "brand.eyebrow": "UCWS 新加坡 2026",
       "brand.title": "项目检索器",
-      "link.aggregatorRepo": "聚合器仓库",
+      "link.aggregatorRepo": "Skill 仓库",
       "link.official": "UCWS 官方仓库",
       "link.launchlensRepo": "LaunchLens 仓库",
       "link.launchlensDemo": "LaunchLens Demo",
-      "hero.eyebrow": "配套检索索引",
-      "hero.title": "在一个入口检索项目、官方资料和 commit 历史。",
+      "hero.eyebrow": "配套 Skill 索引",
+      "hero.title": "检索项目、资料、commit 和可交接给 Agent 的 skill 上下文。",
       "hero.body":
-        "这个 demo 读取由 UCWS 官方归档、LaunchLens 项目墙快照、官方资料文档和 commit 历史生成的标准化检索索引，帮助评委和 Agent 查找证据，同时避免把私密 token 混入数据层。",
+        "这个 demo 读取由 UCWS 官方归档、LaunchLens 项目墙快照、官方资料文档、提交表单、skill 元数据和 commit 历史生成的标准化检索索引，帮助评委和 Agent 查找证据，同时避免把私密 token 混入数据层。",
       "status.loading": "正在载入检索索引...",
       "status.ready": "检索索引已就绪",
       "status.generated": "生成时间",
       "status.official": "官方来源",
       "status.launchlens": "LaunchLens",
+      "status.skillDemo": "Skill Demo",
       "status.openArchive": "UCWS GitHub 归档",
       "status.openDemo": "打开 demo",
-      "placeholder.search": "搜索项目、仓库、分类、官方文档、commit...",
+      "placeholder.search": "搜索项目、仓库、skill、提交表单、文档、commit...",
       "filter.allRecords": "全部记录",
       "filter.projects": "项目",
-      "filter.resources": "官方资料",
+      "filter.resources": "资料和 Skill 文档",
       "filter.commits": "Commit 历史",
       "filter.allCategories": "全部分类",
       "filter.allEvidence": "全部证据",
@@ -117,14 +133,18 @@
       "filter.hasDemo": "有 Demo",
       "filter.gaps": "证据缺口",
       "button.brief": "生成评审摘要",
+      "button.agent": "生成 Agent 交接",
       "index.eyebrow": "检索索引",
       "index.title": "项目、资料和 commit",
       "assist.eyebrow": "评委辅助",
-      "assist.title": "证据摘要",
+      "assist.title": "证据与 Agent 摘要",
       "assist.empty": "先筛选记录，再生成评审摘要。",
       "resource.norms": "聚合规范",
       "resource.interop": "互操作说明",
-      "resource.skill": "Codex Skill",
+      "resource.agentHandoff": "Agent 交接",
+      "resource.skill": "UCWS Skill",
+      "resource.submissionEn": "英文提交表单",
+      "resource.submissionZh": "中文提交表单",
       "resource.json": "项目索引 JSON",
       "stat.projects": "项目",
       "stat.resources": "资料",
@@ -136,6 +156,7 @@
       "source.official": "官方归档",
       "source.snapshot": "官方快照",
       "source.wall": "项目墙",
+      "source.aggregator": "聚合器 Skill 仓库",
       "source.indexed": "已索引",
       "type.project": "项目",
       "type.resource": "资料",
@@ -172,6 +193,15 @@
       "brief.resourcePass": "用官方资料记录回答活动、安全、提交规范等问题。",
       "brief.commitPass": "用 commit 历史追踪变更内容和时间。",
       "brief.launchlens": "打开 LaunchLens 做更深入的评分、仓库扫描和 AI 梳理。",
+      "agent.title": "UCWS 项目检索器 Agent 交接",
+      "agent.generated": "基于当前线上检索索引生成。",
+      "agent.prompt": "建议提示词：",
+      "agent.readIndex": "先读取 data/project-index.json，再总结项目。",
+      "agent.useSkill": "使用 UCWS skill 完成有来源边界的刷新、评审和双语提交材料整理。",
+      "agent.forms": "使用英文和中文提交表单作为 Project Wall 文案。",
+      "agent.formsLabel": "提交表单：",
+      "agent.boundary": "把 UCWS 官方内容当作带引用的参考资料，不复制无依据或私密内容。",
+      "agent.launchlens": "使用 LaunchLens 做更深入的评分、仓库扫描和 AI 梳理。",
       "error.load": "无法读取 data/project-index.json",
       "error.build": "请先运行 npm.cmd run build，然后刷新 demo。",
     },
@@ -194,6 +224,7 @@
     categorySelect: document.getElementById("categorySelect"),
     evidenceSelect: document.getElementById("evidenceSelect"),
     briefButton: document.getElementById("briefButton"),
+    agentPromptButton: document.getElementById("agentPromptButton"),
     resultCount: document.getElementById("resultCount"),
     projectList: document.getElementById("projectList"),
     briefOutput: document.getElementById("briefOutput"),
@@ -221,6 +252,7 @@
     if (source === "official-repo") return t("source.official");
     if (source === "official-local-snapshot") return t("source.snapshot");
     if (source === "dynamic-wall") return t("source.wall");
+    if (source === "aggregator-repo") return t("source.aggregator");
     if (source?.includes("official-repo") && source?.includes("dynamic-wall")) return t("source.officialWall");
     return source || t("source.indexed");
   }
@@ -472,6 +504,48 @@
     refs.briefOutput.textContent = lines.join("\n");
   }
 
+  function buildAgentHandoff() {
+    const sources = state.index?.sources || {};
+    const stats = state.index?.stats || {};
+    const forms = state.index?.submissionForms || [];
+    const skill = state.index?.skill || {};
+    const demoUrl = sources.aggregator?.demoUrl || "https://wangsiyi7.github.io/ucws-project-aggregator/";
+    const repoUrl = sources.aggregator?.repoUrl || "https://github.com/wangsiyi7/ucws-project-aggregator";
+    const launchlensDemo = sources.launchlens?.demoUrl || "https://wangsiyi7.github.io/launchlens/";
+    const formLines = forms.length
+      ? forms.map((form) => `- ${form.language}: ${form.path}`).join("\n")
+      : "- SUBMISSION_FORM.en.md\n- SUBMISSION_FORM.zh-CN.md";
+    const lines = [
+      t("agent.title"),
+      t("agent.generated"),
+      "",
+      `${t("stat.projects")}: ${stats.projects || 0}`,
+      `${t("stat.resources")}: ${stats.resources || 0}`,
+      `${t("stat.searchable")}: ${stats.searchableRecords || allRecords().length}`,
+      "",
+      t("agent.prompt"),
+      "```text",
+      "Use $ucws-project-aggregation in ucws-project-aggregator.",
+      t("agent.readIndex"),
+      `${t("agent.useSkill")} ${skill.path || "skills/ucws-project-aggregation/SKILL.md"}`,
+      t("agent.forms"),
+      t("agent.boundary"),
+      t("agent.launchlens"),
+      "```",
+      "",
+      `Demo: ${demoUrl}`,
+      `Repository: ${repoUrl}`,
+      `LaunchLens: ${launchlensDemo}`,
+      "",
+      t("agent.formsLabel"),
+      formLines,
+      "",
+      `Skill: ${skill.path || "skills/ucws-project-aggregation/SKILL.md"}`,
+      `Agent handoff: ${sources.aggregator?.agentHandoffPath || "docs/AGENT_HANDOFF.md"}`,
+    ];
+    refs.briefOutput.textContent = lines.join("\n");
+  }
+
   function renderStatus() {
     const sources = state.index?.sources || {};
     const generatedAt = state.index?.generatedAt ? new Date(state.index.generatedAt).toLocaleString() : "unknown";
@@ -480,6 +554,7 @@
       <span>${html(t("status.generated"))}: ${html(generatedAt)}</span>
       <span>${html(t("status.official"))}: <a href="${html(sources.officialRepo?.url || "#")}">${html(t("status.openArchive"))}</a></span>
       <span>${html(t("status.launchlens"))}: <a href="${html(sources.launchlens?.demoUrl || "#")}">${html(t("status.openDemo"))}</a></span>
+      <span>${html(t("status.skillDemo"))}: <a href="${html(sources.aggregator?.demoUrl || "#")}">ucws-project-aggregator/</a></span>
     `;
   }
 
@@ -522,6 +597,7 @@
     renderRecords();
   });
   refs.briefButton.addEventListener("click", buildBrief);
+  refs.agentPromptButton.addEventListener("click", buildAgentHandoff);
   refs.langEnBtn.addEventListener("click", () => {
     state.language = "en";
     localStorage.setItem(LANGUAGE_KEY, state.language);
