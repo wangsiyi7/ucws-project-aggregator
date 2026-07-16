@@ -38,8 +38,9 @@ Use this skill as a long-term companion workflow for UCWS and similar hackathon 
    - Use `SUBMISSION_FORM.en.md` for English Project Wall fields.
    - Use `SUBMISSION_FORM.zh-CN.md` for Chinese Project Wall fields.
    - Keep the public project name and URL path as `ucws-project-aggregator`.
-6. Publish and link.
-   - Keep `main` and `gh-pages` aligned when the demo changes.
+6. Publish and link only on request.
+   - Do not start recurring automation or automatic GitHub sync.
+   - Push to GitHub only after the user explicitly asks for it.
    - Keep LaunchLens linked to the aggregator repo and demo.
    - Keep this aggregator linked back to LaunchLens and the official UCWS archive.
 

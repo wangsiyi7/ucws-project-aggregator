@@ -25,11 +25,11 @@ Report evidence gaps instead of inventing missing repo, demo, screenshot, or tea
 
 ## Maintenance Loop
 
-1. Refresh LaunchLens dynamic wall data when authenticated access is available.
+1. Refresh LaunchLens dynamic wall data only after an explicit user request.
 2. Run `npm.cmd run build`.
 3. Run `npm.cmd test`.
 4. Inspect generated `resources`, `commits`, `searchRecords`, `skill`, and `submissionForms`.
-5. Push both `main` and `gh-pages` when the public demo changes.
+5. Do not start recurring automation or GitHub sync. Any future push must be manual and explicitly requested.
 
 ## Boundary Rule
 

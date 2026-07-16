@@ -62,22 +62,19 @@ data/project-index.json
 
 The dynamic UCWS wall still requires LaunchLens to run with `EPIC_TOKEN`. This project never stores tokens and only consumes LaunchLens output after it has been safely normalized.
 
-## Publish To GitHub
+## GitHub Sync Status
 
-If the GitHub repository does not exist yet, create it with either GitHub web UI or a token:
+GitHub automation is stopped for this repository.
 
-```powershell
-$env:GITHUB_TOKEN="YOUR_TOKEN"
-npm.cmd run publish:github
-```
-
-The repository includes `.github/workflows/pages.yml`, so the static demo deploys through GitHub Pages after the first push.
+- The GitHub Pages workflow has been removed.
+- The npm GitHub publish shortcuts have been removed.
+- Future GitHub pushes or demo publishes should be manual and only after an explicit user request.
 
 ## Interop With LaunchLens
 
 LaunchLens remains the primary builder and judging workspace. This project is the companion search index:
 
-- LaunchLens pulls authenticated Project Wall data into `launchlens/data/ucws-project-wall.json`.
+- LaunchLens may manually pull authenticated Project Wall data into `launchlens/data/ucws-project-wall.json`.
 - This project builds `data/project-index.json` from that snapshot, the official UCWS repo archive, official resources, and commit history.
 - The demo links back to LaunchLens for deeper project judging, repo scanning, and AI-assisted synthesis.
 - The Agent handoff flow points later Agents to `data/project-index.json`, `docs/UCWS_PROJECT_NORMS.md`, the UCWS skill, and the bilingual submission forms.

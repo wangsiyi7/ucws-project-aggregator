@@ -12,9 +12,7 @@
   "scripts": {
     "build": "node tools/build-index.mjs",
     "serve": "node tools/serve.mjs",
-    "test": "node tests/build-index.test.mjs",
-    "create:github": "node tools/publish-github.mjs --create-only",
-    "publish:github": "node tools/publish-github.mjs"
+    "test": "node tests/build-index.test.mjs"
   },
   "keywords": [
     "ucws",
